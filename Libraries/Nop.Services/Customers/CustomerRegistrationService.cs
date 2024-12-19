@@ -21,6 +21,7 @@ namespace Nop.Services.Customers;
 /// </summary>
 public partial class CustomerRegistrationService : ICustomerRegistrationService
 {
+
     #region Fields
 
     protected readonly CustomerSettings _customerSettings;
