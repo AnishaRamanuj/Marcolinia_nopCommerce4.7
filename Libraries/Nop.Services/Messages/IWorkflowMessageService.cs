@@ -671,9 +671,4 @@ public partial interface IWorkflowMessageService
 
     #endregion
 
-    #region OTP Verification
-    Task SaveOtpAsync(OtpVerification otpVerification);
-    Task<OtpVerification> GetOtpAsync(string contact);
-    Task<bool> VerifyOtpAsync(string contact, string otp);
-    #endregion
 }

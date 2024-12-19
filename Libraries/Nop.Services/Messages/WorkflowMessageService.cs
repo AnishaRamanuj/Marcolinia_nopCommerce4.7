@@ -2689,44 +2689,4 @@ public partial class WorkflowMessageService : IWorkflowMessageService
     #endregion
 
     #endregion
-
-    #region OTP Verification methods
-
-    // Save the OTP details
-    public Task SaveOtpAsync(Customer customer)
-    {
-        if (_otpStore.ContainsKey(customer.Phone))
-        {
-            _otpStore[customer.Phone] = customer;
-        }
-        else
-        {
-            _otpStore.Add(customer.Phone, otpVerification);
-        }
-        return Task.CompletedTask;
-    }
-
-    // Retrieve the OTP details by contact
-    public Task<OtpVerification> GetOtpAsync(string contact)
-    {
-        _otpStore.TryGetValue(contact, out var otpVerification);
-        return Task.FromResult(otpVerification);
-    }
-
-    // Verify the OTP
-    public Task<bool> VerifyOtpAsync(string contact, string otp)
-    {
-        if (_otpStore.TryGetValue(contact, out var otpVerification))
-        {
-            if (otpVerification.Otp == otp && otpVerification.ExpirationTime > DateTime.UtcNow)
-            {
-                otpVerification.IsVerified = true;
-                _otpStore[contact] = otpVerification; // Update the store
-                return Task.FromResult(true);
-            }
-        }
-        return Task.FromResult(false);
-    }
-
-    #endregion
 }

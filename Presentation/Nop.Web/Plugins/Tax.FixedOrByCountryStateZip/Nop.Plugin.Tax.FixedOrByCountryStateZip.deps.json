@@ -34,11 +34,9 @@
   },
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "Nop.Plugin.Payments.AmazonPay/1.0.0": {
+      "Nop.Plugin.Tax.FixedOrByCountryStateZip/1.0.0": {
         "dependencies": {
-          "Amazon.Pay.API.SDK": "2.7.3",
-          "Nop.Web": "4.70.0",
-          "Portable.BouncyCastle": "1.8.9",
+          "Nop.Web.Framework": "4.70.0",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "8.0.0.0",
@@ -342,10 +340,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "Nop.Plugin.Payments.AmazonPay.dll": {}
+          "Nop.Plugin.Tax.FixedOrByCountryStateZip.dll": {}
         },
         "compile": {
-          "Nop.Plugin.Payments.AmazonPay.dll": {}
+          "Nop.Plugin.Tax.FixedOrByCountryStateZip.dll": {}
         }
       },
       "AdvancedStringBuilder/0.1.1": {
@@ -357,21 +355,6 @@
         },
         "compile": {
           "lib/netstandard2.0/AdvancedStringBuilder.dll": {}
-        }
-      },
-      "Amazon.Pay.API.SDK/2.7.3": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3",
-          "Portable.BouncyCastle": "1.8.9"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Amazon.Pay.API.SDK.dll": {
-            "assemblyVersion": "2.7.3.0",
-            "fileVersion": "2.7.3.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Amazon.Pay.API.SDK.dll": {}
         }
       },
       "Autofac/8.0.0": {
@@ -2484,17 +2467,6 @@
           "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.9": {
-        "runtime": {
-          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
-            "assemblyVersion": "1.8.9.0",
-            "fileVersion": "1.8.9.1"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
-        }
-      },
       "QuestPDF/2022.12.15": {
         "dependencies": {
           "SkiaSharp": "2.88.8",
@@ -3739,20 +3711,6 @@
         },
         "compile": {
           "Nop.Services.dll": {}
-        }
-      },
-      "Nop.Web/4.70.0": {
-        "dependencies": {
-          "Nop.Core": "4.70.0",
-          "Nop.Data": "4.70.0",
-          "Nop.Services": "4.70.0",
-          "Nop.Web.Framework": "4.70.0"
-        },
-        "runtime": {
-          "Nop.Web.dll": {}
-        },
-        "compile": {
-          "Nop.Web.dll": {}
         }
       },
       "Nop.Web.Framework/4.70.0": {
@@ -5581,7 +5539,7 @@
     }
   },
   "libraries": {
-    "Nop.Plugin.Payments.AmazonPay/1.0.0": {
+    "Nop.Plugin.Tax.FixedOrByCountryStateZip/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5592,13 +5550,6 @@
       "sha512": "sha512-32IrlspOA59ewotQ4tlKP27QhKxMKGB7oncqlwVHn/hAz+j/r3HvLr6/W9ni9Mnyktlcg6kt7QZS8rEgur1+4Q==",
       "path": "advancedstringbuilder/0.1.1",
       "hashPath": "advancedstringbuilder.0.1.1.nupkg.sha512"
-    },
-    "Amazon.Pay.API.SDK/2.7.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/HvDE4JdwejwRZdq/0JVFTq6fgx1d+GLk5IORDdhVr88TW5jFYtSslO43GZWLi4juT/v7PHyD4KeiaJj7ZbRFw==",
-      "path": "amazon.pay.api.sdk/2.7.3",
-      "hashPath": "amazon.pay.api.sdk.2.7.3.nupkg.sha512"
     },
     "Autofac/8.0.0": {
       "type": "package",
@@ -6692,13 +6643,6 @@
       "path": "pipelines.sockets.unofficial/2.2.8",
       "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
     },
-    "Portable.BouncyCastle/1.8.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
-      "path": "portable.bouncycastle/1.8.9",
-      "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
-    },
     "QuestPDF/2022.12.15": {
       "type": "package",
       "serviceable": true,
@@ -7543,11 +7487,6 @@
       "sha512": ""
     },
     "Nop.Services/4.70.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Nop.Web/4.70.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
