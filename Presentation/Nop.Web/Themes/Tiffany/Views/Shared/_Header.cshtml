@@ -1,0 +1,122 @@
+﻿@using Nop.Core
+@using Nop.Services.Configuration
+@using Nop.Services.Security
+
+@inject IStoreContext storeContext
+@inject ISettingService settingService
+@inject IPermissionService permissionService
+
+@{
+    var storeId = (await storeContext.GetCurrentStoreAsync()).Id;
+    var headerLayout = await settingService.GetSettingByKeyAsync("tiffanythemesettings.headerlayout", String.Empty, storeId, true);
+
+    var shoppingCartEnabled = await permissionService.AuthorizeAsync(StandardPermissionProvider.EnableShoppingCart);
+    var wishlistEnabled = await permissionService.AuthorizeAsync(StandardPermissionProvider.EnableWishlist);
+}
+
+<div class="header @headerLayout">
+    <div class="header-inner">
+    	@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
+        @await Component.InvokeAsync(typeof(LogoViewComponent))
+        <div class="header-links-wrapper">
+            @await Component.InvokeAsync(typeof(HeaderLinksViewComponent))
+        </div>
+        <div class="search-n-selectors">
+            <div class="search-box store-search-box">
+                @await Component.InvokeAsync(typeof(SearchBoxViewComponent))
+            </div>
+            <div class="header-selectors-wrapper">
+            	@await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
+            	@await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
+            	@await Component.InvokeAsync(typeof(LanguageSelectorViewComponent))
+            	@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderSelectors })
+            </div>
+        </div>
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderAfter })
+    </div>
+</div>
+<div class="overlayOffCanvas"></div>
+<div class="responsive-nav-wrapper-parent">
+    <div class="responsive-nav-wrapper">
+        <div class="menu-title">
+            <span>@T("SevenSpikes.Themes.Common.MenuTitle")</span>
+        </div>
+        <div class="search-wrap">
+            <span>@T("Search")</span>
+        </div>
+        @if (wishlistEnabled)
+        {
+            <div class="wishlist-button">
+                <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
+                    <span class="cart-label">@T("Wishlist")</span>
+                </a>
+            </div>
+        }
+        @if (shoppingCartEnabled)
+        {
+            <div class="shopping-cart-link">
+                <a href="@Url.RouteUrl("ShoppingCart")">@T("ShoppingCart")</a>
+            </div>
+        }
+        <div class="filters-button">
+            <span>@T("SevenSpikes.Themes.Common.Filters")</span>
+        </div>
+        <div class="personal-button" id="header-links-opener">
+            <span>@T("SevenSpikes.Themes.Common.Personal")</span>
+        </div>
+    </div>
+</div>
+<div class="header-menu-wrapper">
+    <div class="header-menu">
+        <div class="wishlist-shoping">
+            @if (shoppingCartEnabled)
+            {
+                <div id="topcartlink">
+                    <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
+                        <span class="cart-label">@T("ShoppingCart")</span>
+                    </a>
+                    <!--flyout-cart-->
+                    @await Component.InvokeAsync(typeof(FlyoutShoppingCartViewComponent))
+                </div>
+                 <script type="text/javascript" asp-location="Footer">
+                    $(document).ready(function () {
+                        $('.header-menu').on('mouseenter', '#topcartlink', function () {
+                            $('#flyout-cart').addClass('active');
+                        });
+                        $('.header-menu').on('mouseleave', '#topcartlink', function () {
+                            $('#flyout-cart').removeClass('active');
+                        });
+                        $('.header-menu').on('mouseenter', '#flyout-cart', function () {
+                            $('#flyout-cart').addClass('active');
+                        });
+                        $('.header-menu').on('mouseleave', '#flyout-cart', function () {
+                            $('#flyout-cart').removeClass('active');
+                        });
+                    });
+                </script>
+            }
+            @if (wishlistEnabled)
+            {
+                <div class="wishlist-button">
+                    <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist" title="@T("Wishlist")">
+                        <span class="cart-label">@T("Wishlist")</span>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="close-menu">
+            <span>@T("SevenSpikes.Themes.Common.CloseMenu")</span>
+        </div>
+        @{
+            var menuHtml = await Component.InvokeAsync("Widget", new { widgetZone = "theme_header_menu" });
+        }
+        @if (!String.IsNullOrEmpty(await menuHtml.RenderHtmlContentAsync()))
+        {
+            @menuHtml
+        }
+        else
+        {
+            @await Component.InvokeAsync(typeof(TopMenuViewComponent))
+        }
+    </div>
+</div>

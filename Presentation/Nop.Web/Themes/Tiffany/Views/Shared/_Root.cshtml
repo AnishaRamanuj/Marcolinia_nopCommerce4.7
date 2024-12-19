@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "_Root.Head";
+
+    var controllerName = Url.ActionContext.RouteData.Values["controller"].ToString();
+    var isHomePage = controllerName.Equals("home", StringComparison.InvariantCultureIgnoreCase);
+}
+@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
+@{ await Html.RenderPartialAsync("_Notifications"); }
+@{ await Html.RenderPartialAsync("_JavaScriptDisabledWarning"); }
+<div class="master-wrapper-page">
+    <div class="main" style="background-color: #a59a96;">
+        <marquee class="marq" bgcolor="#262626" style="font-family: Futura, sans-serif; height: 30px; line-height: 30px; color: #fff;" direction="left" loop="">
+            Your Order is eligible for FREE shipping (in UAE only)
+        </marquee>
+    </div>
+
+    @await Component.InvokeAsync(typeof(AdminHeaderLinksViewComponent))
+    @{ await Html.RenderPartialAsync("_Header"); }
+    @{
+        if (isHomePage)
+        {
+            var homePageMainSliderHtml = await Component.InvokeAsync("Widget", new { widgetZone = "home_page_main_slider" });
+
+            if (!String.IsNullOrEmpty(await homePageMainSliderHtml.RenderHtmlContentAsync()))
+            {
+                <div class="home-page-main-slider">
+                    @homePageMainSliderHtml
+
+                    @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_search_widget" })
+                </div>
+            }
+            else
+            {
+                @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_search_widget" })
+            }
+        }
+        var categoriesBannerHtml = await Component.InvokeAsync("Widget", new { widgetZone = "categories" });
+        if (!String.IsNullOrEmpty(await categoriesBannerHtml.RenderHtmlContentAsync()))
+        {
+            <div class="categories-banner">
+                @categoriesBannerHtml
+            </div>
+        }
+    }
+    <div class="master-wrapper-content" id="main" role="main">
+        <script asp-location="Footer">
+		var localized_data = {
+	            AjaxCartFailure: "@T("AjaxCart.Failure")"
+	        };
+            AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', localized_data);
+        </script>
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ContentBefore })
+        @*ajax loading window*@
+        <div class="ajax-loading-block-window" style="display: none">
+            <div class="loading-image"></div>
+        </div>
+        @if (IsSectionDefined("Breadcrumb"))
+        {
+            @RenderSection("Breadcrumb") 
+        }
+        <div class="master-column-wrapper">
+            @RenderBody()
+        </div>
+        @if (isHomePage)
+        {
+            @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeNews })
+            @await Component.InvokeAsync(typeof(HomepageNewsViewComponent))
+
+            <div class="news-carousel">
+                @await Component.InvokeAsync("Widget", new { widgetZone = "homepage_after_news" })
+            </div>
+            <div class="home-page-bottom-banners">
+                <div class="left">
+                    @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_bottom_left_slider" })
+                </div>
+                <div class="right">
+                    @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_bottom_right_slider" })
+                </div>
+            </div>
+        }
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ContentAfter })
+    </div>
+</div>
+@await Component.InvokeAsync(typeof(FooterViewComponent))
+@await Component.InvokeAsync(typeof(EuCookieLawViewComponent))
+@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })

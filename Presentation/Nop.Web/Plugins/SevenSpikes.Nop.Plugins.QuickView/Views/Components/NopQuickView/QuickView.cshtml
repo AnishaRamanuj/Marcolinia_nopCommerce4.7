@@ -1,0 +1,39 @@
+﻿@using Nop.Core;
+
+@inject QuickViewSettings quickViewSettings;
+@inject IWorkContext workContext;
+
+@{
+    var themeFolder = await ThemeHelper.GetPluginThemeAsync(Plugin.FolderName);
+
+    <link rel="stylesheet" href="~/Plugins/SevenSpikes.Nop.Plugins.QuickView/Themes/@themeFolder/Content/QuickView.css" />
+
+    var supportRtl = (await workContext.GetWorkingLanguageAsync()).Rtl;
+    if (supportRtl)
+    {
+        <link rel="stylesheet" href="~/Plugins/SevenSpikes.Nop.Plugins.QuickView/Themes/@themeFolder/Content/QuickView.rtl.css" />
+
+    }
+
+    <link rel="stylesheet" href="~/lib_npm/fine-uploader/fine-uploader/fine-uploader.min.css" />
+
+    NopHtml.AppendScriptParts(ResourceLocation.Footer, $"~/Plugins/SevenSpikes.Core/Scripts/lib/kendo/2024.1.130/js/kendo.public.min.js");
+    
+
+    <script src="~/lib_npm/fine-uploader/jquery.fine-uploader/jquery.fine-uploader.min.js" asp-location="Footer"></script>
+    <script src="~/Plugins/SevenSpikes.Core/Scripts/sevenspikes.core.min.js" asp-location="Footer"></script>
+    <script src="~/Plugins/SevenSpikes.Core/Scripts/jquery.json-2.4.min.js" asp-location="Footer"></script>
+    <script src="~/Plugins/SevenSpikes.Nop.Plugins.QuickView/Scripts/QuickView.min.js" asp-location="Footer"></script>
+    <script src="~/Plugins/SevenSpikes.Core/Scripts/cloudzoom.core.min.js" asp-location="Footer"></script>
+}
+
+<div class="quickViewData" data-productselector="@quickViewSettings.ProductItemSelector"
+     data-productselectorchild="@quickViewSettings.ProductItemSelectorChild"
+     data-retrievequickviewurl="@Url.RouteUrl("QuickViewData")"
+     data-quickviewbuttontext="@T("SevenSpikes.QuickView.Admin.Settings.QuickViewButtonText")"
+     data-quickviewbuttontitle="@T("SevenSpikes.QuickView.Admin.Settings.QuickViewButtonTitle")"
+     data-isquickviewpopupdraggable="@quickViewSettings.MakeQuickViewPopupDraggable"
+     data-enablequickviewpopupoverlay="@quickViewSettings.EnableQuickViewPopupOverlay"
+     data-accordionpanelsheightstyle="@quickViewSettings.AccordionPanelsHeightStyle"
+     data-getquickviewbuttonroute="@Url.RouteUrl("QuickViewButton")">
+</div>

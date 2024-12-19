@@ -1,0 +1,12 @@
+﻿{
+  "Group": "Shivaay Soft",
+  "FriendlyName": "Email OTP Activate",
+  "SystemName": "SS.Plugin.Widgets.EmailOTPActivate",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Shivaay Soft",
+  "DisplayOrder": 1,
+  "FileName": "SS.Plugin.Widgets.EmailOTPActivate.dll",
+  "Description": "This plugin is used for customer email otp activation.",
+  "DependsOnSystemNames": [ "ShivaaySoft.Plugin.Core" ]
+}

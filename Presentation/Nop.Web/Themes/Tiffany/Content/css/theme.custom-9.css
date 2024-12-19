@@ -1,0 +1,226 @@
+/*=====================================================
+    
+                    COLOR SCHEMES
+
+=====================================================*/
+
+/* BROWN SUGAR */
+
+.item-box .details,
+.quick-view-button a,
+.add-info .buttons .product-box-add-to-cart-button,
+.add-info .buttons .add-to-compare-list-button,
+.swiper-pagination-bullet-active,
+.news-items .read-more,
+.newsletter-email button,
+.registration-page .button-1,
+.registration-result-page .button-1,
+.login-page .button-1,
+.password-recovery-page .button-1,
+.account-page .button-1,
+.return-request-page .button-1,
+.account-page .button-2,
+.news-item-page .button-1,
+.next-product:hover,
+.previous-product:hover,
+.quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active a,
+.private-message-send-page .cancel-pm-button,
+.compare-products-page .clear-list,
+.product-grid .item-box .hover-effect-2 .quick-view-button a,
+.forum-search-box .advanced a,
+.topic-posts .post-time,
+.forum-edit-page .buttons .button-1,
+.ui-tabs .ui-tabs-panel .buttons .write-product-review-button,
+.quickViewWindow .purchase-area .add-to-cart-panel .add-to-cart-button,
+.overview .add-to-cart-button,
+.variant-overview .add-to-cart-button,
+.write-review .button-1,
+.productAddedToCartWindowCheckout:hover,
+.shopping-cart-page .common-buttons .continue-shopping-button,
+.mfp-container .apply-shipping-button,
+.shopping-cart-page .button-1,
+.cart-collaterals .coupon-code button:hover,
+.shopping-cart-page .estimate-shipping-button:hover,
+.shopping-cart-page .common-buttons .update-cart-button:hover,
+.order-progress a:before,
+.login-page .checkout-as-guest-or-register-block .button-1,
+.login-page .returning-wrapper .button-1,
+.checkout-page .button-1,
+.checkout-page .address-item:nth-child(2n) .select-billing-address-button:hover,
+.checkout-page .address-item:nth-child(2n) .select-shipping-address-button:hover,
+.shipping-method .method-name:hover,
+.shipping-method li:nth-child(2) .method-name,
+.checkout-page .order-completed-continue-button,
+.shopping-cart-page .button-2,
+.checkout-page .button-2,
+.order-details-page .page-title a,
+.order-details-page .button-2,
+.order-details-page .button-1,
+.product-list .details .add-info .buttons button.button-2.add-to-compare-list-button:hover,
+.product-list .details .add-info .buttons button.button-2,
+.contact-page .button-1,
+.email-a-friend-page .button-1,
+.apply-vendor-page .button-1,
+.manufacturer-grid .item-box:nth-child(2n-1) .title:hover,
+.manufacturer-grid .item-box:nth-child(2n) .title,
+.vendor-grid .item-box:nth-child(2n-1) .title:hover,
+.vendor-grid .item-box:nth-child(2n) .title,
+.ui-datepicker-calendar th span,
+.newsletter-email .button-1.newsletter-unsubscribe-button:hover,
+.private-message-send-page .buttons .send-pm-button,
+.private-message-send-page .buttons .cancel-pm-button:hover,
+.private-message-view-page .reply-pm-button,
+.private-message-view-page .back-pm-button,
+.private-message-view-page .delete-pm-button:hover,
+.user-agreement-page .button-1,
+.post-navigation .next::before,
+.post-navigation .prev::before,
+.post-navigation a,
+.post-navigation a + a,
+.home-page-filters-wrapper .search-button,
+.productAddedToCartWindowSummary .viewBasketLink,
+.productAddedToCartWindowSummary .continueShoppingLink:hover,
+.ui-dialog .back-in-stock-subscription-page .notify-me-button,
+.spc-header li.active::after,
+.spc-header li:after {
+  background-color: #a18a76;
+  -webkit-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.post-info .manage-post .edit-post-button,
+.post-info .manage-post .delete-post-button,
+.item-box .add-info button.button-2.add-to-wishlist-button,
+.product-list .details .add-info .buttons button.button-2.add-to-wishlist-button,
+.poll .buttons button,
+.button-2.contact-vendor-button,
+.wishlist-content .common-buttons .wishlist-add-to-cart-button,
+.wishlist-content .common-buttons .update-wishlist-button:hover,
+.wishlist-content .common-buttons .email-a-friend-wishlist-button:hover {
+  background-color: #a18a76 !important;
+}
+.item-box:nth-child(2n+1) .details,
+.quick-view-button:hover a,
+.add-info .buttons .product-box-add-to-cart-button:hover,
+.add-info .buttons .add-to-compare-list-button:hover,
+.item-box:nth-child(2n+1) .swiper-pagination-bullet-active,
+.news-items .read-more:hover,
+.newsletter-email button:hover,
+.mini-shopping-cart button,
+.pager li.previous-page *,
+.pager li.next-page *,
+.pager li.first-page *,
+.pager li.last-page *,
+.registration-page .button-1:hover,
+.registration-result-page .button-1:hover,
+.login-page .button-1:hover,
+.password-recovery-page .button-1:hover,
+.account-page .button-1:hover,
+.return-request-page .button-1:hover,
+.account-page .button-2:nth-child(2n+1),
+.avatar-page button:nth-child(2n+1),
+.next-product,
+.previous-product,
+.quick-tabs-3 .ui-tabs .ui-state-active.ui-tabs-active a,
+.quick-tabs-2 .productTabs .ui-tabs-nav li a,
+.ui-tabs .ui-state-active.ui-tabs-active:after,
+.private-message-send-page .send-pm-button,
+.compare-products-page .clear-list:hover,
+.product-grid .item-box .hover-effect-2 .quick-view-button a:hover,
+.forum-search-box .advanced a:hover,
+.post-info .manage-post a:hover,
+.forum-edit-page .buttons .button-2.cancel-topic-button,
+.forum-edit-page .buttons .button-2.cancel-post-button,
+.quickViewWindow .purchase-area .add-to-cart-panel .add-to-cart-button:hover,
+.overview .add-to-cart-button:hover,
+.variant-overview .add-to-cart-button:hover,
+.write-review .button-1:hover,
+.productAddedToCartWindowCheckout,
+.productAddedToCartWindowSummary .continueShoppingLink,
+.productAddedToCartWindowSummary .viewBasketLink:hover,
+.mini-shopping-cart .cart-button:hover,
+.cart-collaterals .coupon-code button,
+.shopping-cart-page .estimate-shipping-button,
+.shopping-cart-page .common-buttons .update-cart-button,
+.shopping-cart-page .common-buttons .estimate-shipping-button,
+.shopping-cart-page .common-buttons .continue-shopping-button:hover,
+.shopping-cart-page .button-1:hover,
+.login-page .checkout-as-guest-or-register-block .button-1:hover,
+.login-page .returning-wrapper .button-1:hover,
+.checkout-page .button-1:hover,
+.checkout-page .address-item:nth-child(2n) .select-billing-address-button,
+.checkout-page .address-item:nth-child(2n) .select-shipping-address-button,
+.shipping-method .method-name,
+.shipping-method li:nth-child(2) .method-name:hover,
+.checkout-page .order-completed-continue-button:hover,
+.shopping-cart-page .button-2:hover,
+.checkout-page .button-2:hover,
+.order-details-page .page-title a:hover,
+.order-details-page .button-2:hover,
+.order-details-page .button-1:hover,
+.product-list .details .add-info .buttons button.button-2.add-to-compare-list-button,
+.product-list .details .add-info .buttons button.button-2:hover,
+.product-list .details .add-info .buttons button.button-2.add-to-wishlist-button,
+.contact-page .button-1:hover,
+.email-a-friend-page .button-1:hover,
+.apply-vendor-page .button-1:hover,
+.manufacturer-grid .item-box:nth-child(2n-1) .title,
+.manufacturer-grid .item-box:nth-child(2n) .title:hover,
+.vendor-grid .item-box:nth-child(2n-1) .title,
+.vendor-grid .item-box:nth-child(2n) .title:hover,
+.ui-datepicker-calendar td:hover a,
+.newsletter-email .button-1.newsletter-unsubscribe-button,
+.newsletter-email .button-1.newsletter-subscribe-button:hover,
+.private-message-send-page .buttons .send-pm-button:hover,
+.private-message-send-page .buttons .cancel-pm-button,
+.current-time,
+.private-message-view-page .reply-pm-button:hover,
+.private-message-view-page .back-pm-button:hover,
+.private-message-view-page .delete-pm-button,
+.user-agreement-page .button-1:hover {
+  background-color: #b6a494;
+  -webkit-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.home-page-filters-wrapper .search-button:hover {
+  background-color: #b6a494 !important;
+}
+.item-box .add-info button.button-2.add-to-wishlist-button:hover,
+.poll .buttons button:hover,
+.button-2.contact-vendor-button:hover,
+.wishlist-content .common-buttons .update-wishlist-button,
+.wishlist-content .common-buttons .email-a-friend-wishlist-button,
+.wishlist-content .common-buttons .wishlist-add-to-cart-button:hover {
+  background-color: #b6a494 !important;
+}
+#headerMenuParent,
+.home-page-category-grid.categories-1 .item-box .title,
+.header-menu > ul > li:hover,
+#topcartlink,
+.wishlist-button,
+.mega-menu .dropdown,
+.blog-search-box .search-box-button {
+  background-color: rgba(75, 62, 51, 0.3);
+}
+#AjaxFiltersProForm {
+  background-color: rgba(182, 164, 148, 0.6) !important;
+}
+.header-menu .sublist li a {
+  background-color: rgba(75, 62, 51, 0.7);
+}
+#headerMenuParent.stick,
+.news-list-homepage .view-all,
+.header-menu .sublist li:hover a,
+.home-page-category-grid.categories-1 .item-box:hover .title {
+  /*background-color: rgba(75, 62, 51, 0.8);*/
+  background-color: #197149;
+  opacity: 0.9;
+}
+.footer-lower {
+  background-color: #4b3e33;
+}
+.quickViewWindow .selected-value .color-container,
+.color-squares .selected-value .color-container {
+  border-color: #a18a76;
+}

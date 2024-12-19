@@ -1,0 +1,86 @@
+﻿@model EmailOTPValidateModel
+
+@{
+	Layout = "_ColumnsOne";
+	NopHtml.AddTitleParts(T("PageTitle.Register").Text);
+	NopHtml.AppendPageCssClassParts("html-registration-result-page");
+
+	var currentThemeName = await themeContext.GetWorkingThemeNameAsync();
+	NopHtml.AddCssFileParts("~/Plugins/SS.Plugin.Widgets.EmailOTPActivate/Themes/" + currentThemeName + "/Content/css/styles.css");
+}
+<div class="page registration-result-page">
+	<div class="otp-page-container">
+		<div class="page-title">
+			<h1>@T("PageTitle.Register")</h1>
+		</div>
+		<div class="page-body">
+			<div class="form-ui">
+				<form asp-action="EmailOTPValidate" asp-controller="CustomCustomer" method="post" autocomplete="off">
+					@Html.HiddenFor(x => x.CustomerId)
+					@Html.HiddenFor(x => x.ReturnUrl)
+					<div class="inputs">
+						<label asp-for="@Model.OTP"></label>
+						<input asp-for="@Model.OTP" />
+						<span asp-validation-for="@Model.OTP"></span>
+					</div>
+					<div class="time-counter" id="timeCounter">
+						<strong>@T("SS.Plugin.Widgets.EmailOTPActivate.OTPExpiredMessage")<span class="counter" id="countdown"></span></strong>
+					</div>
+					<div class="buttons mb-0">
+						<button type="button" onclick="ResendOTP()" class="btn btn-primary btn-secondary button-1 register-next-step-button">@T("SS.Plugin.Widgets.EmailOTPActivate.ResendOTP")</button>
+						<button type="submit" name="register-button" id="CustomerRegisterWithEmailOTP-button" class="btn btn-primary btn-secondary button-1 register-next-step-button">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script asp-location="Footer">
+
+	function ResendOTP() {
+
+		var postData = {
+			customerId: @Model.CustomerId,
+			returnUrl: '@Model.ReturnUrl'
+		};
+		addAntiForgeryToken(postData);
+		$.ajax({
+			url: '@Url.Action("ResendOTP", "CustomCustomer")',
+			type: 'POST',
+			data: postData,
+			success: function (data) {
+				location.reload();
+			},
+			error: function () {
+				alert('An error occurred while resend OTP.');
+			}
+		});
+	}
+
+	// Update the count down every 1 second
+	var x = setInterval(function () {
+
+		// Get sale end date to counting down to
+		var saleEnd = new Date("@Model.OTPExpiredDate").getTime();
+
+		// Get Sale Start date and time
+		var salestart = new Date();
+
+		var distance = saleEnd - salestart;
+		// Time calculations for minutes and seconds
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		if (minutes < 10)
+			minutes = "0" + minutes;
+		if (seconds < 10)
+			seconds = "0" + seconds;
+		// Display the result in the element with id="countdown"
+		var cnt = minutes + ":" + seconds;
+		$("#countdown").html(cnt);
+
+		if (distance <= 0) {
+			$('#timeCounter').hide();
+		}
+	}, 1000);
+</script>
+

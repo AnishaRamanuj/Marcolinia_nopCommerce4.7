@@ -1,0 +1,45 @@
+﻿/*=====================================================
+    
+    DESKTOP - LARGE
+
+=====================================================*/
+
+@media all and (min-width: 1281px) {
+    .header-inner,
+    .header-menu,
+    .master-column-wrapper,
+    .news-list-homepage .news-items,
+    .footer-middle .center,
+    .breadcrumb ul {
+        width: 1200px;
+    }
+
+    .footer .center {
+        max-width: 1200px;
+    }
+
+    .product-grid .item-box {
+        width: 25%;
+        max-width: none;
+    }
+
+    .footer-middle .footer-block {
+        max-width: none;
+    }
+
+    .sub-category-grid .item-box {
+        width: 25%;
+    }
+
+    .product-details-page .overview {
+        width: calc(100% - 600px);
+    }
+
+    .giftcard label {
+        width: 411px;
+    }
+
+    .cart-collaterals {
+        width: 720px;
+    }
+}

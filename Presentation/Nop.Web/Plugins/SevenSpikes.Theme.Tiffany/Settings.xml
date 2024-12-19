@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <Setting Name="tiffanythemesettings.preset">
+    <Value>8e807a</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.defaultproductimageproportion">
+    <Value>132</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.defaultcategoryimageproportion">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.productimageproportion">
+    <Value>132</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.categoryimageproportion">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.defaultpreset">
+    <Value>8e807a</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.catalogpageslayout">
+    <Value>two-columns</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.headerlayout">
+    <Value>header-1</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.categorieslayout">
+    <Value>categories-1</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.itemboxhovereffect">
+    <Value>hover-effect-1</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.quicktabslayout">
+    <Value>quick-tabs-1</Value>
+  </Setting>
+  <Setting Name="tiffanythemesettings.RollOverEnabled">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="ordersettings.onepagecheckoutenabled">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="catalogsettings.showproductsfromsubcategories">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="mediasettings.productthumbpicturesize">
+    <Value>360</Value>
+  </Setting>
+  <Setting Name="mediasettings.productdetailspicturesize">
+    <Value>600</Value>
+  </Setting>
+  <Setting Name="mediasettings.minicartthumbpicturesize">
+    <Value>95</Value>
+  </Setting>
+  <Setting Name="mediasettings.manufacturerthumbpicturesize">
+    <Value>350</Value>
+  </Setting>
+  <Setting Name="mediasettings.categorythumbpicturesize">
+    <Value>405</Value>
+  </Setting>
+  <Setting Name="mediasettings.productthumbpicturesizeonproductdetailspage">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="mediasettings.associatedproductpicturesize">
+    <Value>320</Value>
+  </Setting>
+  <Setting Name="mediasettings.maximumimagesize">
+    <Value>1920</Value>
+  </Setting>
+  <Setting Name="JCarouselGeneralSettings.ResponsiveBreakpointsForSlickSlider-Tiffany">
+    <Value>[{"breakpoint":745,"settings":{"slidesToShow":3}},{"breakpoint":520,"settings":{"slidesToShow":2}},{"breakpoint":439,"settings":{"slidesToShow":1}}]</Value>
+  </Setting>
+  <Setting Name="NopAjaxFiltersSettings.WidgetZone">
+    <Value>left_side_column_before</Value>
+  </Setting>
+  <Setting Name="NopAjaxFiltersSettings.ShowNumberOfReturnedProductsSelector">
+    <Value>.product-selectors</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.MegaMenuCategoryTemplate">
+    <Value>CategoryMenuTemplate.WithPictures</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.MegaMenuManufacturerTemplate">
+    <Value>ManufacturerMenuTemplate.WithPictures</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.NumberOfCategoriesPerRow">
+    <Value>4</Value>
+  </Setting>
+  <Setting Name="QuickViewSettings.ProductItemSelectorChild">
+    <Value>.buttons</Value>
+  </Setting>
+  <Setting Name="QuickViewSettings.AccordionPanelsHeightStyle">
+    <Value>auto</Value>
+  </Setting>
+  <Setting Name="quickviewsettings.productdetailspicturesize">
+    <Value>330</Value>
+  </Setting>
+  <Setting Name="QuickViewSettings.ProductThumbPictureSize">
+    <Value>80</Value>
+  </Setting>
+  <Setting Name="cloudzoomsettings.zoomposition">
+    <Value>right</Value>
+  </Setting>
+  <Setting Name="CloudZoomSettings.ZoomWidth">
+    <Value>500</Value>
+  </Setting>
+  <Setting Name="CloudZoomSettings.ZoomHeight">
+    <Value>500</Value>
+  </Setting>
+  <Setting Name="cloudzoomsettings.adjustx">
+    <Value>20</Value>
+  </Setting>
+  <Setting Name="cloudzoomsettings.adjusty">
+    <Value>0</Value>
+  </Setting>
+  <Setting Name="CloudZoomSettings.IsPictureThumbnailsCarouselVertical-Tiffany">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="CloudZoomSettings.NumberOfPictureThumbnailsInCarousel-Tiffany">
+    <Value>3</Value>
+  </Setting>
+  <Setting Name="CloudZoomSettings.ResponsiveBreakpointsForThumbnailsCarousel-Tiffany">
+    <Value>[{"breakpoint":1001,"settings":{"slidesToShow":4,"slidesToScroll":4,"arrows":false,"dots":true,"vertical":false}},{"breakpoint":481,"settings":{"slidesToShow":3,"slidesToScroll":3,"arrows":false,"dots":true,"vertical":false}}]</Value>
+  </Setting>
+  <Setting Name="megamenusettings.categoriesimagesize">
+    <Value>90</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.ManufacturerImageSize">
+    <Value>150</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.ProductsImageSize">
+    <Value>90</Value>
+  </Setting>
+  <Setting Name="NopAjaxCartSettings.ProductAddedToCartImageSize">
+    <Value>120</Value>
+  </Setting>
+  <Setting Name="NopAjaxCartSettings.MiniProductDetailsViewImageSize">
+    <Value>210</Value>
+  </Setting>
+  <Setting Name="QuickViewSettings.ProductDetailsPictureSize">
+    <Value>330</Value>
+  </Setting>
+  <Setting Name="InstantSearchSettings.PictureSize">
+    <Value>70</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.NumberOfCategoriesPerRow">
+    <Value>3</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.NumberOfManufacturersPerRow">
+    <Value>6</Value>
+  </Setting>
+  <Setting Name="MegaMenuSettings.NumberOfVendorsPerRow">
+    <Value>6</Value>
+  </Setting>
+  <Setting Name="sevenspikescommonsettings.lazyloadimages">
+    <Value>True</Value>
+  </Setting>
+</Settings>

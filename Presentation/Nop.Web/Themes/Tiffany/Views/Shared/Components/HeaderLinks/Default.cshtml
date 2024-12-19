@@ -1,0 +1,106 @@
+﻿@model HeaderLinksModel
+@using Nop.Core.Domain.Customers
+@inject Nop.Core.IWebHelper webHelper
+<style>
+     .login-btn { 
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #fff;
+        color: #666; /* Matches the page color scheme */
+        border-radius: 12px;
+        padding: 0px 6px;
+        font-size: 12px;
+        cursor: pointer;
+        text-transform: uppercase;
+        line-height: 32px;
+        text-decoration: none; /* Removes underline for links */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .login-btn:hover {
+            background-color: #61bd93;
+            color: #000; /* Dark text on hover */
+        }
+
+    .icon-container {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .login-icon {
+        width: 15px;
+        height: 15px;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+</style>
+<div class="header-links">
+    <ul>
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksBefore, additionalData = Model })
+        @if (Model.IsAuthenticated)
+        {
+            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
+            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout">@T("Account.Logout")</a></li>
+        }
+        else
+        {
+            var returnUrl = Context.Request.Query.TryGetValue("returnUrl", out var url) && !StringValues.IsNullOrEmpty(url)
+                ? url.ToString()
+                : webHelper.GetRawUrl(Context.Request);
+
+            @if (Model.RegistrationType != UserRegistrationType.Disabled)
+            {
+                @* <li><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register">@T("Account.Register")</a></li> *@
+                <li>
+                    <a href="@Url.RouteUrl("Register", new { returnUrl })">
+                        <button class="login-btn">
+                            <span class="icon-container">
+                                <svg width="10px" height="10px" viewBox="0 0 0.34 0.34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path fill="#444" d="M0.021 0.253 0 0.34 0.087 0.319l0.196 -0.196L0.216 0.057zm0.011 0.066L0.024 0.309l0.009 -0.043 0.043 0.043zM0.232 0.094l-0.173 0.17L0.047 0.252l0.173 -0.17z" /><path fill="#444" d="M0.326 0.014C0.302 -0.009 0.27 0.004 0.27 0.004L0.238 0.037l0.066 0.066 0.032 -0.032C0.337 0.068 0.349 0.038 0.326 0.015M0.285 0.035 0.274 0.024C0.287 0.011 0.297 0.021 0.297 0.021z" /></svg>
+                            </span>
+                            @T("Account.Register")
+                        </button>
+                    </a>
+                </li>
+            }
+            @* <li><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login">@T("Account.Login")</a></li> *@
+            <li>
+                <a href="@Url.RouteUrl("Login", new { returnUrl })">
+                    <button class="login-btn">
+                        <span class="icon-container">
+                            <svg class="login-icon" viewBox="0 0 0.6 0.6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.375 0.1h0.075a0.05 0.05 0 0 1 0.05 0.05v0.3a0.05 0.05 0 0 1 -0.05 0.05h-0.075m-0.1 -0.1 0.1 -0.1m0 0 -0.1 -0.1m0.1 0.1H0.075"
+                                      stroke="#000000" stroke-width="0.037500000000000006"
+                                      stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        @T("Account.Login")
+                    </button>
+                </a>
+            </li>
+        }
+        @if (Model.AllowPrivateMessages)
+        {
+            <li>
+                <a href="@Url.RouteUrl("PrivateMessages", new { tab = "" })" class="ico-inbox">
+                    <span class="inbox-label">@T("PrivateMessages.Inbox")</span>
+                    <span class="inbox-unread">@Model.UnreadPrivateMessages</span>
+                </a>
+            </li>
+        }
+        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksAfter, additionalData = Model })
+    </ul>
+    @if (Model.AllowPrivateMessages && !string.IsNullOrEmpty(Model.AlertMessage))
+    {
+        //new private message notification
+        <script asp-location="Footer">
+            $(function() {
+                displayPopupNotification('@Html.Raw(JavaScriptEncoder.Default.Encode(Model.AlertMessage))', 'success', false);
+            });
+        </script>
+    }
+</div>
+

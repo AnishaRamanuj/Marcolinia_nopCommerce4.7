@@ -1,0 +1,57 @@
+﻿@model NopBooster.Plugin.ExternalAuth.Google.Model.ConfigurationModel
+
+@inject Nop.Core.IWebHelper webHelper
+
+@{
+    Layout = "_AdminLayout";
+}
+
+
+<form asp-controller="GoogleAuthentication" asp-action="Configure" method="post">
+
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            @T("NopBooster.Plugin.ExternalAuth.Google.Settings")
+        </h1>
+    </div>
+    <div class="form-horizontal content">
+        <div class="cards-group">
+            <div class="card card-default">
+                <div class="card-body">
+
+                    <span>
+                        @T("NopBooster.Plugin.ExternalAuth.Google.Instruction")
+                    </span>
+
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <nop-label asp-for="ClientId" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="ClientId" asp-required="true" />
+                            <span asp-validation-for="ClientId"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <nop-label asp-for="ClientSecret" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="ClientSecret" asp-required="true" />
+                            <span asp-validation-for="ClientSecret"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+

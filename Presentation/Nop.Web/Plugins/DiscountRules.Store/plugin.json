@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Discount requirements",
+  "FriendlyName": "Restricted to store",
+  "SystemName": "DiscountRequirement.Store",
+  "Version": "4.70.1",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "nopCommerce team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.DiscountRules.Store.dll",
+  "Description": "This plugin allows you to create a discounts restricted to one or several stores"
+}

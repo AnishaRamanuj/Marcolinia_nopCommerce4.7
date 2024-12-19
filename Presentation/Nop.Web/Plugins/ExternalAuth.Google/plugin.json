@@ -1,0 +1,11 @@
+{
+  "Group": "ExternalAuth",
+  "FriendlyName": "External Auth Google",
+  "SystemName": "ExternalAuth.Google",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Nop-Booster",
+  "DisplayOrder": 1,
+  "FileName": "NopBooster.Plugin.ExternalAuth.Google.dll",
+  "Description": "This plugin enables Google authentication (login using Google account)"
+}

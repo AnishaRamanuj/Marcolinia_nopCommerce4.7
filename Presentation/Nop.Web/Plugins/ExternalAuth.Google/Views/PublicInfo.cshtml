@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "";
+}
+
+<style>
+    .google-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #d34836;
+        color: #ffffff;
+        border: 1px solid #d34836;
+        border-radius: 5px;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
+
+</style>
+
+<a asp-controller="authentication" asp-action="login" asp-route-returnurl="@Context.Request.Query["ReturnUrl"]"
+   asp-route-authentication="Google" class="google-btn"><span class="icon-google"></span>Sign in with Google</a>

@@ -1,0 +1,49 @@
+﻿@using Nop.Core
+@using Nop.Core.Domain.Catalog
+@using Nop.Services.Configuration
+
+@inject IStoreContext storeContext
+@inject ISettingService settingService
+@inject IViewComponentSelector viewComponentSelector
+
+@{
+    var storeId = (await storeContext.GetCurrentStoreAsync()).Id;
+    var categoriesLayout = await settingService.GetSettingByKeyAsync("tiffanythemesettings.categorieslayout", String.Empty, storeId, true);
+}
+
+@if (Model.SubCategories.Count > 0)
+{
+    <div class="sub-category-grid @categoriesLayout">
+        <div class="item-grid">
+            @foreach (var item in Model.SubCategories)
+            {
+                <div class="item-box">
+                    <div class="sub-category-item">
+                        <h2 class="title">
+                            <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
+                                @item.Name
+                            </a>
+                        </h2>
+                        <div class="picture">
+                            <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
+                                @if (viewComponentSelector.SelectComponent("LazyLoadImage") != null)
+                                {
+                                    @await Component.InvokeAsync("LazyLoadImage", new(string Key, string Value)[] 
+                                    {
+                                        ("src", item.PictureModel.ImageUrl),
+                                        ("alt", item.PictureModel.AlternateText),
+                                        ("title", item.PictureModel.Title)
+                                    })
+                                }
+                                else
+                                {
+                                    <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
+                                }
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

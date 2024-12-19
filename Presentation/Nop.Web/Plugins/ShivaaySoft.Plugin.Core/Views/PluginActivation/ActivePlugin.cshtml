@@ -1,0 +1,143 @@
+@model ShivaayPluginKeyModel
+
+@{
+    Layout = "_AdminLayout";
+    //page title
+    ViewBag.PageTitle = "Shivaay Soft Plugin Activation";
+    //active menu item (system name)
+    NopHtml.SetActiveMenuItemSystemName(ShivaayCoreDefault.MenuPluginActivationSystemName);
+}
+<style>
+    .section-title {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
+<form asp-controller="PluginActivation" asp-action="ActivePlugin" method="post" id="category-form">
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            Shivaay Soft Plugin Activation
+        </h1>
+        <div class="float-right">
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="form-horizontal">
+                <div class="cards-group">
+                    <div class="card card-default">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <p>Must have to enter valid key on the box and hit the save button, the Key is received in your registered email.</p>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-1">
+                                    <nop-label asp-for="Key" />
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="input-group">
+                                        <nop-editor asp-for="Key" />
+                                        <div class="input-group-append">
+                                            <button type="submit" name="sendtestemail" class="btn btn-info">
+                                                @T("Admin.Common.Save")
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="Key"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @foreach (var item in Model.ShivaayPluginLicenses)
+                {
+                    <div class="cards-group">
+                        <div class="card card-default">
+                            <div class="card-body">
+                                @if (item.IsFreeTrial)
+                                {
+                                    <div class="form-group row">
+                                        <div class="form-group section-title" style="color:red;text-align: center;width: 100%;">
+                                            @if (@item.KeyExpiredInDays > 0)
+                                            {
+                                                <p>This License is for free trial it will expire in @(item.KeyExpiredInDays) days.</p>
+                                            }
+                                            else
+                                            {
+                                                <p>This License is for free trial it is expired.</p>
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                                <div class="form-group row">
+                                    <div class="form-group section-title">
+                                        Key
+                                    </div>
+                                    <div class="form-group" style="display:inline; word-break:break-all;">
+                                        @item.Key
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="form-group row">
+                                    <div class="form-group section-title">
+                                        The License is Valid for these Plugin
+                                    </div>
+                                    <div class="form-group">
+                                        <ul>
+                                            @foreach (var systemName in item.PluginSystemName)
+                                            {
+                                                <li>@systemName</li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                                @if (!item.IsFreeTrial)
+                                {
+                                    <div class="form-group row">
+                                        <div class="form-group section-title">
+                                            The License is valid for these Domain only
+                                        </div>
+                                        <div class="form-group">
+                                            <ul>
+                                                @foreach (var domain in item.ValiedForDomain)
+                                                {
+                                                    <li>@domain</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                }
+
+                                <div class="form-group row">
+                                    <button type="button" name="save-continue" class="btn btn-danger" onclick="DeleteLicenseKye('@(item.Key)')">
+                                        <i class="far fa-trash-alt"></i>
+                                        @T("Admin.Common.Delete")
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</form>
+<script type="text/javascript">
+    function DeleteLicenseKye(key) {
+        var postData = { key: key };
+        addAntiForgeryToken(postData)
+        $.ajax({
+            url: '@Url.Action("DeActivePlugin", "PluginActivation")',
+            cache: false,
+            data: postData,
+            type: "POST",
+            success: function (data) {
+                if (data.Success) {
+                    location.reload();
+                }
+            }
+        });
+    }
+</script>

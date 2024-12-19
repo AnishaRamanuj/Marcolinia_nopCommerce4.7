@@ -1,0 +1,272 @@
+﻿@model TiffanyThemeSettingsModel
+
+@{
+    Layout = AdminViewLocations.AdminLayoutViewPath;
+
+    NopHtml.SetActiveMenuItemSystemName("SevenSpikes.Themes.Admin.SettingsSubmenu.Tiffany");
+}
+
+<link rel="stylesheet" href="~/Plugins/SevenSpikes.Core/Areas/Admin/Content/Styles/adminstyles.css" />
+<link rel="stylesheet" href="~/Plugins/SevenSpikes.Theme.Tiffany/Areas/Admin/Content/Styles/admin.css" />
+
+<script src="~/Plugins/SevenSpikes.Core/Areas/Admin/Content/Scripts/custom.presets.min.js" asp-location="Footer"></script>
+<script src="~/Plugins/SevenSpikes.Theme.Tiffany/Areas/Admin/Content/Scripts/admin.min.js" asp-location="Footer"></script>
+
+<form method="post">
+    <nop-antiforgery-token />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#@Html.IdFor(model => model.LogoImageId_OverrideForStore)").change(logoOverrideChanged);
+            $("#@Html.IdFor(model => model.Preset_OverrideForStore)").change(colorPreset);
+
+            $('.store-scope-configuration .checkbox input').change(function () {
+                logoOverrideChanged();
+                colorPreset();
+            });
+
+            logoOverrideChanged();
+            colorPreset();
+
+            var customerPresetObj = new CustomPreset('.theme-color .radionButton:last label', '.theme-color .radionButton label');
+            customerPresetObj.setPresetsBackgroundColor();
+            customerPresetObj.addKendoColorPickerToTheLastRadioButton();
+
+        });
+
+        function logoOverrideChanged() {
+            if ($('#@Html.IdFor(model => model.LogoImageId_OverrideForStore)').length == 0) {
+                return;
+            }
+
+            if ($('#@Html.IdFor(model => model.LogoImageId_OverrideForStore)').is(':checked') == true) {
+                $("#logo-image .upload-image-overlay").remove();
+            } else {
+                $('#logo-image').append("<div class=\"upload-image-overlay\"></div>");
+            }
+        }
+
+        function colorPreset() {
+            if ($('#@Html.IdFor(model => model.Preset_OverrideForStore)').length == 0) {
+                return;
+            }
+
+            if ($('#@Html.IdFor(model => model.Preset_OverrideForStore)').is(':checked') == true) {
+                $(".theme-color .adminData .upload-image-overlay").remove();
+            } else {
+                $('.theme-color .adminData').append("<div class=\"upload-image-overlay\"></div>");
+            }
+        }
+    </script>
+
+    <div class="content-header clearfix">
+        <h1 class="float-left">
+            @T("SevenSpikes.Themes.Tiffany.Admin.Settings.ThemeSettings")
+        </h1>
+        <div class="float-right">
+            @{ await Html.RenderPartialAsync(AdminViewLocations.AdminResetDefaultSettingsViewPath, Plugin.FolderName); } 
+            <button type="submit" name="save" class="btn bg-blue">
+                <i class="far fa-save"></i>
+                @T("Admin.Common.Save")
+            </button>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="form-horizontal">
+            @await Component.InvokeAsync("StoreScopeConfiguration")
+            <div class="cards-default">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="form-group row theme-color">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Preset_OverrideForStore" asp-input="Preset" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Preset" />
+                            </div>
+                            <div class="col-md-9 adminData">
+                                @Html.NopRadioButtonsForPresets(Model.Presets, Model.Preset)
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="CatalogPagesLayout_OverrideForStore" asp-input="CatalogPagesLayout" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="CatalogPagesLayout" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-select asp-for="CatalogPagesLayout" asp-items="Model.SupportedCatalogPagesLayouts" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="HeaderLayout_OverrideForStore" asp-input="HeaderLayout" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="HeaderLayout" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-select asp-for="HeaderLayout" asp-items="Model.SupportedHeaderLayouts" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="CategoriesLayout_OverrideForStore" asp-input="CategoriesLayout" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="CategoriesLayout" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-select asp-for="CategoriesLayout" asp-items="Model.SupportedCategoriesLayouts" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="RollOverEnabled_OverrideForStore" asp-input="RollOverEnabled" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="RollOverEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="RollOverEnabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="ItemBoxHoverEffect_OverrideForStore" asp-input="ItemBoxHoverEffect" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="ItemBoxHoverEffect" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-select asp-for="ItemBoxHoverEffect" asp-items="Model.SupportedItemBoxHoverEffects" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="QuickTabsLayout_OverrideForStore" asp-input="QuickTabsLayout" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="QuickTabsLayout" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-select asp-for="QuickTabsLayout" asp-items="Model.SupportedQuickTabsLayouts" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="PinterestUserUrl_OverrideForStore" asp-input="PinterestUserUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="PinterestUserUrl" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="PinterestUserUrl" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="DefaultCategoryNavigationEnabled_OverrideForStore" asp-input="DefaultCategoryNavigationEnabled" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="DefaultCategoryNavigationEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="DefaultCategoryNavigationEnabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="DefaultManufacturerNavigationEnabled_OverrideForStore" asp-input="DefaultManufacturerNavigationEnabled" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="DefaultManufacturerNavigationEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="DefaultManufacturerNavigationEnabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="DefaultVendorNavigationEnabled_OverrideForStore" asp-input="DefaultVendorNavigationEnabled" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="DefaultVendorNavigationEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="DefaultVendorNavigationEnabled" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="PinterestUrl_OverrideForStore" asp-input="PinterestUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="PinterestUrl" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="PinterestUrl" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="VimeoUrl_OverrideForStore" asp-input="VimeoUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="VimeoUrl" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="VimeoUrl" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="InstagramUrl_OverrideForStore" asp-input="InstagramUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="InstagramUrl" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="InstagramUrl" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="RemoveCopyright_OverrideForStore" asp-input="RemoveCopyright" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="RemoveCopyright" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="RemoveCopyright" />
+                                <p><em>@T("SevenSpikes.Themes.Admin.Settings.RemoveCopyright.Hint.Link")</em></p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="RemoveDesignedBy_OverrideForStore" asp-input="RemoveDesignedBy" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="RemoveDesignedBy" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="RemoveDesignedBy" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="LogoImageId_OverrideForStore" asp-input="LogoImageId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="LogoImageId" />
+                            </div>
+                            <div class="col-md-9">
+                                <div id="logo-image">
+                                    <nop-editor asp-for="LogoImageId" />
+                                    <span asp-validation-for="LogoImageId"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="CustomHeadStyles_OverrideForStore" asp-input="CustomHeadStyles" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="CustomHeadStyles" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="CustomHeadStyles" style="height: 450px;" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="ProductImageProportion_OverrideForStore" asp-input="ProductImageProportion" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="ProductImageProportion" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ProductImageProportion" />
+                                <span asp-validation-for="ProductImageProportion"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="CategoryImageProportion_OverrideForStore" asp-input="CategoryImageProportion" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="CategoryImageProportion" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="CategoryImageProportion" />
+                                <span asp-validation-for="CategoryImageProportion"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

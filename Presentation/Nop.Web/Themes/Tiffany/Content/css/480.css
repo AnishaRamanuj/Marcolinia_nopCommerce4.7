@@ -1,0 +1,126 @@
+﻿/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (min-width: 481px) {
+	
+/* GLOBAL STYLES */
+/* HEADER */
+
+.search-box input.search-box-text {
+	width: 300px;
+}
+.ui-autocomplete {
+	width: 300px !important;
+}
+.eu-cookie-bar-notification {
+    width: 450px;
+    max-width: 95%;
+    margin-left: -225px;
+}
+
+/* FOOTER */
+
+.newsletter-email input[type="email"] {
+	width: 300px;
+}
+
+/* CATEGORY PAGE & GRIDS */
+
+.item-grid {
+    width:100%;
+    max-width:520px;
+    margin:auto;
+}
+.home-page-category-grid .item-grid {
+    max-width:560px;
+}
+.home-page-category-grid .item-box,
+.sub-category-grid .item-box,
+.manufacturer-grid .item-box,
+.vendor-grid .item-box  {
+    float:left;
+    margin:0;
+    width:50%;
+}
+.home-page-category-grid .item-box:nth-child(2n+1){
+    clear:both;
+}
+.home-page-category-grid.categories-1 .item-box:nth-child(2n+1) {
+    clear:none;
+}
+.home-page-category-grid.categories-2 .item-box,
+.sub-category-grid.categories-2 .item-box{
+    float:none;
+    width:auto;
+    max-width: 750px;
+    margin: auto;
+}
+.home-page-category-grid.categories-2 .item-box .title,
+.sub-category-grid.categories-2 .item-box .title {
+    background: rgba(255, 255, 255, 0.7);
+}
+.home-page-category-grid.categories-2 .item-box .title a, 
+.sub-category-grid.categories-2 .item-box .title a {
+border: 1px solid rgba(0, 0, 0, 0.2);
+color: #000000;
+padding: 10px 15px;
+}
+.home-page-category-grid.categories-2 .item-box .picture a,
+.sub-category-grid.categories-2 .item-box .picture a{
+    height:127px;
+}
+
+.product-grid .item-box,
+.product-list .item-box {
+    float: left;
+    width: 50%;
+}
+
+
+/* REVIEW PAGE */
+
+.product-review-list {
+	width: 90%;
+	max-width: 600px;
+	margin: 0 auto 50px;
+}
+.product-review-item .review-text {
+	border: 1px solid #ddd;
+}
+
+/* WISHLIST PAGE */
+
+.wishlist-content .buttons button {
+	width: auto;
+	min-width: 124px;
+}
+
+/* PASSWORD PROTECTION */
+.enter-password-form input[type="password"] {
+	width: 300px !important;
+}
+
+/* SHOPPING CART & CHECKOUT */
+
+.shopping-cart-page .common-buttons button,
+.shopping-cart-page .common-buttons a {
+    display: block;
+    margin: 0 auto;
+	width: 50%;
+}
+.cart-collaterals .coupon-code {
+    margin: auto;
+    max-width: 350px;
+}
+
+/* FORUM & PROFILE */
+
+.forum-search-box-text,
+.forum-search-text {
+	width: 300px !important;
+}
+
+}

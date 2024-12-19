@@ -1,0 +1,30 @@
+﻿
+span.search-box-text {
+    float: right;
+}
+input.instant-search-busy {
+    background-position: left 3% center;
+}
+.search-box-select {
+	float: right;
+}
+.search-box .k-clear-value {
+    right: unset;
+    left: 0px;
+}
+.instant-search-item .img-block {
+    float: right;
+}
+.instant-search-item .detail {
+	text-align:right;
+}
+.instant-search-item .detail .title {
+    margin:0 0 5px 0;
+}
+
+@media all and (min-width: 481px) {
+
+    .instant-search-item .detail {
+	    margin-right: 75px;
+    }
+}
