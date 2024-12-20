@@ -257,7 +257,5 @@ public partial class Customer : BaseEntity, ISoftDeletedEntity
         get => TaxDisplayTypeId.HasValue ? (TaxDisplayType)TaxDisplayTypeId : null;
         set => TaxDisplayTypeId = value.HasValue ? (int)value : null;
     }
-    public DateTime OTPExpirationTime { get; set; } // OTP expiration time
-    public bool IsVerified { get; set; }
     #endregion
 }
