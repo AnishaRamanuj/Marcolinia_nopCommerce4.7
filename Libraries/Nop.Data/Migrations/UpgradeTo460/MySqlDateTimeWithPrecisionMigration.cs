@@ -206,12 +206,12 @@ public class MySqlDateTimeWithPrecisionMigration : ForwardOnlyMigration
         Alter.Table(NameCompatibilityManager.GetTableName(typeof(OrderNote)))
             .AlterColumn(NameCompatibilityManager.GetColumnName(typeof(OrderNote), nameof(OrderNote.CreatedOnUtc)))
             .AsCustom("datetime(6)");
-        Alter.Table(NameCompatibilityManager.GetTableName(typeof(OtpVerification)))
-            .AlterColumn(NameCompatibilityManager.GetColumnName(typeof(OtpVerification), nameof(OtpVerification.EndDateUtc)))
+        Alter.Table(NameCompatibilityManager.GetTableName(typeof(Poll)))
+            .AlterColumn(NameCompatibilityManager.GetColumnName(typeof(Poll), nameof(Poll.EndDateUtc)))
             .AsCustom("datetime(6)")
             .Nullable();
-        Alter.Table(NameCompatibilityManager.GetTableName(typeof(OtpVerification)))
-            .AlterColumn(NameCompatibilityManager.GetColumnName(typeof(OtpVerification), nameof(OtpVerification.StartDateUtc)))
+        Alter.Table(NameCompatibilityManager.GetTableName(typeof(Poll)))
+            .AlterColumn(NameCompatibilityManager.GetColumnName(typeof(Poll), nameof(Poll.StartDateUtc)))
             .AsCustom("datetime(6)")
             .Nullable();
         Alter.Table(NameCompatibilityManager.GetTableName(typeof(PollVotingRecord)))

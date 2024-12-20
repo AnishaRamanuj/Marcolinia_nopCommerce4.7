@@ -8003,7 +8003,7 @@ namespace Nop.Services.Installation
         {
             var defaultLanguage = _languageRepository.Table.FirstOrDefault() ?? throw new Exception("Default language could not be loaded");
 
-            var poll1 = new OtpVerification
+            var poll1 = new Poll
             {
                 LanguageId = defaultLanguage.Id,
                 Name = "Do you like nopCommerce?",

@@ -12,7 +12,7 @@ public partial class PollService : IPollService
 {
     #region Fields
 
-    protected readonly IRepository<OtpVerification> _pollRepository;
+    protected readonly IRepository<Poll> _pollRepository;
     protected readonly IRepository<PollAnswer> _pollAnswerRepository;
     protected readonly IRepository<PollVotingRecord> _pollVotingRecordRepository;
     protected readonly IStoreMappingService _storeMappingService;
@@ -22,7 +22,7 @@ public partial class PollService : IPollService
     #region Ctor
 
     public PollService(
-        IRepository<OtpVerification> pollRepository,
+        IRepository<Poll> pollRepository,
         IRepository<PollAnswer> pollAnswerRepository,
         IRepository<PollVotingRecord> pollVotingRecordRepository,
         IStoreMappingService storeMappingService)
@@ -45,7 +45,7 @@ public partial class PollService : IPollService
     /// A task that represents the asynchronous operation
     /// The task result contains the poll
     /// </returns>
-    public virtual async Task<OtpVerification> GetPollByIdAsync(int pollId)
+    public virtual async Task<Poll> GetPollByIdAsync(int pollId)
     {
         return await _pollRepository.GetByIdAsync(pollId, cache => default);
     }
@@ -64,7 +64,7 @@ public partial class PollService : IPollService
     /// A task that represents the asynchronous operation
     /// The task result contains the polls
     /// </returns>
-    public virtual async Task<IPagedList<OtpVerification>> GetPollsAsync(int storeId, int languageId = 0, bool showHidden = false,
+    public virtual async Task<IPagedList<Poll>> GetPollsAsync(int storeId, int languageId = 0, bool showHidden = false,
         bool loadShownOnHomepageOnly = false, string systemKeyword = null,
         int pageIndex = 0, int pageSize = int.MaxValue)
     {
@@ -109,7 +109,7 @@ public partial class PollService : IPollService
     /// </summary>
     /// <param name="poll">The poll</param>
     /// <returns>A task that represents the asynchronous operation</returns>
-    public virtual async Task DeletePollAsync(OtpVerification poll)
+    public virtual async Task DeletePollAsync(Poll poll)
     {
         await _pollRepository.DeleteAsync(poll);
     }
@@ -119,7 +119,7 @@ public partial class PollService : IPollService
     /// </summary>
     /// <param name="poll">Poll</param>
     /// <returns>A task that represents the asynchronous operation</returns>
-    public virtual async Task InsertPollAsync(OtpVerification poll)
+    public virtual async Task InsertPollAsync(Poll poll)
     {
         await _pollRepository.InsertAsync(poll);
     }
@@ -129,7 +129,7 @@ public partial class PollService : IPollService
     /// </summary>
     /// <param name="poll">Poll</param>
     /// <returns>A task that represents the asynchronous operation</returns>
-    public virtual async Task UpdatePollAsync(OtpVerification poll)
+    public virtual async Task UpdatePollAsync(Poll poll)
     {
         await _pollRepository.UpdateAsync(poll);
     }

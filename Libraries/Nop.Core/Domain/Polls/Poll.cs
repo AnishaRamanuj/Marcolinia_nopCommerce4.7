@@ -5,7 +5,7 @@ namespace Nop.Core.Domain.Polls;
 /// <summary>
 /// Represents a poll
 /// </summary>
-public partial class OtpVerification : BaseEntity, IStoreMappingSupported
+public partial class Poll : BaseEntity, IStoreMappingSupported
 {
     /// <summary>
     /// Gets or sets the language identifier

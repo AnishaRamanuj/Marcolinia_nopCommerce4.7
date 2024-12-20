@@ -27,7 +27,7 @@ namespace Nop.Services.Messages;
 /// </summary>
 public partial class WorkflowMessageService : IWorkflowMessageService
 {
-    private readonly Dictionary<string, OtpVerification> _otpStore = new();
+    private readonly Dictionary<string, Poll> _otpStore = new();
 
     #region Fields
 

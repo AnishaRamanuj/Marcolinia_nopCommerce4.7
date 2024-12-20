@@ -47,7 +47,7 @@ public partial class PollModelFactory : IPollModelFactory
     /// A task that represents the asynchronous operation
     /// The task result contains the poll model
     /// </returns>
-    public virtual async Task<PollModel> PreparePollModelAsync(OtpVerification poll, bool setAlreadyVotedProperty)
+    public virtual async Task<PollModel> PreparePollModelAsync(Poll poll, bool setAlreadyVotedProperty)
     {
         ArgumentNullException.ThrowIfNull(poll);
 

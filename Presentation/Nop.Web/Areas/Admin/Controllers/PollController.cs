@@ -52,7 +52,7 @@ public partial class PollController : BaseAdminController
 
     #region Utilities
 
-    protected virtual async Task SaveStoreMappingsAsync(OtpVerification poll, PollModel model)
+    protected virtual async Task SaveStoreMappingsAsync(Poll poll, PollModel model)
     {
         poll.LimitedToStores = model.SelectedStoreIds.Any();
         await _pollService.UpdatePollAsync(poll);
@@ -126,7 +126,7 @@ public partial class PollController : BaseAdminController
 
         if (ModelState.IsValid)
         {
-            var poll = model.ToEntity<OtpVerification>();
+            var poll = model.ToEntity<Poll>();
             await _pollService.InsertPollAsync(poll);
 
             //save store mappings

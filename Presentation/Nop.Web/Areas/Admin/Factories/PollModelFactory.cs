@@ -54,7 +54,7 @@ public partial class PollModelFactory : IPollModelFactory
     /// <param name="searchModel">Poll answer search model</param>
     /// <param name="poll">Poll</param>
     /// <returns>Poll answer search model</returns>
-    protected virtual PollAnswerSearchModel PreparePollAnswerSearchModel(PollAnswerSearchModel searchModel, OtpVerification poll)
+    protected virtual PollAnswerSearchModel PreparePollAnswerSearchModel(PollAnswerSearchModel searchModel, Poll poll)
     {
         ArgumentNullException.ThrowIfNull(searchModel);
 
@@ -146,7 +146,7 @@ public partial class PollModelFactory : IPollModelFactory
     /// A task that represents the asynchronous operation
     /// The task result contains the poll model
     /// </returns>
-    public virtual async Task<PollModel> PreparePollModelAsync(PollModel model, OtpVerification poll, bool excludeProperties = false)
+    public virtual async Task<PollModel> PreparePollModelAsync(PollModel model, Poll poll, bool excludeProperties = false)
     {
         if (poll != null)
         {
@@ -185,7 +185,7 @@ public partial class PollModelFactory : IPollModelFactory
     /// A task that represents the asynchronous operation
     /// The task result contains the poll answer list model
     /// </returns>
-    public virtual async Task<PollAnswerListModel> PreparePollAnswerListModelAsync(PollAnswerSearchModel searchModel, OtpVerification poll)
+    public virtual async Task<PollAnswerListModel> PreparePollAnswerListModelAsync(PollAnswerSearchModel searchModel, Poll poll)
     {
         ArgumentNullException.ThrowIfNull(searchModel);
 

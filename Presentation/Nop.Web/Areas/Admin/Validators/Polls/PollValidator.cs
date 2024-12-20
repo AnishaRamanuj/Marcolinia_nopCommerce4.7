@@ -12,6 +12,6 @@ public partial class PollValidator : BaseNopValidator<PollModel>
     {
         RuleFor(x => x.Name).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Admin.ContentManagement.Polls.Fields.Name.Required"));
 
-        SetDatabaseValidationRules<OtpVerification>();
+        SetDatabaseValidationRules<Poll>();
     }
 }

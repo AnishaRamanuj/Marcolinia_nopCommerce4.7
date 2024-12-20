@@ -150,7 +150,7 @@ public class SchemaMigration : ForwardOnlyMigration
         Create.TableFor<QueuedEmail>();
         Create.TableFor<NewsItem>();
         Create.TableFor<NewsComment>();
-        Create.TableFor<OtpVerification>();
+        Create.TableFor<Poll>();
         Create.TableFor<PollAnswer>();
         Create.TableFor<PollVotingRecord>();
         Create.TableFor<AclRecord>();

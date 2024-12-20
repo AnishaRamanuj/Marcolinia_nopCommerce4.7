@@ -17,7 +17,7 @@ public partial interface IPollModelFactory
     /// A task that represents the asynchronous operation
     /// The task result contains the poll model
     /// </returns>
-    Task<PollModel> PreparePollModelAsync(OtpVerification poll, bool setAlreadyVotedProperty);
+    Task<PollModel> PreparePollModelAsync(Poll poll, bool setAlreadyVotedProperty);
 
     /// <summary>
     /// Get the poll model by poll system keyword

@@ -8,7 +8,7 @@ namespace Nop.Data.Mapping.Builders.Polls;
 /// <summary>
 /// Represents a poll entity builder
 /// </summary>
-public partial class PollBuilder : NopEntityBuilder<OtpVerification>
+public partial class PollBuilder : NopEntityBuilder<Poll>
 {
     #region Methods
 
@@ -19,8 +19,8 @@ public partial class PollBuilder : NopEntityBuilder<OtpVerification>
     public override void MapEntity(CreateTableExpressionBuilder table)
     {
         table
-            .WithColumn(nameof(OtpVerification.Name)).AsString(int.MaxValue).NotNullable()
-            .WithColumn(nameof(OtpVerification.LanguageId)).AsInt32().ForeignKey<Language>();
+            .WithColumn(nameof(Poll.Name)).AsString(int.MaxValue).NotNullable()
+            .WithColumn(nameof(Poll.LanguageId)).AsInt32().ForeignKey<Language>();
     }
 
     #endregion

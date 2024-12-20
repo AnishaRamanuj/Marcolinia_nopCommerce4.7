@@ -19,7 +19,7 @@ public partial class PollAnswerBuilder : NopEntityBuilder<PollAnswer>
     {
         table
             .WithColumn(nameof(PollAnswer.Name)).AsString(int.MaxValue).NotNullable()
-            .WithColumn(nameof(PollAnswer.PollId)).AsInt32().ForeignKey<OtpVerification>();
+            .WithColumn(nameof(PollAnswer.PollId)).AsInt32().ForeignKey<Poll>();
     }
 
     #endregion

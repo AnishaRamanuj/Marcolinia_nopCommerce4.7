@@ -1474,11 +1474,11 @@ public partial class AdminMapperConfiguration : Profile, IOrderedMapperProfile
         CreateMap<PollAnswer, PollAnswerModel>();
         CreateMap<PollAnswerModel, PollAnswer>();
 
-        CreateMap<OtpVerification, PollModel>()
+        CreateMap<Poll, PollModel>()
             .ForMember(model => model.AvailableLanguages, options => options.Ignore())
             .ForMember(model => model.PollAnswerSearchModel, options => options.Ignore())
             .ForMember(model => model.LanguageName, options => options.Ignore());
-        CreateMap<PollModel, OtpVerification>();
+        CreateMap<PollModel, Poll>();
     }
 
     /// <summary>

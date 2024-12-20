@@ -38,7 +38,7 @@ public partial interface IPollModelFactory
     /// A task that represents the asynchronous operation
     /// The task result contains the poll model
     /// </returns>
-    Task<PollModel> PreparePollModelAsync(PollModel model, OtpVerification poll, bool excludeProperties = false);
+    Task<PollModel> PreparePollModelAsync(PollModel model, Poll poll, bool excludeProperties = false);
 
     /// <summary>
     /// Prepare paged poll answer list model
@@ -49,5 +49,5 @@ public partial interface IPollModelFactory
     /// A task that represents the asynchronous operation
     /// The task result contains the poll answer list model
     /// </returns>
-    Task<PollAnswerListModel> PreparePollAnswerListModelAsync(PollAnswerSearchModel searchModel, OtpVerification poll);
+    Task<PollAnswerListModel> PreparePollAnswerListModelAsync(PollAnswerSearchModel searchModel, Poll poll);
 }

@@ -16,7 +16,7 @@ public partial interface IPollService
     /// A task that represents the asynchronous operation
     /// The task result contains the poll
     /// </returns>
-    Task<OtpVerification> GetPollByIdAsync(int pollId);
+    Task<Poll> GetPollByIdAsync(int pollId);
 
     /// <summary>
     /// Gets polls
@@ -32,7 +32,7 @@ public partial interface IPollService
     /// A task that represents the asynchronous operation
     /// The task result contains the polls
     /// </returns>
-    Task<IPagedList<OtpVerification>> GetPollsAsync(int storeId, int languageId = 0, bool showHidden = false,
+    Task<IPagedList<Poll>> GetPollsAsync(int storeId, int languageId = 0, bool showHidden = false,
         bool loadShownOnHomepageOnly = false, string systemKeyword = null,
         int pageIndex = 0, int pageSize = int.MaxValue);
 
@@ -41,21 +41,21 @@ public partial interface IPollService
     /// </summary>
     /// <param name="poll">The poll</param>
     /// <returns>A task that represents the asynchronous operation</returns>
-    Task DeletePollAsync(OtpVerification poll);
+    Task DeletePollAsync(Poll poll);
 
     /// <summary>
     /// Inserts a poll
     /// </summary>
     /// <param name="poll">Poll</param>
     /// <returns>A task that represents the asynchronous operation</returns>
-    Task InsertPollAsync(OtpVerification poll);
+    Task InsertPollAsync(Poll poll);
 
     /// <summary>
     /// Updates the poll
     /// </summary>
     /// <param name="poll">Poll</param>
     /// <returns>A task that represents the asynchronous operation</returns>
-    Task UpdatePollAsync(OtpVerification poll);
+    Task UpdatePollAsync(Poll poll);
 
     /// <summary>
     /// Gets a poll answer

@@ -71,9 +71,9 @@ public partial class ModelCacheEventConsumer :
     //Product review
     IConsumer<EntityDeletedEvent<ProductReview>>,
     //polls
-    IConsumer<EntityInsertedEvent<OtpVerification>>,
-    IConsumer<EntityUpdatedEvent<OtpVerification>>,
-    IConsumer<EntityDeletedEvent<OtpVerification>>,
+    IConsumer<EntityInsertedEvent<Poll>>,
+    IConsumer<EntityUpdatedEvent<Poll>>,
+    IConsumer<EntityDeletedEvent<Poll>>,
     //blog posts
     IConsumer<EntityInsertedEvent<BlogPost>>,
     IConsumer<EntityUpdatedEvent<BlogPost>>,
@@ -449,19 +449,19 @@ public partial class ModelCacheEventConsumer :
     #region Polls
 
     /// <returns>A task that represents the asynchronous operation</returns>
-    public async Task HandleEventAsync(EntityInsertedEvent<OtpVerification> eventMessage)
+    public async Task HandleEventAsync(EntityInsertedEvent<Poll> eventMessage)
     {
         await _staticCacheManager.RemoveByPrefixAsync(NopModelCacheDefaults.PollsPrefixCacheKey);
     }
 
     /// <returns>A task that represents the asynchronous operation</returns>
-    public async Task HandleEventAsync(EntityUpdatedEvent<OtpVerification> eventMessage)
+    public async Task HandleEventAsync(EntityUpdatedEvent<Poll> eventMessage)
     {
         await _staticCacheManager.RemoveByPrefixAsync(NopModelCacheDefaults.PollsPrefixCacheKey);
     }
 
     /// <returns>A task that represents the asynchronous operation</returns>
-    public async Task HandleEventAsync(EntityDeletedEvent<OtpVerification> eventMessage)
+    public async Task HandleEventAsync(EntityDeletedEvent<Poll> eventMessage)
     {
         await _staticCacheManager.RemoveByPrefixAsync(NopModelCacheDefaults.PollsPrefixCacheKey);
     }
