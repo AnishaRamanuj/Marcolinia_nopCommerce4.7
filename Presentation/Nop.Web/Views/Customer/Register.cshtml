@@ -8,6 +8,467 @@
     //page class
     NopHtml.AppendPageCssClassParts("html-registration-page");
 }
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+<style>
+    .master-column-wrapper {
+        background: transparent;
+    }
+
+    .master-wrapper-content {
+        border: 0;
+        box-shadow: none;
+        background-color: #f3f3f9;
+        margin: 0px;
+    }
+
+        .master-wrapper-content::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/pattern.svg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            background-repeat: no-repeat;
+        }
+</style>
+
+
+<div class="login-page-main">
+    <div class="heading-box">
+        <h2>Welcome, Please Sign Up!</h2>
+        <p>Already have an account <a href="javascript:void();">Login</a></p>
+    </div>
+    <div class="social-login">
+        <button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                    <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917"></path>
+                    <path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691"></path>
+                    <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44"></path>
+                    <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"></path>
+                </svg>
+            </span>
+            Continue with Google
+        </button>
+        <button><span><img src="~/images/microsoft_icon.svg.png" /></span> Continue with Microsoft </button>
+        <button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                    <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#2aa4f4"></stop>
+                        <stop offset="1" stop-color="#007ad9"></stop>
+                    </linearGradient>
+                    <path fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)" d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4"></path>
+                    <path fill="#fff" d="M26.707 29.301h5.176l.813-5.258h-5.989v-2.874c0-2.184.714-4.121 2.757-4.121h3.283V12.46c-.577-.078-1.797-.248-4.102-.248-4.814 0-7.636 2.542-7.636 8.334v3.498H16.06v5.258h4.948v14.452c.98.146 1.973.246 2.992.246.921 0 1.82-.084 2.707-.204z"></path>
+                </svg>
+            </span>
+            Continue with Facebook
+        </button>
+        <button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+                    <path d="M44.527 34.75c-1.078 2.395-1.597 3.465-2.984 5.578-1.941 2.953-4.68 6.64-8.063 6.664-3.011.028-3.789-1.965-7.878-1.93-4.086.02-4.938 1.97-7.954 1.938-3.386-.031-5.976-3.352-7.918-6.3-5.43-8.27-6.003-17.966-2.648-23.122 2.375-3.656 6.129-5.805 9.656-5.805 3.594 0 5.852 1.973 8.82 1.973 2.883 0 4.637-1.976 8.794-1.976 3.14 0 6.46 1.71 8.836 4.664-7.766 4.257-6.504 15.347 1.34 18.316M31.195 8.469c1.512-1.942 2.66-4.68 2.242-7.469-2.464.168-5.347 1.742-7.03 3.781-1.528 1.86-2.794 4.617-2.302 7.285 2.692.086 5.477-1.52 7.09-3.597"></path>
+                </svg>
+            </span>
+            Continue with Apple
+        </button>
+    </div>
+    <div class="login-or"><span>or</span></div>
+    <form>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="form-input">
+                <div class="input-flexbox">
+                    <span class="radio-btn">
+                        <input type="radio" value="M" name="Gender">
+                        <label class="forcheckbox" for="gender-male">Male</label> 
+                    </span>
+                    <span class="radio-btn">
+                        <input type="radio" value="F" name="Gender">
+                        <label class="forcheckbox" for="gender-female">Female</label>
+                    </span>
+                </div>
+             </div>
+        </div>
+        <div class="form-group">
+            <label>First Name <span class="astrick">*</span></label>
+            <div class="form-input">
+                <input type="password" class="form-control" placeholder="First Name">
+            </div>
+        </div>
+         <div class="form-group">
+            <label>Last Name <span class="astrick">*</span></label>
+            <div class="form-input">
+                <input type="password" class="form-control" placeholder="Last Name">
+            </div>
+        </div>
+         <div class="form-group">
+            <label>Date of Birth</label>
+            <div class="form-input">
+                <div class="input-flexbox">
+                    <div class="select-box">
+                        <select name="DateOfBirthDay" class="form-control">
+                            <option value="0">Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                     <div class="select-box">
+                        <select name="DateOfBirthMonth" class="form-control">
+                            <option value="0">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="select-box">
+                        <select name="DateOfBirthYear" class="form-control">
+                           <option value="0">Year</option>
+                           <option value="1914">1914</option>
+                           <option value="1915">1915</option>
+                           <option value="1916">1916</option>
+                           <option value="1917">1917</option>
+                           <option value="1918">1918</option>
+                           <option value="1919">1919</option>
+                           <option value="1920">1920</option>
+                           <option value="1921">1921</option>
+                           <option value="1922">1922</option>
+                           <option value="1923">1923</option>
+                           <option value="1924">1924</option>
+                           <option value="1925">1925</option>
+                           <option value="1926">1926</option>
+                           <option value="1927">1927</option>
+                           <option value="1928">1928</option>
+                           <option value="1929">1929</option>
+                           <option value="1930">1930</option>
+                           <option value="1931">1931</option>
+                           <option value="1932">1932</option>
+                           <option value="1933">1933</option>
+                           <option value="1934">1934</option>
+                           <option value="1935">1935</option>
+                           <option value="1936">1936</option>
+                           <option value="1937">1937</option>
+                           <option value="1938">1938</option>
+                           <option value="1939">1939</option>
+                           <option value="1940">1940</option>
+                           <option value="1941">1941</option>
+                           <option value="1942">1942</option>
+                           <option value="1943">1943</option>
+                           <option value="1944">1944</option>
+                           <option value="1945">1945</option>
+                           <option value="1946">1946</option>
+                           <option value="1947">1947</option>
+                           <option value="1948">1948</option>
+                           <option value="1949">1949</option>
+                           <option value="1950">1950</option>
+                           <option value="1951">1951</option>
+                           <option value="1952">1952</option>
+                           <option value="1953">1953</option>
+                           <option value="1954">1954</option>
+                           <option value="1955">1955</option>
+                           <option value="1956">1956</option>
+                           <option value="1957">1957</option>
+                           <option value="1958">1958</option>
+                           <option value="1959">1959</option>
+                           <option value="1960">1960</option>
+                           <option value="1961">1961</option>
+                           <option value="1962">1962</option>
+                           <option value="1963">1963</option>
+                           <option value="1964">1964</option>
+                           <option value="1965">1965</option>
+                           <option value="1966">1966</option>
+                           <option value="1967">1967</option>
+                            <option value="1968">1968</option>
+                            <option value="1969">1969</option>
+                            <option value="1970">1970</option>
+                            <option value="1971">1971</option>
+                            <option value="1972">1972</option>
+                            <option value="1973">1973</option>
+                            <option value="1974">1974</option>
+                            <option value="1975">1975</option>
+                            <option value="1976">1976</option>
+                            <option value="1977">1977</option>
+                            <option value="1978">1978</option>
+                            <option value="1979">1979</option>
+                            <option value="1980">1980</option>
+                            <option value="1981">1981</option>
+                            <option value="1982">1982</option>
+                            <option value="1983">1983</option>
+                            <option value="1984">1984</option>
+                            <option value="1985">1985</option>
+                            <option value="1986">1986</option>
+                            <option value="1987">1987</option>
+                            <option value="1988">1988</option>
+                            <option value="1989">1989</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                            <option value="1994">1994</option>
+                            <option value="1995">1995</option>
+                            <option value="1996">1996</option>
+                            <option value="1997">1997</option>
+                            <option value="1998">1998</option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                        </select>
+                        </div>
+                </div>
+            </div>
+        </div>
+         <div class="form-group">
+            <label>Email <span class="astrick">*</span></label>
+            <div class="form-input">
+                <input type="email" class="form-control" name="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Country <span class="astrick">*</span></label>
+            <div class="form-input">
+                <select name="CountryId" class="form-control">
+                    <option selected="" value="0">Select country</option>
+                    <option value="225">U A E</option>
+                    <option value="187">Saudi Arabia</option>
+                    <option value="477">United States of America</option>
+                    <option value="726">United States of America</option>
+                    <option value="163">Oman</option>
+                    <option value="176">Qatar</option>
+                    <option value="241">Afghanistan</option>
+                    <option value="490">Afghanistan</option>
+                    <option value="491">Åland Islands</option>
+                    <option value="242">Åland Islands</option>
+                    <option value="243">Albania</option>
+                    <option value="530">Canada</option>
+                    <option value="531">Cayman Islands</option>
+                    <option value="282">Cayman Islands</option>
+                    <option value="283">Central African Republic</option>
+                    <option value="532">Central African Republic</option>
+                    <option value="533">Chad</option>
+                    <option value="284">Chad</option>
+                    <option value="285">Chile</option>
+                    <option value="534">Chile</option>
+                    <option value="535">China</option>
+                    <option value="286">China</option>
+                    <option value="287">Christmas Island</option>
+                    <option value="536">Christmas Island</option>
+                    <option value="537">Cocos (Keeling) Islands</option>
+                    <option value="288">Cocos (Keeling) Islands</option>
+                    <option value="289">Colombia</option>
+                    <option value="538">Colombia</option>
+                    <option value="539">Comoros</option>
+                    <option value="290">Comoros</option>
+                    <option value="291">Congo</option>
+                    <option value="540">Congo</option>
+                    <option value="541">Congo (Democratic Republic of the)</option>
+                    <option value="292">Congo (Democratic Republic of the)</option>
+                    <option value="293">Cook Islands</option>
+                    <option value="542">Cook Islands</option>
+                    <option value="543">Costa Rica</option>
+                    <option value="294">Costa Rica</option>
+                    <option value="295">Côte d'Ivoire</option>
+                    <option value="544">Côte d'Ivoire</option>
+                    <option value="545">Croatia</option>
+                    <option value="296">Croatia</option>
+                    <option value="297">Cuba</option>
+                    <option value="546">Cuba</option>
+                    <option value="547">Curaçao</option>
+                    <option value="298">Curaçao</option>
+                    <option value="299">Cyprus</option>
+                    <option value="548">Cyprus</option>
+                    <option value="549">Czechia</option>
+                    <option value="300">Czechia</option>
+                    <option value="301">Denmark</option>
+                    <option value="550">Denmark</option>
+                    <option value="551">Djibouti</option>
+                    <option value="302">Djibouti</option>
+                    <option value="303">Dominica</option>
+                    <option value="552">Dominica</option>
+                    <option value="553">Dominican Republic</option>
+                    <option value="304">Dominican Republic</option>
+                    <option value="305">Ecuador</option>
+                    <option value="554">Ecuador</option>
+                    <option value="555">Egypt</option>
+                    <option value="306">Egypt</option>
+                    <option value="307">El Salvador</option>
+                    <option value="556">El Salvador</option>
+                    <option value="557">Equatorial Guinea</option>
+                    <option value="308">Equatorial Guinea</option>
+                    <option value="309">Eritrea</option>
+                    <option value="558">Eritrea</option>
+                    <option value="559">Estonia</option>
+                    <option value="310">Estonia</option>
+                    <option value="311">Eswatini</option>
+                    <option value="560">Eswatini</option>
+                    <option value="561">Ethiopia</option>
+                    <option value="312">Ethiopia</option>
+                    <option value="313">Falkland Islands (Malvinas)</option>
+                    <option value="562">Falkland Islands (Malvinas)</option>
+                    <option value="563">Faroe Islands</option>
+                    <option value="314">Faroe Islands</option>
+                    <option value="315">Fiji</option>
+                    <option value="564">Fiji</option>
+                    <option value="565">Finland</option>
+                    <option value="316">Finland</option>
+                    <option value="317">France</option>
+                    <option value="566">France</option>
+                    <option value="567">French Guiana</option>
+                    <option value="318">French Guiana</option>
+                    <option value="319">French Polynesia</option>
+                    <option value="568">French Polynesia</option>
+                    <option value="569">French Southern Territories</option>
+                    <option value="320">French Southern Territories</option>
+                    <option value="321">Gabon</option>
+                    <option value="570">Gabon</option>
+                    <option value="571">Gambia</option>
+                    <option value="322">Gambia</option>
+                    <option value="323">Georgia</option>
+                    <option value="572">Georgia</option>
+                    <option value="573">Germany</option>
+                    <option value="324">Germany</option>
+                    <option value="325">Ghana</option>
+                    <option value="574">Ghana</option>
+                    <option value="575">Gibraltar</option>
+                    <option value="326">Gibraltar</option>
+                    <option value="327">Greece</option>
+                    <option value="576">Greece</option>
+                    <option value="577">Greenland</option>
+                    <option value="328">Greenland</option>
+                    <option value="329">Grenada</option>
+                    <option value="578">Grenada</option>
+                    <option value="579">Guadeloupe</option>
+                    <option value="330">Guadeloupe</option>
+                    <option value="331">Guam</option>
+                    <option value="580">Guam</option>
+                    <option value="581">Guatemala</option>
+                    <option value="332">Guatemala</option>
+                    <option value="333">Guernsey</option>
+                    <option value="582">Guernsey</option>
+                    <option value="583">Guinea</option>
+                    <option value="334">Guinea</option>
+                    <option value="335">Guinea-Bissau</option>
+                    <option value="584">Guinea-Bissau</option>
+                    <option value="585">Guyana</option>
+                    <option value="336">Guyana</option>
+                    <option value="337">Haiti</option>
+                    <option value="586">Haiti</option>
+                    <option value="587">Heard Island and McDonald Islands</option>
+                    <option value="338">Heard Island and McDonald Islands</option>
+                    <option value="339">Holy See</option>
+                    <option value="588">Holy See</option>
+                    <option value="589">Honduras</option>
+                    <option value="340">Honduras</option>
+                    <option value="341">Hong Kong</option>
+                    <option value="590">Hong Kong</option>
+                    <option value="591">Hungary</option>
+                    <option value="342">Hungary</option>
+                    <option value="737">Zambia</option>
+                    <option value="488">Zambia</option>
+                    <option value="489">Zimbabwe</option>
+                    <option value="738">Zimbabwe</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Phone <span class="astrick">*</span></label>
+            <div class="form-input">
+                <input type="tel" class="form-control" name="Phone">
+            </div>
+        </div>
+       
+         <div class="form-group">
+            <label>Password <span class="astrick">*</span></label>
+            <div class="form-input">
+                <input type="password" class="form-control" name="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Confirm password: <span class="astrick">*</span></label>
+            <div class="form-input">
+                <input type="password" class="form-control" name="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="flex-box">
+                <div class="checkbox-input-label">
+                    <input type="checkbox" name="Newsletter" value="true"> <label for="Newsletter">Newsletter</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="login_btn"><button type="submit" class="btn theme-btn">Register</button></div>
+        </div>
+    </form>
+</div>
+
+
 
 <div class="page registration-page">
     <div class="page-title">

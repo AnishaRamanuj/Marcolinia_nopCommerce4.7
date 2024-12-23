@@ -8072,27 +8072,30 @@ label, label + * {
     color: #4ab2f1;
   }
 
-  .header-menu .sublist {
-    display: none;
-    position: absolute;
-    width: 200px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
-    background-color: #fff;
-    padding: 10px 0;
-    text-align: left;
-  }
+    .header-menu .sublist {
+        display: none;
+        position: absolute;
+        width: 240px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+        background-color: #fff;
+        padding: 8px 0;
+        text-align: left;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+    }
 
   .header-menu .sublist li {
     position: relative;
   }
 
-  .header-menu .sublist li a {
-    display: block;
-    position: relative;
-    padding: 10px 20px 10px 30px;
-    font-size: 14px;
-    color: #444;
-  }
+    .header-menu .sublist li a {
+        display: block;
+        position: relative;
+        padding: 8px 20px 8px 30px;
+        font-size: 14px;
+        color: #444;
+        background: #ffffff;
+    }
 
   .header-menu .sublist li a:before {
     content: "";

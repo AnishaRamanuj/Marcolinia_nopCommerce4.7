@@ -375,15 +375,18 @@
       font-family: Noto serif, "Trebuchet MS", Arial, Helvetica, sans-serif;
       text-transform: uppercase;
     }
-	.header-menu .sublist-wrap {
-		display: none;
-		position: absolute;
-		top: 45px;
-		z-index: 1001;
-		width: 200px;
-		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
-		background: rgba(255,255,255,0.85);
-	}
+		.header-menu .sublist-wrap {
+			display: none;
+			position: absolute;
+			top: 45px;
+			z-index: 1001;
+			width: 180px;
+			/*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);*/
+			/*background: rgba(255,255,255,0.85);*/
+			background: #fff;
+			border-radius: 5px;
+			border: 1px solid #ddd;
+		}
 	.header-menu .sublist-wrap.active {
 		display: block;
 	}
@@ -398,7 +401,8 @@
 	}
 	.header-menu .sublist li a {
 		display: block;
-		background: rgba(57,50,48,0.7);
+		background:#ffffff;
+	/*	background: rgba(57,50,48,0.7);*/
 		padding: 10px 24px 10px 24px;
 		font-size: 15px;
 		color: #fff;
@@ -751,7 +755,7 @@
 	}
 	.home-page-category-grid.categories-1 .item-box:hover .title,
 	.sub-category-grid.categories-1 .item-box:hover .title {
-		background: url("../img/title-decoration.png") no-repeat scroll center 97px rgba(0, 0, 0, 0.5)/* CHECK_HERE */;
+		/*background: url("../img/title-decoration.png") no-repeat scroll center 97px rgba(0, 0, 0, 0.5)*/
 		height: 167px;
 	}
 	.categories-2 .sub-category-item,
@@ -803,7 +807,7 @@
 	}
 	.add-info .buttons .product-box-add-to-cart-button,
 	.add-info .buttons .add-to-compare-list-button {
-		background-color: #8e807a;
+		background-color: #b68d40;
 	}
 	.product-grid .hover-effect-2 .picture {
 		margin: 0;
