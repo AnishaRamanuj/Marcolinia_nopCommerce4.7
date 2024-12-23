@@ -17,7 +17,7 @@
     display: block;
     width: 45px;
     height: 45px;
-    background: #b68d40 url('images/quick-view.png') center no-repeat;
+    background: #8e807a url('images/quick-view.png') center no-repeat;
     padding: 0;
     font-size: 0;
     cursor: pointer;
@@ -111,7 +111,7 @@
 .quickViewWindow .product-name {
     margin: 0;
     padding:0 0 20px 0;
-   /* background:url(images/title-decoration.png) no-repeat center bottom;*/
+    background:url(images/title-decoration.png) no-repeat center bottom;
 	font-family: Arvo;
 	text-transform: uppercase;
     text-align: center;
@@ -124,10 +124,10 @@
 .quickViewWindow .overview {
     padding: 0;
 }
-    .quickViewWindow .overview .stock .value,
-    .quickViewWindow .overview .manufacturers .value {
-        color: #d6ad60;
-    }
+.quickViewWindow .overview .stock .value,
+.quickViewWindow .overview .manufacturers .value {
+    color:#8e807a;
+}
 .quickViewWindow a {
     font-size:13px;
 }

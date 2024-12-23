@@ -59,20 +59,17 @@
 	display: none !important;
 }
 
-	.mega-menu .dropdown {
-		display: none;
-		position: absolute;
-		z-index: 3; /*necessary of there is a :before or :after with another z-index*/
-		overflow: hidden;
-		background: #fff;
-		min-width: 180px;
-/*		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);*/
-		/*background: rgba(255,255,255,0.85);*/
-		background:#fff;
-		transition: all .3s ease;
-		border-radius: 5px;
-		border: 1px solid #ddd;
-	}
+.mega-menu .dropdown {
+	display: none;
+	position: absolute;
+	z-index: 3; /*necessary of there is a :before or :after with another z-index*/
+	overflow: hidden;
+	background: #fff;
+	min-width: 180px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+	background: rgba(255,255,255,0.85);
+	transition: all .3s ease;
+}
     .mega-menu .dropdown.active {
         display: block;
     }
@@ -116,8 +113,7 @@
 	width: 1000px;
 	margin: 0 auto;
 	padding: 10px;
-	background:#ffffff;
-	/*background: rgba(255,255,255,.95);*/
+	background: rgba(255,255,255,.95);
 }
 
 .mega-menu .dropdown.fullWidth .box a,
@@ -213,7 +209,7 @@
 	font-family: Arvo;
 	text-transform: uppercase;
 	text-align: center;
-	/*background: url(images/title-decoration.png)no-repeat center bottom;*/
+	background: url(images/title-decoration.png)no-repeat center bottom;
 }
 
 .mega-menu .dropdown.categories.fullWidth .box .title a {
@@ -274,7 +270,7 @@
 
 .mega-menu .topic-wrapper strong {
 	display: block;
-	/*background:url(images/title-decoration.png) no-repeat center bottom;*/
+	background:url(images/title-decoration.png) no-repeat center bottom;
 	padding: 8px 0 20px 0;
 	font-size: 16px;
 	text-transform: uppercase;

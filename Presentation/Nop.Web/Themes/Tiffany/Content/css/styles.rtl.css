@@ -160,7 +160,7 @@ label, label + * {
 	padding-bottom: 20px;
 	font-family: 'Arvo';
 	text-transform: uppercase;
-/*	background: url('../img/title-decoration.png')no-repeat center bottom;*/
+	background: url('../img/title-decoration.png')no-repeat center bottom;
 	font-weight: normal;
 	font-size: 22px;
 	color: #000;
@@ -770,7 +770,7 @@ label, label + * {
 	font-family: 'Arvo';
 	font-size: 18px;
 	text-transform: uppercase;
-	/*background: url(../img/title-decoration.png)no-repeat center bottom;*/
+	background: url(../img/title-decoration.png)no-repeat center bottom;
 }
 .footer-upper .title.overlaid strong {
 	font-weight: normal;
@@ -826,7 +826,7 @@ label, label + * {
 	color: #555;
 }
 .newsletter .title{
-    /*background: url("../img/title-decoration.png") no-repeat center bottom;*/
+    background: url("../img/title-decoration.png") no-repeat center bottom;
     font-family: "Arvo";
     font-size: 18px;
     margin: 20px;
@@ -860,7 +860,7 @@ label, label + * {
 	height: 36px;
 	border: none;
 	overflow: hidden;
-/*	background: #a69c97;*/
+	background: #a69c97;
 	font-family: 'Arvo';
 	color: #fff;
 	font-size: 16px;
@@ -1437,7 +1437,7 @@ div.product-viewmode {
 }
 .sub-category-grid {
 	margin-bottom: 30px;
-/*	background: url('../img/title-decoration.png') no-repeat center bottom;*/
+	background: url('../img/title-decoration.png') no-repeat center bottom;
 	padding-bottom: 60px;
 }
 .manufacturer-grid .item-box .title {
@@ -1451,7 +1451,7 @@ div.product-viewmode {
 	margin: 0 0 30px;
 	font-size: 20px;
 	padding-bottom: 22px;
-/*	background: url('../img/title-decoration.png') no-repeat center bottom;*/
+	background: url('../img/title-decoration.png') no-repeat center bottom;
 }
 .product-grid .title strong,
 .home-page-category-grid .title strong {
@@ -1757,7 +1757,7 @@ div.product-viewmode {
 	text-transform: uppercase;
 	font-family: Arvo;
 	padding-bottom: 22px;
-/*	background: url(../img/title-decoration.png) no-repeat center bottom;*/
+	background: url(../img/title-decoration.png) no-repeat center bottom;
 	color: #000;
 }
 .overview .short-description {
@@ -2074,7 +2074,7 @@ div.product-viewmode {
 .variant-overview .variant-name {
 	vertical-align: middle;
 	margin: 0 0 20px;
-/*	background: url('../img/title-decoration.png') no-repeat center bottom;*/
+	background: url('../img/title-decoration.png') no-repeat center bottom;
 	padding: 5px 10px 30px;
 	font-size: 18px;
 	font-family: Arvo;
@@ -2126,10 +2126,10 @@ div.product-viewmode {
 	color: #fff;
 	text-transform: uppercase;
 }
-	.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
-	.ui-tabs .ui-state-active.ui-tabs-active a {
-		background: #b68d40;
-	}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, 
+.ui-tabs .ui-state-active.ui-tabs-active a {
+	background: #8e807a;
+}
 .ui-tabs .ui-tabs-panel {
 	padding: 20px 0 0;
 }
@@ -2520,14 +2520,14 @@ td .attributes {
 }
 .mfp-container .apply-shipping-button {
 	min-width: 120px;
-	background: #b68d40;
+	background: #8e807a;
 	padding: 10px 15px;
-	font-size: 14px;
-	color: #fff;
+    font-size: 14px;
+    color: #fff;
 	width: auto;
-	font-family: Arvo;
-	border: none;
-	text-transform: uppercase;
+    font-family: Arvo;
+    border: none;
+    text-transform: uppercase;
 }
 .mfp-container .no-shipping-options {
 	padding: 30px 15px;
@@ -2661,7 +2661,7 @@ td .attributes {
     color: #690;
 }
 .write-review .button-1 {
-	background: #b68d40;
+	background: #8e807a;
 	border: medium none;
 	color: #ffffff;
 	font-family: Arvo;
@@ -2792,9 +2792,9 @@ td .attributes {
 	text-transform: uppercase;
 	background: #a79c97;
 }
-	.wishlist-content .buttons button:nth-child(even) {
-		background: #b68d40;
-	}
+.wishlist-content .buttons button:nth-child(even) {
+	background: #8e807a;
+}
 .wishlist-page .share-info a {
 	display: block;
 	margin: 0 0 5px;
@@ -2814,22 +2814,22 @@ td .attributes {
 	color: #666;
 	padding: 0 0 40px 0;
 }
-	.compare-products-page .clear-list {
-		display: inline-block;
-		margin: 0 0 20px;
-		background: #b68d40;
-		border: none;
-		color: #ffffff;
-		font-family: Arvo;
-		font-size: 16px;
-		height: 40px;
-		overflow: hidden;
-		line-height: 40px;
-		max-width: none;
-		padding: 0 10px;
-		text-transform: uppercase;
-		width: auto;
-	}
+.compare-products-page .clear-list {
+	display: inline-block;
+	margin: 0 0 20px;
+	background: #8e807a;
+	border: none;
+	color: #ffffff;
+	font-family: Arvo;
+	font-size: 16px;
+	height: 40px;
+	overflow: hidden;
+	line-height: 40px;
+	max-width: none;
+	padding: 0 10px;
+	text-transform: uppercase;
+	width: auto;
+}
 .compare-products-page .button-2 {
 	color: #555;
 	border: none;
@@ -2867,7 +2867,7 @@ td .attributes {
 	margin: 0 0 30px;
 	font-size: 20px;
 	padding-bottom: 22px;
-	/*background: url('../img/title-decoration.png') no-repeat center bottom;*/
+	background: url('../img/title-decoration.png') no-repeat center bottom;
 }
 .topic-block-title h2 {
 	font-weight: normal;
@@ -2905,16 +2905,16 @@ td .attributes {
 	width: 200px !important;
 	height: 36px !important;
 }
-	.enter-password-form button {
-		float: right !important;
-		width: auto !important;
-		height: 36px !important;
-		border: none !important;
-		background: #b68d40 !important;
-		padding: 0 20px !important;
-		font-size: 16px !important;
-		color: #ffffff !important;
-	}
+.enter-password-form button {
+	float: right !important;
+	width: auto !important;
+	height: 36px !important;
+	border: none !important;
+	background: #8e807a !important;
+	padding: 0 20px !important;
+	font-size: 16px !important;
+	color: #ffffff !important;
+}
 .password-error {
 	margin: 0 0 10px;
 }
@@ -2930,7 +2930,7 @@ td .attributes {
 .contact-page .button-1,
 .email-a-friend-page .button-1,
 .apply-vendor-page .button-1 {
-	background: #b68d40;
+	background: #8e807a;
 	border: none;
 	color: #ffffff;
 	font-family: Arvo;
@@ -3086,7 +3086,7 @@ td .attributes {
 .password-recovery-page .button-1,
 .account-page .button-1,
 .return-request-page .button-1 {
-	background: #b68d40;
+	background: #8e807a;
 	border: none;
 	color: #ffffff;
 	font-family: Arvo;
@@ -3145,7 +3145,7 @@ td .attributes {
 	margin: 2px 0;
 	padding: 0 20px;
 	height: 40px;
-	background: #b68d40;
+	background: #8e807a;
 	color: #fff;
 	font-family: Arvo;
 	text-transform: uppercase;
@@ -3185,7 +3185,7 @@ td .attributes {
 	font-weight: bold;
 }
 .account-page .button-2 {
-	background: #b68d40;
+	background: #8e807a;
 	border: none;
 	color: #ffffff;
 	font-family: Arvo;
@@ -4211,7 +4211,7 @@ input.estimate-shipping-radio:checked + label {
 }
 .sitemap-page .entity-title {
 	margin: 0 0 8px;
-	/*background: url('../img/title-decoration-small.png') no-repeat center bottom;*/
+	background: url('../img/title-decoration-small.png') no-repeat center bottom;
 	padding: 0 0 20px 0;
 }
 .sitemap-page .entity-title h2 {
@@ -4444,7 +4444,7 @@ input.estimate-shipping-radio:checked + label {
 }
 .comment-list .title {
 	margin: 0 0 30px 0;
-	/*background: url("../img/title-decoration.png") no-repeat center bottom;*/
+	background: url("../img/title-decoration.png") no-repeat center bottom;
 	color: #000000;
 	font-family: "Arvo";
 	font-size: 22px;
@@ -4776,7 +4776,7 @@ input.estimate-shipping-radio:checked + label {
 	font-weight: normal;
 	margin: 0 0 10px;
 	text-transform: uppercase;
-/*	background: url('../img/title-decoration.png') center bottom no-repeat;*/
+	background: url('../img/title-decoration.png') center bottom no-repeat;
 	padding-bottom: 22px;
 }
 .forum-page .forum-info .forum-description {
@@ -4819,7 +4819,7 @@ input.estimate-shipping-radio:checked + label {
 	font-weight: normal;
 	text-transform: uppercase;
 	font-family: Arvo;
-/*	background: url('../img/title-decoration.png') center bottom no-repeat;*/
+	background: url('../img/title-decoration.png') center bottom no-repeat;
 	padding-bottom: 22px;
 }
 .forum-topic-page .topic-actions.upper {

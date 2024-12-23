@@ -207,9 +207,7 @@
   background-color: rgba(182, 164, 148, 0.6) !important;
 }
 .header-menu .sublist li a {
-    /*  background-color: rgba(75, 62, 51, 0.7);*/
-    background: #ffffff;
-    color: #122620;
+  background-color: rgba(75, 62, 51, 0.7);
 }
 #headerMenuParent.stick,
 .news-list-homepage .view-all,

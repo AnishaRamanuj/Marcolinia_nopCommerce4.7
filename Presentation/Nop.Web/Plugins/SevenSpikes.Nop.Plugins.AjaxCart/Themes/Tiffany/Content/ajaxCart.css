@@ -126,7 +126,7 @@
     left: 0;
     width: 100%;
     padding: 20px 30px;
-/*    background: url(images/title-decoration.png) no-repeat center bottom transparent;*/
+    background: url(images/title-decoration.png) no-repeat center bottom transparent;
     text-transform: uppercase;
     font-family: Arvo;
     text-align: center;

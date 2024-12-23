@@ -546,7 +546,7 @@ a.filterItemSelectedDisabled:hover {
 }
 .ajaxFilters .k-window-titlebar {
 	margin: 5px 0 0 !important;
-/*	background: url(images/title-decoration.png) no-repeat center bottom;*/
+	background: url(images/title-decoration.png) no-repeat center bottom;
 	text-align: center;
 }
 .ajaxFilters .k-window-titlebar span {

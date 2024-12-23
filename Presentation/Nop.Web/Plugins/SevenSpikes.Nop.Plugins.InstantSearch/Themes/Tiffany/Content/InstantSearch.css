@@ -16,11 +16,10 @@ span.search-box-text {
     background: none;
 }
 input.search-box-text {
-  width: 420px !important;
+  width: 220px !important;
   border: 1px solid #ddd;
   background: #fff;
   border-radius: 7px;
-  padding-right:30px;
 }
 input.search-box-text.narrow {
 	width: 160px !important;
@@ -44,8 +43,6 @@ input.instant-search-busy {
 }
 .search-box-button {
     margin: 0;
-    position:absolute;
-    right:0px;
 }
 .search-box .k-clear-value {
     display: flex;
@@ -163,7 +160,7 @@ input.instant-search-busy {
 
 @media all and (min-width: 481px) {	
 
-
+input.search-box-text,
 .instantSearch {
     width: 300px !important;
 }
@@ -181,10 +178,10 @@ input.search-box-text.narrow {
 
 @media all and (min-width: 1025px) {
 
-/*  input.search-box-text {
+  input.search-box-text {
     width: 220px !important;
     border-radius: 7px;
-  }*/
+  }
 input.search-box-text.narrow {
 	width: 192px !important;
 }

@@ -252,11 +252,11 @@ body.home-page-wrapper {
 .search-box .search-box-text {
     border-right:none;
 }
-    .search-box .search-box-button {
-        border: none;
-        border-left: none;
-        background-color: transparent;
-    }
+  .search-box .search-box-button {
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #fff;
+  }
   .search-box input.search-box-text {
     width: 220px;
     border-color: #ddd;
@@ -386,10 +386,8 @@ body.home-page-wrapper {
 	top: 45px;
 	z-index: 1001;
 	width: 200px;
-   /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);*/
-	background: #fff;
-    border-radius:5px;
-    border:1px solid #ddd;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+	background: rgba(255,255,255,0.85);
 }
     .header-menu .sublist-wrap.active {
         display: block;
@@ -405,16 +403,14 @@ body.home-page-wrapper {
 }
 .header-menu .sublist li a {
 	display: block;
-/*	background: rgba(57,50,48,0.7);*/
-    background:#ffffff;
+	background: rgba(57,50,48,0.7);
 	padding: 10px 24px 10px 24px;
 	font-size: 15px;
 	color: #fff;
 	line-height: 24px;
 }
 .header-menu .sublist li:hover > a {
-/*    background: rgba(57,50,48,0.8);*/
-    background:#fff;
+    background: rgba(57,50,48,0.8);
 }
 .header-menu .sublist-wrap .sublist-wrap {
 	top: 2px;
@@ -754,10 +750,9 @@ body.home-page-wrapper {
 .product-tag-page .product-list .item-box {
     float:none;
 }
-    .home-page-category-grid .item-box {
-        max-width: none;
-        width: 32.66%;
-    }
+.home-page-category-grid .item-box {
+	max-width:none;
+}
 .home-page-category-grid.categories-1 .item-box:nth-child(2n){
     margin:0;
 }
@@ -793,11 +788,11 @@ body.home-page-wrapper {
 .sub-category-grid.categories-2 .item-box .picture a {
 	height: 170px;
 }
-/*.product-grid .item-box {
+.product-grid .item-box {
     width:250px;
     margin:0;
     overflow:hidden;
-}*/
+}
 .product-grid .item-box .details{
     height: 140px;
     position: absolute;
@@ -828,10 +823,10 @@ body.home-page-wrapper {
 .product-grid .hover-effect-2 .item-box:hover .details .buttons {
     height:50px;
 }
-    .add-info .buttons .product-box-add-to-cart-button,
-    .add-info .buttons .add-to-compare-list-button {
-        background-color: #b68d40;
-    }
+.add-info .buttons .product-box-add-to-cart-button,
+.add-info .buttons .add-to-compare-list-button {
+    background-color:#8e807a;
+}
 .product-grid .hover-effect-2 .picture {
     margin:0;
 }
@@ -1257,23 +1252,5 @@ body.home-page-wrapper {
     right:-480px;
     opacity:0.2;
 }
-    .header-inner {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
 
-    .header-logo {
-        order: 1;
-        flex: 1;
-        text-align: left;
-    }
-
-    .header-links-wrapper {
-        order: 3;
-    }
-
-    .search-n-selectors {
-        order: 2;
-    }
 }
