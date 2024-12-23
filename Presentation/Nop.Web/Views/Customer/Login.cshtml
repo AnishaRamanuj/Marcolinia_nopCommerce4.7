@@ -14,6 +14,105 @@
     //register URL with return URL (if specified)
     var registerUrl = Url.RouteUrl("Register", new { returnUrl = this.Context.Request.Query["returnUrl"] }, webHelper.GetCurrentRequestProtocol());
 }
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+<style>
+    .master-column-wrapper {
+        background: transparent;
+    }
+    .master-wrapper-content{
+        border: 0;
+        box-shadow: none;
+        background-color: #f3f3f9;
+        margin:0px;
+    }
+
+    .master-wrapper-content::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/pattern.svg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            background-repeat: no-repeat;
+        }
+</style>
+
+<div class="login-page-main">
+    <div class="heading-box">
+        <h2>Welcome, Please Sign In!</h2>
+        <p>Sign Up as a New Customer <a href="javascript:void();">Register</a></p>
+    </div>
+    <div class="social-login">
+        <button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                    <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917"></path>
+                    <path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691"></path>
+                    <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44"></path>
+                    <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"></path>
+                </svg>
+            </span>
+            Continue with Google
+        </button>
+        <button><span><img src="~/images/microsoft_icon.svg.png" /></span> Continue with Microsoft </button>
+        <button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                    <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#2aa4f4"></stop>
+                        <stop offset="1" stop-color="#007ad9"></stop>
+                    </linearGradient>
+                    <path fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)" d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4"></path>
+                    <path fill="#fff" d="M26.707 29.301h5.176l.813-5.258h-5.989v-2.874c0-2.184.714-4.121 2.757-4.121h3.283V12.46c-.577-.078-1.797-.248-4.102-.248-4.814 0-7.636 2.542-7.636 8.334v3.498H16.06v5.258h4.948v14.452c.98.146 1.973.246 2.992.246.921 0 1.82-.084 2.707-.204z"></path>
+                </svg>
+            </span>
+            Continue with Facebook
+        </button>
+        <button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+                    <path d="M44.527 34.75c-1.078 2.395-1.597 3.465-2.984 5.578-1.941 2.953-4.68 6.64-8.063 6.664-3.011.028-3.789-1.965-7.878-1.93-4.086.02-4.938 1.97-7.954 1.938-3.386-.031-5.976-3.352-7.918-6.3-5.43-8.27-6.003-17.966-2.648-23.122 2.375-3.656 6.129-5.805 9.656-5.805 3.594 0 5.852 1.973 8.82 1.973 2.883 0 4.637-1.976 8.794-1.976 3.14 0 6.46 1.71 8.836 4.664-7.766 4.257-6.504 15.347 1.34 18.316M31.195 8.469c1.512-1.942 2.66-4.68 2.242-7.469-2.464.168-5.347 1.742-7.03 3.781-1.528 1.86-2.794 4.617-2.302 7.285 2.692.086 5.477-1.52 7.09-3.597"></path>
+                </svg>
+            </span>
+            Continue with Apple
+        </button>
+    </div>
+    <div class="login-or"><span>or</span></div>
+    <form>
+        <div class="form-group">
+            <label>Email</label>
+            <div class="form-input"><input type="email" class="form-control" placeholder="Your email"></div>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <div class="form-input"><input type="password" class="form-control" placeholder="Your password"></div>
+        </div>
+        <div class="form-group">
+            <div class="flex-box">
+                <div class="remember-me checkbox-input-label">
+                    <input type="checkbox" name="RememberMe" value="true"> <label for="RememberMe">Remember me?</label>
+                </div>
+                <div class="forgot-password"> <a href="/passwordrecovery">Forgot password?</a> </div>
+            </div>
+        </div>
+        <div class="form-group"></div>
+        <div class="form-group">
+            <div class="login_btn"><button type="submit" class="btn theme-btn">Log in</button></div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
 <div class="page login-page">
     <div class="page-title">
         <h1>@T("Account.Login.Welcome")</h1>
