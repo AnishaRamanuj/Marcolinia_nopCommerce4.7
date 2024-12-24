@@ -768,7 +768,8 @@ public partial class CustomerController : BasePublicController
 
     [HttpPost]
     [ValidateCaptcha]
-    [ValidateHoneypot]
+    //available even when a store is closed
+    [CheckAccessClosedStore(ignore: true)]
     //available even when navigation is not allowed
     [CheckAccessPublicStore(ignore: true)]
     public virtual async Task<IActionResult> Register(RegisterModel model, string returnUrl, bool captchaValid, IFormCollection form)

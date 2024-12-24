@@ -1,4 +1,6 @@
 ﻿@model RegisterModel
+@using Nop.Core
+@using Nop.Core.Domain.Customers
 
 @{
     Layout = "_ColumnsOne";
@@ -15,29 +17,28 @@
 
 <style>
     .master-column-wrapper {
-        background: transparent;
+    background: transparent;
     }
 
     .master-wrapper-content {
-        border: 0;
-        box-shadow: none;
-        background-color: #f3f3f9;
-        margin: 0px;
+    border: 0;
+    box-shadow: none;
+    background-color: #f3f3f9;
+    margin: 0px;
     }
 
-        .master-wrapper-content::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-image: url('../images/pattern.svg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.08;
-            background-repeat: no-repeat;
-        }
+    .master-wrapper-content::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/pattern.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    background-repeat: no-repeat;
+    }
 </style>
-
 
 <div class="login-page-main">
     <div class="heading-box">
@@ -80,826 +81,169 @@
         </button>
     </div>
     <div class="login-or"><span>or</span></div>
-    <form>
+    @* <form> *@
+    <form asp-route="Register" asp-route-returnurl="@Context.Request.Query["ReturnUrl"]" method="post" autocomplete="off">
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.RegisterTop, additionalData = Model })
+      <div asp-validation-summary="ModelOnly" class="message-error"></div>
         <div class="form-group">
             <label>Gender</label>
             <div class="form-input">
                 <div class="input-flexbox">
                     <span class="radio-btn">
-                        <input type="radio" value="M" name="Gender">
+                        <input type="radio" value="M" name="Gender" checked="@(Model.Gender == "M")" id="gender-male">
                         <label class="forcheckbox" for="gender-male">Male</label> 
                     </span>
                     <span class="radio-btn">
-                        <input type="radio" value="F" name="Gender">
+                        <input type="radio" value="F" name="Gender" checked="@(Model.Gender == "F")" id="gender-female">
                         <label class="forcheckbox" for="gender-female">Female</label>
                     </span>
                 </div>
-             </div>
-        </div>
-        <div class="form-group">
-            <label>First Name <span class="astrick">*</span></label>
-            <div class="form-input">
-                <input type="password" class="form-control" placeholder="First Name">
             </div>
         </div>
-         <div class="form-group">
-            <label>Last Name <span class="astrick">*</span></label>
-            <div class="form-input">
-                <input type="password" class="form-control" placeholder="Last Name">
-            </div>
-        </div>
-         <div class="form-group">
-            <label>Date of Birth</label>
-            <div class="form-input">
-                <div class="input-flexbox">
-                    <div class="select-box">
-                        <select name="DateOfBirthDay" class="form-control">
-                            <option value="0">Day</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                        </select>
-                    </div>
-                     <div class="select-box">
-                        <select name="DateOfBirthMonth" class="form-control">
-                            <option value="0">Month</option>
-                            <option value="1">January</option>
-                            <option value="2">February</option>
-                            <option value="3">March</option>
-                            <option value="4">April</option>
-                            <option value="5">May</option>
-                            <option value="6">June</option>
-                            <option value="7">July</option>
-                            <option value="8">August</option>
-                            <option value="9">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                        </select>
-                    </div>
-                    <div class="select-box">
-                        <select name="DateOfBirthYear" class="form-control">
-                           <option value="0">Year</option>
-                           <option value="1914">1914</option>
-                           <option value="1915">1915</option>
-                           <option value="1916">1916</option>
-                           <option value="1917">1917</option>
-                           <option value="1918">1918</option>
-                           <option value="1919">1919</option>
-                           <option value="1920">1920</option>
-                           <option value="1921">1921</option>
-                           <option value="1922">1922</option>
-                           <option value="1923">1923</option>
-                           <option value="1924">1924</option>
-                           <option value="1925">1925</option>
-                           <option value="1926">1926</option>
-                           <option value="1927">1927</option>
-                           <option value="1928">1928</option>
-                           <option value="1929">1929</option>
-                           <option value="1930">1930</option>
-                           <option value="1931">1931</option>
-                           <option value="1932">1932</option>
-                           <option value="1933">1933</option>
-                           <option value="1934">1934</option>
-                           <option value="1935">1935</option>
-                           <option value="1936">1936</option>
-                           <option value="1937">1937</option>
-                           <option value="1938">1938</option>
-                           <option value="1939">1939</option>
-                           <option value="1940">1940</option>
-                           <option value="1941">1941</option>
-                           <option value="1942">1942</option>
-                           <option value="1943">1943</option>
-                           <option value="1944">1944</option>
-                           <option value="1945">1945</option>
-                           <option value="1946">1946</option>
-                           <option value="1947">1947</option>
-                           <option value="1948">1948</option>
-                           <option value="1949">1949</option>
-                           <option value="1950">1950</option>
-                           <option value="1951">1951</option>
-                           <option value="1952">1952</option>
-                           <option value="1953">1953</option>
-                           <option value="1954">1954</option>
-                           <option value="1955">1955</option>
-                           <option value="1956">1956</option>
-                           <option value="1957">1957</option>
-                           <option value="1958">1958</option>
-                           <option value="1959">1959</option>
-                           <option value="1960">1960</option>
-                           <option value="1961">1961</option>
-                           <option value="1962">1962</option>
-                           <option value="1963">1963</option>
-                           <option value="1964">1964</option>
-                           <option value="1965">1965</option>
-                           <option value="1966">1966</option>
-                           <option value="1967">1967</option>
-                            <option value="1968">1968</option>
-                            <option value="1969">1969</option>
-                            <option value="1970">1970</option>
-                            <option value="1971">1971</option>
-                            <option value="1972">1972</option>
-                            <option value="1973">1973</option>
-                            <option value="1974">1974</option>
-                            <option value="1975">1975</option>
-                            <option value="1976">1976</option>
-                            <option value="1977">1977</option>
-                            <option value="1978">1978</option>
-                            <option value="1979">1979</option>
-                            <option value="1980">1980</option>
-                            <option value="1981">1981</option>
-                            <option value="1982">1982</option>
-                            <option value="1983">1983</option>
-                            <option value="1984">1984</option>
-                            <option value="1985">1985</option>
-                            <option value="1986">1986</option>
-                            <option value="1987">1987</option>
-                            <option value="1988">1988</option>
-                            <option value="1989">1989</option>
-                            <option value="1990">1990</option>
-                            <option value="1991">1991</option>
-                            <option value="1992">1992</option>
-                            <option value="1993">1993</option>
-                            <option value="1994">1994</option>
-                            <option value="1995">1995</option>
-                            <option value="1996">1996</option>
-                            <option value="1997">1997</option>
-                            <option value="1998">1998</option>
-                            <option value="1999">1999</option>
-                            <option value="2000">2000</option>
-                            <option value="2001">2001</option>
-                            <option value="2002">2002</option>
-                            <option value="2003">2003</option>
-                            <option value="2004">2004</option>
-                            <option value="2005">2005</option>
-                            <option value="2006">2006</option>
-                            <option value="2007">2007</option>
-                            <option value="2008">2008</option>
-                            <option value="2009">2009</option>
-                            <option value="2010">2010</option>
-                            <option value="2011">2011</option>
-                            <option value="2012">2012</option>
-                            <option value="2013">2013</option>
-                            <option value="2014">2014</option>
-                            <option value="2015">2015</option>
-                            <option value="2016">2016</option>
-                            <option value="2017">2017</option>
-                            <option value="2018">2018</option>
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                        </select>
-                        </div>
+
+        @if (Model.FirstNameEnabled)
+        {
+            <div class="form-group">
+                <label>
+                    First Name
+                    @if (Model.FirstNameRequired)
+                    {
+                        <span class="astrick">*</span>
+                    }
+                </label>
+                <div class="form-input">
+                    <input class="form-control" placeholder="First Name" asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
                 </div>
             </div>
-        </div>
-         <div class="form-group">
+        }
+
+        @if (Model.LastNameEnabled)
+        {
+            <div class="form-group">
+                <label>Last Name
+                    @if (Model.LastNameRequired)
+                    {
+                        <span class="astrick">*</span>
+                    }
+                </label>
+                <div class="form-input">
+                    <input class="form-control" placeholder="Last Name" asp-for="LastName"/>
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+        }
+
+        @if (Model.DateOfBirthEnabled)
+        {
+            <div class="form-group">
+                <label>Date of Birth
+                    @if (Model.DateOfBirthRequired)
+                    {
+                        <span class="astrick">*</span>
+                    }
+                </label>
+                <div class="form-input">
+                    <div class="input-flexbox">
+                        <nop-date-picker  asp-day-name="@Html.NameFor(x => x.DateOfBirthDay)"
+                        asp-month-name="@Html.NameFor(x => x.DateOfBirthMonth)"
+                        asp-year-name="@Html.NameFor(x => x.DateOfBirthYear)"
+                        asp-begin-year="@(DateTime.Now.AddYears(-110))"
+                        asp-end-year="@(DateTime.UtcNow)"
+                        asp-selected-date="@Model.ParseDateOfBirth()" />
+                        <span asp-validation-for="DateOfBirthDay"></span>
+                        <span asp-validation-for="DateOfBirthMonth"></span>
+                        <span asp-validation-for="DateOfBirthYear"></span>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="form-group">
             <label>Email <span class="astrick">*</span></label>
             <div class="form-input">
-                <input type="email" class="form-control" name="Email">
+                <input type="email" class="form-control" name="Email" asp-for="Email" />
+                <span asp-validation-for="Email"></span>
             </div>
         </div>
+
+        @*   @if (Model.CountyEnabled)
+        { *@
         <div class="form-group">
-            <label>Country <span class="astrick">*</span></label>
+            <label>Country
+                @if (Model.CountryRequired)
+                {
+                    <span class="astrick">*</span>
+                }
+            </label>
             <div class="form-input">
-                <select name="CountryId" class="form-control">
-                    <option selected="" value="0">Select country</option>
-                    <option value="225">U A E</option>
-                    <option value="187">Saudi Arabia</option>
-                    <option value="477">United States of America</option>
-                    <option value="726">United States of America</option>
-                    <option value="163">Oman</option>
-                    <option value="176">Qatar</option>
-                    <option value="241">Afghanistan</option>
-                    <option value="490">Afghanistan</option>
-                    <option value="491">Åland Islands</option>
-                    <option value="242">Åland Islands</option>
-                    <option value="243">Albania</option>
-                    <option value="530">Canada</option>
-                    <option value="531">Cayman Islands</option>
-                    <option value="282">Cayman Islands</option>
-                    <option value="283">Central African Republic</option>
-                    <option value="532">Central African Republic</option>
-                    <option value="533">Chad</option>
-                    <option value="284">Chad</option>
-                    <option value="285">Chile</option>
-                    <option value="534">Chile</option>
-                    <option value="535">China</option>
-                    <option value="286">China</option>
-                    <option value="287">Christmas Island</option>
-                    <option value="536">Christmas Island</option>
-                    <option value="537">Cocos (Keeling) Islands</option>
-                    <option value="288">Cocos (Keeling) Islands</option>
-                    <option value="289">Colombia</option>
-                    <option value="538">Colombia</option>
-                    <option value="539">Comoros</option>
-                    <option value="290">Comoros</option>
-                    <option value="291">Congo</option>
-                    <option value="540">Congo</option>
-                    <option value="541">Congo (Democratic Republic of the)</option>
-                    <option value="292">Congo (Democratic Republic of the)</option>
-                    <option value="293">Cook Islands</option>
-                    <option value="542">Cook Islands</option>
-                    <option value="543">Costa Rica</option>
-                    <option value="294">Costa Rica</option>
-                    <option value="295">Côte d'Ivoire</option>
-                    <option value="544">Côte d'Ivoire</option>
-                    <option value="545">Croatia</option>
-                    <option value="296">Croatia</option>
-                    <option value="297">Cuba</option>
-                    <option value="546">Cuba</option>
-                    <option value="547">Curaçao</option>
-                    <option value="298">Curaçao</option>
-                    <option value="299">Cyprus</option>
-                    <option value="548">Cyprus</option>
-                    <option value="549">Czechia</option>
-                    <option value="300">Czechia</option>
-                    <option value="301">Denmark</option>
-                    <option value="550">Denmark</option>
-                    <option value="551">Djibouti</option>
-                    <option value="302">Djibouti</option>
-                    <option value="303">Dominica</option>
-                    <option value="552">Dominica</option>
-                    <option value="553">Dominican Republic</option>
-                    <option value="304">Dominican Republic</option>
-                    <option value="305">Ecuador</option>
-                    <option value="554">Ecuador</option>
-                    <option value="555">Egypt</option>
-                    <option value="306">Egypt</option>
-                    <option value="307">El Salvador</option>
-                    <option value="556">El Salvador</option>
-                    <option value="557">Equatorial Guinea</option>
-                    <option value="308">Equatorial Guinea</option>
-                    <option value="309">Eritrea</option>
-                    <option value="558">Eritrea</option>
-                    <option value="559">Estonia</option>
-                    <option value="310">Estonia</option>
-                    <option value="311">Eswatini</option>
-                    <option value="560">Eswatini</option>
-                    <option value="561">Ethiopia</option>
-                    <option value="312">Ethiopia</option>
-                    <option value="313">Falkland Islands (Malvinas)</option>
-                    <option value="562">Falkland Islands (Malvinas)</option>
-                    <option value="563">Faroe Islands</option>
-                    <option value="314">Faroe Islands</option>
-                    <option value="315">Fiji</option>
-                    <option value="564">Fiji</option>
-                    <option value="565">Finland</option>
-                    <option value="316">Finland</option>
-                    <option value="317">France</option>
-                    <option value="566">France</option>
-                    <option value="567">French Guiana</option>
-                    <option value="318">French Guiana</option>
-                    <option value="319">French Polynesia</option>
-                    <option value="568">French Polynesia</option>
-                    <option value="569">French Southern Territories</option>
-                    <option value="320">French Southern Territories</option>
-                    <option value="321">Gabon</option>
-                    <option value="570">Gabon</option>
-                    <option value="571">Gambia</option>
-                    <option value="322">Gambia</option>
-                    <option value="323">Georgia</option>
-                    <option value="572">Georgia</option>
-                    <option value="573">Germany</option>
-                    <option value="324">Germany</option>
-                    <option value="325">Ghana</option>
-                    <option value="574">Ghana</option>
-                    <option value="575">Gibraltar</option>
-                    <option value="326">Gibraltar</option>
-                    <option value="327">Greece</option>
-                    <option value="576">Greece</option>
-                    <option value="577">Greenland</option>
-                    <option value="328">Greenland</option>
-                    <option value="329">Grenada</option>
-                    <option value="578">Grenada</option>
-                    <option value="579">Guadeloupe</option>
-                    <option value="330">Guadeloupe</option>
-                    <option value="331">Guam</option>
-                    <option value="580">Guam</option>
-                    <option value="581">Guatemala</option>
-                    <option value="332">Guatemala</option>
-                    <option value="333">Guernsey</option>
-                    <option value="582">Guernsey</option>
-                    <option value="583">Guinea</option>
-                    <option value="334">Guinea</option>
-                    <option value="335">Guinea-Bissau</option>
-                    <option value="584">Guinea-Bissau</option>
-                    <option value="585">Guyana</option>
-                    <option value="336">Guyana</option>
-                    <option value="337">Haiti</option>
-                    <option value="586">Haiti</option>
-                    <option value="587">Heard Island and McDonald Islands</option>
-                    <option value="338">Heard Island and McDonald Islands</option>
-                    <option value="339">Holy See</option>
-                    <option value="588">Holy See</option>
-                    <option value="589">Honduras</option>
-                    <option value="340">Honduras</option>
-                    <option value="341">Hong Kong</option>
-                    <option value="590">Hong Kong</option>
-                    <option value="591">Hungary</option>
-                    <option value="342">Hungary</option>
-                    <option value="737">Zambia</option>
-                    <option value="488">Zambia</option>
-                    <option value="489">Zimbabwe</option>
-                    <option value="738">Zimbabwe</option>
-                </select>
+                <select class="form-control" asp-for="CountryId" asp-items="Model.AvailableCountries"
+                data-trigger="country-select"
+                data-url="@(Url.RouteUrl("GetStatesByCountryId"))"
+                data-stateprovince="#@Html.IdFor(model => model.StateProvinceId)"
+                data-loading="#states-loading-progress"></select>
+                <span asp-validation-for="CountryId"></span>
             </div>
         </div>
-        <div class="form-group">
-            <label>Phone <span class="astrick">*</span></label>
-            <div class="form-input">
-                <input type="tel" class="form-control" name="Phone">
+        @* } *@
+        @if (Model.PhoneEnabled)
+        {
+            <div class="form-group">
+                <label>
+                    Phone
+                    @if (Model.PhoneRequired)
+                    {
+                        <span class="astrick">*</span>
+                    }
+                </label>
+                <div class="form-input">
+                    <input type="tel" class="form-control" name="Phone" asp-for="Phone" />
+                    <span asp-validation-for="Phone"></span>
+                </div>
             </div>
-        </div>
-       
+        }
+
          <div class="form-group">
             <label>Password <span class="astrick">*</span></label>
             <div class="form-input">
-                <input type="password" class="form-control" name="Password">
+                <input type="password" class="form-control" name="Password" asp-for="Password" />
+                <span asp-validation-for="Password"></span>
             </div>
         </div>
+
         <div class="form-group">
             <label>Confirm password: <span class="astrick">*</span></label>
             <div class="form-input">
-                <input type="password" class="form-control" name="Password">
+                <input type="password" class="form-control" name="Password" asp-for="ConfirmPassword" />
+                <span asp-validation-for="ConfirmPassword"></span>
             </div>
         </div>
-        <div class="form-group">
-            <div class="flex-box">
-                <div class="checkbox-input-label">
-                    <input type="checkbox" name="Newsletter" value="true"> <label for="Newsletter">Newsletter</label>
+
+        @if (Model.NewsletterEnabled)
+        {
+            <div class="form-group">
+                <div class="flex-box">
+                    <div class="checkbox-input-label">
+                        <input type="checkbox" name="Newsletter" value="true"> <label for="Newsletter">Newsletter</label>
+                        <span asp-validation-for="Newsletter"></span>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+
+        @if (Model.CustomerAttributes.Count > 0)
+        {
+            @await Html.PartialAsync("_CustomerAttributes", Model.CustomerAttributes)
+        }
+
         <div class="form-group">
-            <div class="login_btn"><button type="submit" class="btn theme-btn">Register</button></div>
+            <div class="login_btn">
+                <button type="submit" class="btn theme-btn" onclick="/Customer/Register">
+                    @T("Account.Register.Button")
+                </button>
+            </div>
         </div>
+
     </form>
 </div>
 
-
-
-<div class="page registration-page">
-    <div class="page-title">
-        <h1>@T("Account.Register")</h1>
-    </div>
-    <div class="page-body">
-        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.RegisterTop, additionalData = Model })
-        <form asp-route="Register" asp-route-returnurl="@Context.Request.Query["ReturnUrl"]" method="post" autocomplete="off">
-            <div asp-validation-summary="ModelOnly" class="message-error"></div>
-            <div class="fieldset">
-                <div class="title">
-                    <strong>@T("Account.YourPersonalDetails")</strong>
-                </div>
-                <div class="form-fields">
-                    @if (Model.GenderEnabled)
-                    {
-                        <div class="inputs">
-                            <label for="gender">@T("Account.Fields.Gender"):</label>
-                            <div id="gender" class="gender">
-                                <span class="male">
-                                    <input type="radio" asp-for="Gender" value="M" checked="@(Model.Gender == "M")" id="gender-male" />
-                                    <label class="forcheckbox" for="gender-male">@T("Account.Fields.Gender.Male")</label>
-                                </span>
-                                <span class="female">
-                                    <input type="radio" asp-for="Gender" value="F" checked="@(Model.Gender == "F")" id="gender-female" />
-                                    <label class="forcheckbox" for="gender-female">@T("Account.Fields.Gender.Female")</label>
-                                </span>
-                                @if (Model.NeutralGenderEnabled)
-                                {
-                                    <span class="Neutral">
-                                        <input type="radio" asp-for="Gender" value="N" checked="@(Model.Gender == "N")" id="gender-neutral" />
-                                        <label class="forcheckbox" for="gender-neutral">@T("Account.Fields.Gender.Neutral")</label>
-                                    </span>
-                                }
-                            </div>
-                        </div>
-                    }
-                    @if (Model.FirstNameEnabled)
-                    {
-                        <div class="inputs">
-                            <label asp-for="FirstName" asp-postfix=":"></label>
-                            <input asp-for="FirstName" />
-                            @if (Model.FirstNameRequired)
-                            {
-                                <nop-required />
-                            }
-                            <span asp-validation-for="FirstName"></span>
-                        </div>
-                    }
-                    @if (Model.LastNameEnabled)
-                    {
-                        <div class="inputs">
-                            <label asp-for="LastName" asp-postfix=":"></label>
-                            <input asp-for="LastName" />
-                            @if (Model.LastNameRequired)
-                            {
-                                <nop-required />
-                            }
-                            <span asp-validation-for="LastName"></span>
-                        </div>
-                    }
-                    @if (Model.DateOfBirthEnabled)
-                    {
-                        <div class="inputs date-of-birth">
-                            <label>@T("Account.Fields.DateOfBirth"):</label>
-                            <nop-date-picker asp-day-name="@Html.NameFor(x => x.DateOfBirthDay)"
-                                             asp-month-name="@Html.NameFor(x => x.DateOfBirthMonth)"
-                                             asp-year-name="@Html.NameFor(x => x.DateOfBirthYear)"
-                                             asp-begin-year="@(DateTime.Now.AddYears(-110))"
-                                             asp-end-year="@(DateTime.UtcNow)"
-                                             asp-selected-date="@Model.ParseDateOfBirth()" />
-
-                            @if (Model.DateOfBirthRequired)
-                            {
-                                <nop-required />
-                            }
-                            <span asp-validation-for="DateOfBirthDay"></span>
-                            <span asp-validation-for="DateOfBirthMonth"></span>
-                            <span asp-validation-for="DateOfBirthYear"></span>
-                        </div>
-                    }
-                    <div class="inputs">
-                        <label asp-for="Email" asp-postfix=":"></label>
-                        <input asp-for="Email" />
-                        <nop-required />
-                        <span asp-validation-for="Email"></span>
-                    </div>
-                    @if (Model.EnteringEmailTwice)
-                    {
-                        <div class="inputs">
-                            <label asp-for="ConfirmEmail" asp-postfix=":"></label>
-                            <input asp-for="ConfirmEmail" />
-                            <nop-required />
-                            <span asp-validation-for="ConfirmEmail"></span>
-                        </div>
-                    }
-                    @if (Model.UsernamesEnabled)
-                    {
-                        <div class="inputs">
-                            <label asp-for="Username" asp-postfix=":"></label>
-                            <input asp-for="Username" />
-                            <nop-required />
-                            <span asp-validation-for="Username"></span>
-                            @if (Model.CheckUsernameAvailabilityEnabled)
-                            {
-                                @await Html.PartialAsync("_CheckUsernameAvailability")
-                            }
-                        </div>
-
-                    }
-                </div>
-            </div>
-            @if (Model.CompanyEnabled || Model.DisplayVatNumber)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.CompanyDetails")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.CompanyEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="Company" asp-postfix=":"></label>
-                                <input asp-for="Company" />
-                                @if (Model.CompanyRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="Company"></span>
-                            </div>
-                        }
-                        @if (Model.DisplayVatNumber)
-                        {
-                            <div class="inputs">
-                                <label asp-for="VatNumber" asp-postfix=":"></label>
-                                <input asp-for="VatNumber" />
-                                <span class="vat-note"><em>@T("Account.Fields.VatNumber.Note")</em></span>
-                            </div>
-                        }
-                    </div>
-                </div>
-            }
-            @if (Model.StreetAddressEnabled ||
-                Model.StreetAddress2Enabled ||
-                Model.ZipPostalCodeEnabled ||
-                Model.CityEnabled ||
-                Model.CountyEnabled ||
-                Model.CountryEnabled)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.YourAddress")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.StreetAddressEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="StreetAddress" asp-postfix=":"></label>
-                                <input asp-for="StreetAddress" />
-                                @if (Model.StreetAddressRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="StreetAddress"></span>
-                            </div>
-                        }
-                        @if (Model.StreetAddress2Enabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="StreetAddress2" asp-postfix=":"></label>
-                                <input asp-for="StreetAddress2" />
-                                @if (Model.StreetAddress2Required)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="StreetAddress2"></span>
-                            </div>
-                        }
-                        @if (Model.ZipPostalCodeEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="ZipPostalCode" asp-postfix=":"></label>
-                                <input asp-for="ZipPostalCode" />
-                                @if (Model.ZipPostalCodeRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="ZipPostalCode"></span>
-                            </div>
-                        }
-                        @if (Model.CountyEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="County" asp-postfix=":"></label>
-                                <input asp-for="County" />
-                                @if (Model.CountyRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="County"></span>
-                            </div>
-                        }
-                        @if (Model.CityEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="City" asp-postfix=":"></label>
-                                <input asp-for="City" />
-                                @if (Model.CityRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="City"></span>
-                            </div>
-                        }
-                        @if (Model.CountryEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="CountryId" asp-postfix=":"></label>
-                                <select asp-for="CountryId" asp-items="Model.AvailableCountries"
-                                        data-trigger="country-select"
-                                        data-url="@(Url.RouteUrl("GetStatesByCountryId"))"
-                                        data-stateprovince="#@Html.IdFor(model => model.StateProvinceId)"
-                                        data-loading="#states-loading-progress"></select>
-                                @if (Model.CountryRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="CountryId"></span>
-                            </div>
-                        }
-                        @if (Model.CountryEnabled && Model.StateProvinceEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="StateProvinceId" asp-postfix=":"></label>
-                                <select asp-for="StateProvinceId" asp-items="Model.AvailableStates"></select>
-                                @if (Model.StateProvinceRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span id="states-loading-progress" style="display: none;" class="please-wait">@T("Common.Wait")</span>
-                                <span asp-validation-for="StateProvinceId"></span>
-                            </div>
-                        }
-                    </div>
-                </div>
-            }
-            @if (Model.PhoneEnabled || Model.FaxEnabled)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.YourContactInformation")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.PhoneEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="Phone" asp-postfix=":"></label>
-                                <input asp-for="Phone" />
-                                @if (Model.PhoneRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="Phone"></span>
-                            </div>
-                        }
-                        @if (Model.FaxEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="Fax" asp-postfix=":"></label>
-                                <input asp-for="Fax" />
-                                @if (Model.FaxRequired)
-                                {
-                                    <nop-required />
-                                }
-                                <span asp-validation-for="Fax"></span>
-                            </div>
-                        }
-                    </div>
-                </div>
-            }
-            @if (Model.NewsletterEnabled || Model.CustomerAttributes.Count > 0)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.Options")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.NewsletterEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="Newsletter" asp-postfix=":"></label>
-                                <input asp-for="Newsletter" />
-                                <span asp-validation-for="Newsletter"></span>
-                            </div>
-                        }
-                        @if (Model.CustomerAttributes.Count > 0)
-                        {
-                            @await Html.PartialAsync("_CustomerAttributes", Model.CustomerAttributes)
-                        }
-                    </div>
-                </div>
-            }
-            @if (Model.AllowCustomersToSetTimeZone)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.Preferences")</strong>
-                    </div>
-                    <div class="form-fields">
-                        <div class="inputs">
-                            <label asp-for="TimeZoneId" asp-postfix=":"></label>
-                            <select asp-for="TimeZoneId" asp-items="Model.AvailableTimeZones"></select>
-                            <span asp-validation-for="TimeZoneId"></span>
-                        </div>
-                    </div>
-                </div>
-            }
-            <div class="fieldset">
-                <div class="title">
-                    <strong>@T("Account.YourPassword")</strong>
-                </div>
-                <div class="form-fields">
-                    <div class="inputs">
-                        <label asp-for="Password" asp-postfix=":"></label>
-                        <input asp-for="Password" />
-                        <nop-required />
-                        <span asp-validation-for="Password"></span>
-                    </div>
-                    <div class="inputs">
-                        <label asp-for="ConfirmPassword" asp-postfix=":"></label>
-                        <input asp-for="ConfirmPassword" />
-                        <nop-required />
-                        <span asp-validation-for="ConfirmPassword"></span>
-                    </div>
-                    @if (Model.DisplayCaptcha)
-                    {
-                        <nop-captcha />
-                    }
-                    @if (Model.HoneypotEnabled)
-                    {
-                        @Html.Raw(Html.GenerateHoneypotInput())
-                    }
-                </div>
-            </div>
-
-            @if (Model.AcceptPrivacyPolicyEnabled || Model.GdprConsents.Count > 0)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.UserAgreement")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.AcceptPrivacyPolicyEnabled)
-                        {
-                            <script asp-location="Footer">
-                                $(function() {
-                                    $('#register-button').on('click', function() {
-                                        if ($('#accept-consent').is(':checked')) {
-                                            //do some stuff
-                                            return true;
-                                        } else {
-                                            //just show validation errors, don't post
-                                            alert('@Html.Raw(JavaScriptEncoder.Default.Encode(T("Account.Fields.AcceptPrivacyPolicy.Required").Text))');
-                                            return false;
-                                        }
-                                    });
-                                });
-                            </script>
-                            <div class="inputs accept-consent">
-                                <input id="accept-consent" type="checkbox" name="accept-consent" />
-                                <label for="accept-consent">@T("Account.Fields.AcceptPrivacyPolicy")</label>
-                                @if (Model.AcceptPrivacyPolicyPopup)
-                                {
-                                    <span class="read" id="read-privacyinfo">@T("Account.Fields.AcceptPrivacyPolicy.Read")</span>
-                                    <script asp-location="Footer">
-                                    $(function() {
-                                        $('#read-privacyinfo').on('click',
-                                            function(e) {
-                                                displayPopupContentFromUrl(
-                                                    '@Url.RouteUrl("TopicPopup", new {SystemName = "privacyinfo"})',
-                                                    '@T("Account.Fields.AcceptPrivacyPolicy")');
-                                            });
-                                    });
-                                    </script>
-                                }
-                                else
-                                {
-                                    <a class="read" id="read-privacyinfo" href="@Url.RouteTopicUrl("privacyinfo")">@T("Account.Fields.AcceptPrivacyPolicy.Read")</a>
-                                }
-                            </div>
-                        }
-
-                        @if (Model.GdprConsents.Count > 0)
-                        {
-                            foreach (var consent in Model.GdprConsents)
-                            {
-                                if (consent.IsRequired)
-                                {
-                                    <script asp-location="Footer">
-                                    $(function() {
-                                        $('#register-button').on('click', function() {
-                                            if ($('#consent@(consent.Id)').is(':checked')) {
-                                                    //do some stuff
-                                                    return true;
-                                                } else {
-                                                    //just show validation errors, don't post
-                                               alert('@Html.Raw(JavaScriptEncoder.Default.Encode(consent.RequiredMessage))');
-                                                    return false;
-                                                }
-                                            });
-                                    });
-                                    </script>
-                                }
-                                <div class="inputs accept-consent">
-                                    <input id="consent@(consent.Id)" type="checkbox" name="consent@(consent.Id)" checked="@consent.Accepted" />
-                                    <label for="consent@(consent.Id)">@consent.Message</label>
-                                </div>
-                            }
-
-                        }
-                    </div>
-                </div>
-            }
-
-            <div class="buttons">
-                <button type="submit" name="register-button" id="register-button" class="button-1 register-next-step-button">@T("Account.Register.Button")</button>
-            </div>
-        </form>
-        <div class="external-authentication">
-            @await Component.InvokeAsync(typeof(ExternalMethodsViewComponent), "ExternalAuthentication")
-        </div>
-        @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.RegisterBottom, additionalData = Model })
-    </div>
-</div>
