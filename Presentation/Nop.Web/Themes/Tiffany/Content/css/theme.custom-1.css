@@ -194,7 +194,7 @@
 .wishlist-content .common-buttons .wishlist-add-to-cart-button:hover {
   background-color: #909090 !important;
 }
-#headerMenuParent,
+/*#headerMenuParent,
 .home-page-category-grid.categories-1 .item-box .title,
 .header-menu > ul > li:hover,
 #topcartlink,
@@ -202,7 +202,7 @@
 .mega-menu .dropdown,
 .blog-search-box .search-box-button {
   background-color: rgba(43, 43, 43, 0.3);
-}
+}*/
 #AjaxFiltersProForm {
   background-color: rgba(144, 144, 144, 0.6) !important;
 }
@@ -212,8 +212,7 @@
 }
 #headerMenuParent.stick,
 .news-list-homepage .view-all,
-.header-menu .sublist li:hover a,
-.home-page-category-grid.categories-1 .item-box:hover .title {
+.header-menu .sublist li:hover a {
   /*background-color: rgba(43, 43, 43, 0.8);*/
   background-color: #197149;
   opacity: 0.9;

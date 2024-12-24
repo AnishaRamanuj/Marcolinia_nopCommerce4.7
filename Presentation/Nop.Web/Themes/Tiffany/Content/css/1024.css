@@ -79,7 +79,7 @@ body.home-page-wrapper {
     width: auto;
     margin: 0;
     /*background: #fff;*/
-    background: #197149;
+/*    background: #197149;*/
   }
 .header-inner {
 	position: relative;
@@ -106,7 +106,7 @@ body.home-page-wrapper {
 .header-links-wrapper {
 	float: right;
     position: relative;
-    margin: 0 0 0px 30px;
+    margin: 0 0 0px 0;
     max-width: 340px;
 }
 .header-links li {
@@ -232,12 +232,23 @@ body.home-page-wrapper {
     border:none;
     text-transform:uppercase;
 }
-.search-n-selectors {
-    float: right;
-}
-.search-box {
-	float: left;
-}
+    .header-selectors-wrapper {
+        order: 2;
+    }
+    .search-n-selectors {
+  /*      float: right;*/
+        order: 2;
+        display: flex;
+        flex: 1;
+        gap: 0;
+        align-items: center;
+        color: #fff;
+    }
+    .search-box {
+       /* float: left;*/
+        flex: 1;
+        margin:0px 20px;
+    }
 
 .ui-autocomplete {
     width: 192px !important;
@@ -251,6 +262,7 @@ body.home-page-wrapper {
 }
 .search-box .search-box-text {
     border-right:none;
+    width:100%;
 }
     .search-box .search-box-button {
         border: none;
@@ -258,26 +270,27 @@ body.home-page-wrapper {
         background-color: transparent;
     }
   .search-box input.search-box-text {
-    width: 220px;
+    width: 100%;
     border-color: #ddd;
     border-radius: 7px;
   }
 .header-selectors-wrapper {
-	float: right;
-	margin: 0 0 0 25px;
+  
+	/*float: right;
+	margin: 0 0 0 25px;*/
 }
 .header-selectors-wrapper > div {
 	width: 40px;
 	font-size: 14px;
 	float: left;
 	margin: 0 10px;
-	color: #666;
+	color: #fff;
 }
-  .header-selectors-wrapper select {
-    height: 32px;
-    border: none;
-    color: black;
-  }
+    .header-selectors-wrapper select {
+        height: 32px;
+        border: none;
+        color: #a7a7a7;
+    }
 
 .header-2 .search-n-selectors {
     position: absolute;
@@ -334,7 +347,7 @@ body.home-page-wrapper {
     margin-top: 0 !important;
 }
 #headerMenuParent {
-	background:rgba(57,50,48,.3);
+	/*background:rgba(57,50,48,.3);*/
     position: relative;
     z-index:1001;
 }
@@ -346,7 +359,7 @@ body.home-page-wrapper {
     width: 100%;
     /*background: rgba(57, 50, 48, 0.9);*/
     background-color: #197149;
-    opacity: 0.9;
+    opacity: 1;
   }
 .header-menu {
     margin:0 auto;
@@ -385,7 +398,7 @@ body.home-page-wrapper {
 	position: absolute;
 	top: 45px;
 	z-index: 1001;
-	width: 200px;
+	width: 250px;
    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);*/
 	background: #fff;
     border-radius:5px;
@@ -774,7 +787,7 @@ body.home-page-wrapper {
 }
 .home-page-category-grid.categories-1 .item-box:hover .title,
 .sub-category-grid.categories-1 .item-box:hover .title{
-    background: url("../img/title-decoration.png") no-repeat scroll center 97px rgba(0, 0, 0, 0.5);
+/*    background: url("../img/title-decoration.png") no-repeat scroll center 97px rgba(0, 0, 0, 0.5);*/
     height: 167px;
 }
 
@@ -809,22 +822,23 @@ body.home-page-wrapper {
     transition:all 0.35s ease;
 }
 .product-grid .item-box .picture {
-    margin: 0 0 100px;
+    margin: 0 0 120px;
 }
-  .product-grid .item-box:hover .details, .product-grid .ajax-cart-product-item-hover .details {
-    bottom: 0;
-    /*background: #fff;*/
-    /*color: #000;*/
-    background: #8ea89c;
-    color: #fff;
-  }
+    .product-grid .item-box:hover .details, .product-grid .ajax-cart-product-item-hover .details {
+        bottom: 0;
+        /*background: #fff;*/
+        /*color: #000;*/
+        /* background: #8ea89c;*/
+        background-color: var(--btnPrimaryBgHoverColor);
+        color: #fff;
+    }
 .product-grid .item-box .buttons {
     top: auto;
 	bottom: -52px;
 }
-.product-grid .item-box:hover .details .buttons, .ajax-cart-product-item-hover .details .buttons {
-	bottom: -43px;
-}
+    .product-grid .item-box:hover .details .buttons, .ajax-cart-product-item-hover .details .buttons {
+        bottom: -33px;
+    }
 .product-grid .hover-effect-2 .item-box:hover .details .buttons {
     height:50px;
 }
@@ -1265,7 +1279,7 @@ body.home-page-wrapper {
 
     .header-logo {
         order: 1;
-        flex: 1;
+/*        flex: 1;*/
         text-align: left;
     }
 

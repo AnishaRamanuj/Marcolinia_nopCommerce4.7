@@ -193,6 +193,7 @@
 .mega-menu .dropdown.categories.fullWidth .row-wrapper{
 	float: left;
 	padding: 15px 0 0 0;
+	width:100%;
 }
 
 .mega-menu .dropdown.categories.fullWidth .row {
@@ -207,7 +208,7 @@
 .mega-menu .dropdown.categories.fullWidth .title {
 	display: block;
 	margin: 0 0 2px 0;
-	padding: 0 0 20px 0;
+	padding: 0 0 10px 0;
 	font-size: 18px;
 	color: #231c19;
 	font-family: Arvo;
@@ -224,7 +225,7 @@
 
 .mega-menu .dropdown.categories.fullWidth .box a {
 	border: none;
-	color: #000;
+	color: var(--primaryColor);
 }
 
 .mega-menu .dropdown.categories.fullWidth .box a:hover {

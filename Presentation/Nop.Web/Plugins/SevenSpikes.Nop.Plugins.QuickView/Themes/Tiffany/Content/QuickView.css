@@ -15,8 +15,8 @@
 }
 .quick-view-button a {
     display: block;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     background: #b68d40 url('images/quick-view.png') center no-repeat;
     padding: 0;
     font-size: 0;

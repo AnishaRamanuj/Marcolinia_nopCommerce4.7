@@ -3389,7 +3389,7 @@ label, label + * {
 }
 
 .home-page .topic-block {
-  margin: 0 0 50px;
+    margin: 15px 0 40px;
 }
 
 .popup-window .topic-page {

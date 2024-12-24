@@ -7,9 +7,15 @@
 @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
 @{ await Html.RenderPartialAsync("_Notifications"); }
 @{ await Html.RenderPartialAsync("_JavaScriptDisabledWarning"); }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet" />
+<link href="~/css/main.css" rel="stylesheet" />
+
 <div class="master-wrapper-page">
-    <div class="main" style="background-color: #a59a96;">
-        <marquee class="marq" bgcolor="#262626" style="font-family: Futura, sans-serif; height: 30px; line-height: 30px; color: #fff;" direction="left" loop="">
+    <div class="main" style=" height: 30px;">
+        <marquee class="marq" bgcolor="#175100" style="line-height: 30px; color: #fff; font-weight:400;" direction="left" loop="">
             Your Order is eligible for FREE shipping (in UAE only)
         </marquee>
     </div>
@@ -58,9 +64,13 @@
         {
             @RenderSection("Breadcrumb") 
         }
-        <div class="master-column-wrapper">
-            @RenderBody()
+        <div class="main_content">
+            @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageTop })
+            <div class="master-column-wrapper">
+                @RenderBody()
+            </div>
         </div>
+        
         @if (isHomePage)
         {
             @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeNews })

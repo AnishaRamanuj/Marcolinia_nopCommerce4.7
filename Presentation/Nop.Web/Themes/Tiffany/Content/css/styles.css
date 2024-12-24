@@ -6,6 +6,8 @@
 
 
 /*********** CSS RESET **********/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 * {
@@ -22,6 +24,12 @@
 html {
 	margin: 0 !important;
 	-webkit-text-size-adjust: none;
+	font-family: "Poppins", serif;
+}
+body {
+	font-family: "Poppins", serif;
+	color: #122620;
+	font-weight: 400;
 }
 ol, ul {
 	list-style: none;
@@ -643,7 +651,10 @@ label, label + * {
 }
 .header-links li {
 	display: inline-block;
-	padding: 0 10px;
+	padding: 0 5px;
+}
+.header-links {
+	margin-left: 15px;
 }
   .header-links span,
   .header-links a {
@@ -677,21 +688,23 @@ label, label + * {
 	display: block;
 	clear: both;
 }
-.search-box input.search-box-text {
+/*.search-box input.search-box-text {
 	float: left;
 	width: 220px;
 	height: 32px;
 	font-size: 13px;
-}
-.search-box .search-box-button {
-	float: left;
-	width: 32px;
-	height: 32px;
-	border: none;
-	overflow: hidden;
-	background: url('../img/search-button.png') center no-repeat;
-	text-indent: 999px;
-}
+}*/
+	.search-box .search-box-button {
+		float: left;
+		width: 40px;
+		height: 40px;
+		border: none;
+		overflow: hidden;
+		background: url('../img/search-button.png') center no-repeat;
+		text-indent: 999px;
+		top: 1px;
+		right: 5px;
+	}
 .ui-helper-hidden-accessible {
 	display: none;
 }
@@ -1486,24 +1499,25 @@ div.product-viewmode {
 .product-grid .title,
 .home-page-category-grid .title{
 	margin: 0 0 30px;
-	font-size: 20px;
-    padding-bottom:22px;
+	font-size: 28px;
+    padding-bottom:0px;
    /* background:url('../img/title-decoration.png') no-repeat center bottom;*/
 }
 .product-grid .title strong,
 .home-page-category-grid .title strong {
-	font-weight: normal;
+	/*font-weight: normal;*/
     text-transform:uppercase;
-    font-family:Arvo;
+/*    font-family:Arvo;*/
+	/*font-family:var(--fontFamily);*/
 }
-.product-grid .item-box {
+/*.product-grid .item-box {
     margin:auto;
     width:90%;
     max-width:250px;
-}
-.product-grid .item-box .picture a:before {
-	padding-top: 132%; /*replacement for the fixed height (330px) on .picture element*/
-}
+}*/
+/*.product-grid .item-box .picture a:before {
+	padding-top: 132%;
+}*/
 .item-grid .details {
 	color: #fff;
 }
@@ -1547,16 +1561,18 @@ div.product-viewmode {
     right:0;
     text-align:center;
 }
-.item-grid .details .buttons input,
-.item-grid .details .buttons button,
-.item-grid .details .buttons select {
-    margin:0 0 0 1px;
-    height: 45px;
-    width: 45px;
-    font-size:0;
-    border:none;
-    vertical-align: top;
-}
+	.item-grid .details .buttons input,
+	.item-grid .details .buttons button,
+	.item-grid .details .buttons select {
+		margin: 0 0 0 2px;
+		height: 30px;
+		width: 30px;
+		font-size: 0;
+		border: 0;
+		vertical-align: top;
+		border-radius: 4px !important;
+		padding: 5px;
+	}
 .item-grid .item-box .tax-shipping-info{
     text-align:center;
 }
@@ -2933,7 +2949,7 @@ td .attributes {
 	margin: 0 0 20px;
 }
 .home-page .topic-block {
-	margin: 0 0 40px;
+	margin: 15px 0 40px;
 }
 .topic-block-title {
 	margin: 0 0 30px;
@@ -5554,46 +5570,4 @@ pre {
     left: 0;
     margin: auto;
 }
-.home-page-category-grid.categories-1 .item-grid,
-.product-grid .item-grid {
-	display: flex;
-	gap: 1%;
-	flex-wrap: wrap;
-}
-.product-grid .item-box .picture {
-	margin:0px!important;
-	height: 360px;
-	padding: 10px;
-}
-.item-box {
-	overflow: hidden;
-	border: 1px solid #ddd;
-	margin-bottom: 20px!important;
-	border-radius: 10px;
-}
-.home-page-category-grid.categories-1 .item-grid .item-box,
-.product-grid .item-box {
-	overflow: hidden;
-	border: 1px solid #ddd;
-	margin-bottom: 20px !important;
-	border-radius: 10px;
-}
-.product-ribbon {
-	background: #E31837;
-	padding: 4px 10px;
-	border-radius: 50px;
-	color: #fff;
-	font-weight: 800;
-	line-height: 10px !important;
-}
-	.product-ribbon .ribbon-text {
-		line-height: normal !important;
-		font-size: 15px !important;
-		font-weight: bold !important;
-	}
 
-
-.product-grid .item-grid .ribbon-position {
-	top: 10px;
-	right: 10px;
-}
