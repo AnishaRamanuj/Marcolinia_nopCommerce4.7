@@ -36,8 +36,9 @@ body.home-page-wrapper {
     max-width: 100%;
 	box-shadow: 0 0 0 1px #eee;
 	overflow: hidden;
-	background: #fff;
+/*	background: #fff;*/
 	padding-top: 35px;
+    box-shadow:none;
 }
 .home-page-wrapper .master-column-wrapper {
 	box-shadow: none;
@@ -358,7 +359,7 @@ body.home-page-wrapper {
     z-index: 1001;
     width: 100%;
     /*background: rgba(57, 50, 48, 0.9);*/
-    background-color: #197149;
+/*    background-color: #197149;*/
     opacity: 1;
   }
 .header-menu {
@@ -447,7 +448,7 @@ body.home-page-wrapper {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px 0 0;
+    padding: 0;
 }
 .footer-block ul {
     text-align:left;
@@ -477,7 +478,7 @@ body.home-page-wrapper {
 .links-bottom-left {
     float: left;
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .links-bottom-left > div {
     float: left;
@@ -496,7 +497,7 @@ body.home-page-wrapper {
     width: 170px;
 }
 .footer-lower {
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 
@@ -516,15 +517,15 @@ body.home-page-wrapper {
 	max-width: none;
     height:auto;
     border-left: none;
-    background:#fff;
+ /*   background:#fff;*/
 }
 .block .listbox {
 	display: block;
 }
 
-.block .title strong {
+/*.block .title strong {
     padding: 12px 20px 10px;
-}
+}*/
 .block .list a,
 .block .year strong {
     padding: 9px 5px 9px 25px;
@@ -645,9 +646,9 @@ body.home-page-wrapper {
 .block.block-popular-tags .title {
     border-bottom:none;
 }
-.block .tags {
+/*.block .tags {
 	padding: 5px 15px;
-}
+}*/
 .block .poll-options li,
 .block .poll-results li{
 	display: block;

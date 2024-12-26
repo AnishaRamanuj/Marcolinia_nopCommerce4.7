@@ -1118,7 +1118,6 @@ label, label + * {
 .footer-upper {
   width: 95%;
   margin: auto;
-  border-bottom: 1px solid #ddd;
   overflow: hidden;
   padding: 40px 0;
   font-size: 0;
@@ -1265,7 +1264,7 @@ label, label + * {
   width: 95%;
   margin: auto;
   overflow: hidden;
-  padding: 25px 0;
+  padding: 0 0;
   font-size: 12px;
 }
 
@@ -1274,9 +1273,9 @@ label, label + * {
 }
 
 .footer-tax-shipping a {
-  display: inline-block;
-  font-weight: bold;
-  color: #4ab2f1;
+    display: inline-block;
+    font-weight: bold;
+    color: var(--DarkBrownBgColor);
 }
 
 .footer-tax-shipping a:hover,
@@ -1289,11 +1288,11 @@ label, label + * {
   font-size: 16px;
 }
 
-.footer-powered-by a {
-  display: inline-block;
-  font-weight: bold;
-  color: #4ab2f1;
-}
+    .footer-powered-by a {
+        display: inline-block;
+        font-weight: bold;
+        color: var(--DarkBrownBgColor);
+    }
 
 .footer-powered-by a:hover,
 .footer-powered-by a:focus {

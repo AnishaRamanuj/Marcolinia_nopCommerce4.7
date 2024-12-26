@@ -31,9 +31,7 @@
 	padding-right: 3%;
 	padding-left: 3%;
 }
-.footer-upper {
-	margin-bottom: 80px;
-}
+
 .newsletter-email {
 	width: auto;
 	max-width: 600px;
@@ -48,8 +46,8 @@
 .newsletter-email button {
 	float: right;
 	width: auto;
-	min-width: 134px;
-	max-width: 200px;
+	min-width: inherit;
+/*	max-width: 200px;*/
 }
 .footer-middle .footer-block {
 	float: right;

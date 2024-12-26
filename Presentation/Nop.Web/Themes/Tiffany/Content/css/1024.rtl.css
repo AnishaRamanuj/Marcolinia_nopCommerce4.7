@@ -30,7 +30,7 @@
 		max-width: 100%;
 		box-shadow: 0 0 0 1px #eee;
 		overflow: hidden;
-		background: #fff;
+	/*	background: #fff;*/
 		padding-top: 35px;
 	}
 	.home-page-wrapper .master-column-wrapper {
@@ -341,7 +341,7 @@
         z-index: 1001;
         width: 100%;
         /*background: rgba(57, 50, 48, 0.9);*/
-        background-color: #197149;
+     /*   background-color: #197149;*/
         opacity: 0.9;
       }
 	.header-menu {
@@ -455,7 +455,7 @@
 	.links-bottom-left {
 		float: right;
 		text-align: right;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
 	}
 	.links-bottom-left > div {
 		float: right;
@@ -474,7 +474,7 @@
 		width: 170px;
 	}
 	.footer-lower {
-		padding-bottom: 10px;
+		padding-bottom: 0;
 	}
 	.center-2 {
 		float: left;
@@ -490,7 +490,7 @@
 		max-width: none;
 		height: auto;
 		border-right: none;
-		background: #fff;
+	/*	background: #fff;*/
 	}
 	.block .listbox {
 		display: block;

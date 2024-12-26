@@ -32,25 +32,24 @@
 	padding-right: 3%;
 }
 .footer-upper {
-	margin-bottom: 80px;
+	margin-bottom: 0;
 }
 .newsletter-email {
 	width: auto;
 	max-width: 610px;
 	overflow: hidden;
 }
-  .newsletter-email input[type="email"] {
-    float: left;
-    display: inline-block;
-    width: 300px;
-    border-radius: 5px;
-  }
-.newsletter-email button {
-	float: left;
-	width: auto;
-	min-width: 134px;
-	max-width: 200px;
-}
+	.newsletter-email input[type="email"] {
+		float: left;
+		display: inline-block;
+		flex: 1;
+		border-radius: 5px;
+	}
+	.newsletter-email button {
+		float: left;
+		width: auto;
+		min-width: inherit;
+	}
 .footer-middle .footer-block {
 	float: left;
 	width: 31%;

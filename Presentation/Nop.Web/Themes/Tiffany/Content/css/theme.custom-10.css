@@ -84,9 +84,9 @@
 .ui-dialog .back-in-stock-subscription-page .notify-me-button,
 .spc-header li.active::after,
 .spc-header li:after {
-/*    background-color: #8e807a;*/
+    /*    background-color: #8e807a;*/
     background-color: var(--LightBrownBgColor);
-    border-top: 1px dashed var(--btnPrimaryBgHoverColor);
+    border-top: 1px dashed var(--DarkBrownBgColor);
     -webkit-transition: all 0.2s ease 0s;
     -ms-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
@@ -225,15 +225,25 @@
 }
 #headerMenuParent.stick,
 .news-list-homepage .view-all,
-.header-menu .sublist li:hover a,
 .home-page-category-grid.categories-1 .item-box:hover .title {
     /*background-color: rgba(60, 54, 51, 0.8);*/
-    background-color: var(--secondaryColor);
-    opacity: 0.9;
-    color: #ffffff;
+    background: var(--DarkBrownBgColor);
+    opacity: 1;
+    color: var(--white);
+}
+.header-menu .sublist li a span {
+    color: var(--primaryColor);
+}
+.header-menu > ul > li:hover .hover span {
+    color: #fff;
+}
+.header-menu .sublist li:hover a {
+    opacity: 1;
+    background: var(--DarkBrownBgColor);
 }
 .footer-lower {
-  background-color: #3c3633;
+    /*    background-color: #3c3633;*/
+    background-color: var(--primaryColor);
 }
 .quickViewWindow .selected-value .color-container,
 .color-squares .selected-value .color-container {
@@ -246,7 +256,7 @@
         transition: 0.5s ease;
     }
 .home-page-category-grid.categories-1 .item-box:hover .title {
-    background-color: var(--secondaryColor);
+    background-color: var(--DarkBrownBgColor);
     height: 100px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

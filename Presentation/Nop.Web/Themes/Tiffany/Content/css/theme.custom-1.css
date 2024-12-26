@@ -36,7 +36,6 @@
 .variant-overview .add-to-cart-button,
 .write-review .button-1,
 .productAddedToCartWindowCheckout:hover,
-.shopping-cart-page .common-buttons .continue-shopping-button,
 .mfp-container .apply-shipping-button,
 .shopping-cart-page .button-1,
 .cart-collaterals .coupon-code button:hover,
@@ -88,17 +87,23 @@
   -ms-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
-.post-info .manage-post .edit-post-button,
-.post-info .manage-post .delete-post-button,
-.item-box .add-info button.button-2.add-to-wishlist-button,
-.product-list .details .add-info .buttons button.button-2.add-to-wishlist-button,
-.poll .buttons button,
-.button-2.contact-vendor-button,
-.wishlist-content .common-buttons .wishlist-add-to-cart-button,
-.wishlist-content .common-buttons .update-wishlist-button:hover,
-.wishlist-content .common-buttons .email-a-friend-wishlist-button:hover {
-  background-color: #777 !important;
+
+.shopping-cart-page .common-buttons .continue-shopping-button,
+.shopping-cart-page .button-2 {
+    background: var(--DarkBrownBgColor)!important;
 }
+
+    .post-info .manage-post .edit-post-button,
+    .post-info .manage-post .delete-post-button,
+    .item-box .add-info button.button-2.add-to-wishlist-button,
+    .product-list .details .add-info .buttons button.button-2.add-to-wishlist-button,
+    .poll .buttons button,
+    .button-2.contact-vendor-button,
+    .wishlist-content .common-buttons .wishlist-add-to-cart-button,
+    .wishlist-content .common-buttons .update-wishlist-button:hover,
+    .wishlist-content .common-buttons .email-a-friend-wishlist-button:hover {
+        background-color: #777 !important;
+    }
 .item-box:nth-child(2n+1) .details,
 .quick-view-button:hover a,
 .add-info .buttons .product-box-add-to-cart-button:hover,
@@ -139,7 +144,6 @@
 .productAddedToCartWindowSummary .continueShoppingLink,
 .productAddedToCartWindowSummary .viewBasketLink:hover,
 .mini-shopping-cart .cart-button:hover,
-.cart-collaterals .coupon-code button,
 .shopping-cart-page .estimate-shipping-button,
 .shopping-cart-page .common-buttons .update-cart-button,
 .shopping-cart-page .common-buttons .estimate-shipping-button,
@@ -183,9 +187,18 @@
   -ms-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
-.home-page-filters-wrapper .search-button:hover {
-  background-color: #909090 !important;
+.shopping-cart-page .common-buttons .continue-shopping-button,
+.shopping-cart-page .button-2,
+.shopping-cart-page .button-1,
+.shopping-cart-page .common-buttons .continue-shopping-button,
+.cart-collaterals .coupon-code button {
+    background: var(--DarkBrownBgColor)!important;
 }
+
+.home-page-filters-wrapper .search-button:hover {
+    background-color: #909090 !important;
+}
+
 .item-box .add-info button.button-2.add-to-wishlist-button:hover,
 .poll .buttons button:hover,
 .button-2.contact-vendor-button:hover,
@@ -213,9 +226,9 @@
 #headerMenuParent.stick,
 .news-list-homepage .view-all,
 .header-menu .sublist li:hover a {
-  /*background-color: rgba(43, 43, 43, 0.8);*/
-  background-color: #197149;
-  opacity: 0.9;
+    /*background-color: rgba(43, 43, 43, 0.8);*/
+    background: var(--DarkBrownBgColor);
+    opacity: 0.9;
 }
 .footer-lower {
   background-color: #2b2b2b;

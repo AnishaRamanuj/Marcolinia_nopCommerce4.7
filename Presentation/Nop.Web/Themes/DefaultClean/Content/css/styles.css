@@ -1110,7 +1110,6 @@ label, label + * {
 .footer-upper {
   width: 95%;
   margin: auto;
-  border-bottom: 1px solid #ddd;
   overflow: hidden;
   padding: 40px 0;
   font-size: 0;
@@ -1262,8 +1261,9 @@ label, label + * {
 }
 
 .footer-tax-shipping a {
-  font-weight: bold;
-  color: #4ab2f1;
+    font-weight: bold;
+/*    color: #4ab2f1;*/
+    color: var(--DarkBrownBgColor);
 }
 
 .footer-tax-shipping a:hover,
@@ -1276,10 +1276,11 @@ label, label + * {
   font-size: 16px;
 }
 
-.footer-powered-by a {
-  font-weight: bold;
-  color: #4ab2f1;
-}
+    .footer-powered-by a {
+        font-weight: bold;
+       /* color: #4ab2f1;*/
+        color: var(--DarkBrownBgColor);
+    }
 
 .footer-powered-by a:hover,
 .footer-powered-by a:focus {
@@ -8218,12 +8219,12 @@ label, label + * {
   .block {
     float: none;
     width: auto;
-    margin: 0 0 20px;
+/*    margin: 0 0 20px;*/
   }
   
   .block .title {
     margin: 0;
-    border-bottom: 1px solid #ddd;
+/*    border-bottom: 1px solid #ddd;*/
     background: none;
     cursor: auto;
   }

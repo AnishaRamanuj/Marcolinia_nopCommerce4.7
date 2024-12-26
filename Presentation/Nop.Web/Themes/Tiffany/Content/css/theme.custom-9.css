@@ -214,9 +214,9 @@
 #headerMenuParent.stick,
 .news-list-homepage .view-all,
 .header-menu .sublist li:hover a {
-  /*background-color: rgba(75, 62, 51, 0.8);*/
-  background-color: #197149;
-  opacity: 0.9;
+    /*background-color: rgba(75, 62, 51, 0.8);*/
+    background: var(--DarkBrownBgColor);
+    opacity: 1;
 }
 
 
