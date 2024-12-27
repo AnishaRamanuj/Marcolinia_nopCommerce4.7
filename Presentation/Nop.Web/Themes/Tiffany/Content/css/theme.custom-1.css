@@ -37,8 +37,6 @@
 .write-review .button-1,
 .productAddedToCartWindowCheckout:hover,
 .mfp-container .apply-shipping-button,
-.shopping-cart-page .button-1,
-.cart-collaterals .coupon-code button:hover,
 .shopping-cart-page .estimate-shipping-button:hover,
 .shopping-cart-page .common-buttons .update-cart-button:hover,
 .order-progress a:before,
@@ -50,7 +48,6 @@
 .shipping-method .method-name:hover,
 .shipping-method li:nth-child(2) .method-name,
 .checkout-page .order-completed-continue-button,
-.shopping-cart-page .button-2,
 .checkout-page .button-2,
 .order-details-page .page-title a,
 .order-details-page .button-2,
@@ -88,10 +85,7 @@
   transition: all 0.2s ease 0s;
 }
 
-.shopping-cart-page .common-buttons .continue-shopping-button,
-.shopping-cart-page .button-2 {
-    background: var(--DarkBrownBgColor)!important;
-}
+
 
     .post-info .manage-post .edit-post-button,
     .post-info .manage-post .delete-post-button,
@@ -148,7 +142,6 @@
 .shopping-cart-page .common-buttons .update-cart-button,
 .shopping-cart-page .common-buttons .estimate-shipping-button,
 .shopping-cart-page .common-buttons .continue-shopping-button:hover,
-.shopping-cart-page .button-1:hover,
 .login-page .checkout-as-guest-or-register-block .button-1:hover,
 .login-page .returning-wrapper .button-1:hover,
 .checkout-page .button-1:hover,
@@ -157,7 +150,6 @@
 .shipping-method .method-name,
 .shipping-method li:nth-child(2) .method-name:hover,
 .checkout-page .order-completed-continue-button:hover,
-.shopping-cart-page .button-2:hover,
 .checkout-page .button-2:hover,
 .order-details-page .page-title a:hover,
 .order-details-page .button-2:hover,
@@ -190,9 +182,8 @@
 .shopping-cart-page .common-buttons .continue-shopping-button,
 .shopping-cart-page .button-2,
 .shopping-cart-page .button-1,
-.shopping-cart-page .common-buttons .continue-shopping-button,
 .cart-collaterals .coupon-code button {
-    background: var(--DarkBrownBgColor)!important;
+    background: var(--BtnPrimaryBgColor) !important;
 }
 
 .home-page-filters-wrapper .search-button:hover {

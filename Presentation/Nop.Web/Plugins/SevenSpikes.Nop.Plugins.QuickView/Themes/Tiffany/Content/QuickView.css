@@ -112,7 +112,7 @@
     margin: 0;
     padding:0 0 20px 0;
    /* background:url(images/title-decoration.png) no-repeat center bottom;*/
-	font-family: Arvo;
+	
 	text-transform: uppercase;
     text-align: center;
     font-size: 18px;
@@ -388,7 +388,7 @@
     text-align: left;
 }
 .quickViewWindow #accordion .product-details .spec-name {
-    color:#666;
+    
     width:30%;
     text-align:right;
     padding:0 8px 0 0;
@@ -601,7 +601,7 @@
     clear: left;
     margin:7px 7px 7px 0;
     text-align:left;
-    color:#666;
+    
     overflow:hidden;
     min-width:50px;
     width:96px;

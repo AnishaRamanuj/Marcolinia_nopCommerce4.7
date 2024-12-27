@@ -12,7 +12,7 @@
 }
 @if (Model.Enabled)
 {
-    <div class="breadcrumb">
+   @*  <div class="breadcrumb">
         <ul>
             @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductBreadcrumbBefore, additionalData = Model })
             <li>
@@ -44,5 +44,5 @@
                 @Html.Raw(Model.JsonLd)
             </script>
         }
-    </div>
+    </div> *@
 }

@@ -72,7 +72,6 @@
 }
 
 .ajaxCart .k-window-titlebar {
-    font-family: Arvo;
     padding: 0 0 10px;
     text-transform: uppercase;
 }
@@ -128,7 +127,7 @@
     padding: 20px 30px;
 /*    background: url(images/title-decoration.png) no-repeat center bottom transparent;*/
     text-transform: uppercase;
-    font-family: Arvo;
+    
     text-align: center;
     font-weight: normal;
     font-size: 18px;
@@ -236,7 +235,7 @@
     margin: 0 0 15px 0;
     font-size: 16px;
     color: #000;
-    font-family: Arvo;
+    
 }
 
 .productAddedToCartWindowDescription h1 a {
@@ -280,7 +279,7 @@
     margin: 0;
     border: medium none;
     color: #ffffff;
-    font-family: Arvo;
+    
     font-size: 14px;
     padding: 10px 15px;
     text-transform: uppercase;
@@ -304,7 +303,7 @@
 .productAddedToCartWindowCheckout {
     border: medium none;
     color: #ffffff;
-    font-family: Arvo;
+    
     font-size: 14px;
     padding: 10px 15px;
     text-transform: uppercase;
@@ -441,7 +440,7 @@
 
 .miniProductDetailsView h1.product-variant-name {
     color: #000000;
-    font-family: Arvo;
+    
     font-size: 16px;
     margin: 0 0 15px;
     text-transform: none;
@@ -560,7 +559,7 @@
 .miniProductDetailsView .product-name {
     background: url("images/title-decoration.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
     color: #000000;
-    font-family: Arvo;
+    
     font-size: 18px;
     font-weight: normal;
     padding: 20px 30px;

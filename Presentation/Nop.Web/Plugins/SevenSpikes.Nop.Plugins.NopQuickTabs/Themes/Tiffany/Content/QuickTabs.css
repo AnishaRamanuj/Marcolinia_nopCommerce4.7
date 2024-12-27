@@ -73,7 +73,7 @@
 }
 .ui-tabs .ui-tabs-panel .product-specs-box .spec-name {
     background:#fff;
-    color:#666;
+    
     width:30%;
     text-align:right;
     padding:0 8px 0 0;
@@ -84,7 +84,6 @@
     padding:0 0 0 8px;
 }
 .ui-tabs .product-reviews-page .title strong {
-    font-family: Arvo;
     font-size: 16px;
     text-transform: uppercase;
     font-weight:normal;
@@ -195,7 +194,7 @@
         text-align:right;
         padding:0 8px 0 0;
         line-height:40px;
-        color:#666;
+        
         font-size:16px;
     }
     .ui-tabs-panel .write-review .review-rating .tooltiptext {

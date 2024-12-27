@@ -290,7 +290,7 @@ label, label + * {
 }
 .fieldset .title strong,
 .section .title strong {
-	font-family: Arvo;
+	
 	font-size: 16px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -619,8 +619,6 @@ label, label + * {
 	position: relative;
 	margin: 0 0 20px;
 }
-.header-links {
-}
 .header-links ul {
 	font-size: 0;
 }
@@ -707,11 +705,11 @@ label, label + * {
 	margin-left: 8px;
 	vertical-align: middle;
 }
-.header-selectors-wrapper > div {
+/*.header-selectors-wrapper > div {
 	display: inline-block;
 	margin: 0 5px 10px;
 	vertical-align: middle;
-}
+}*/
 .header-selectors-wrapper select {
   max-width: 100%;
   border-radius: 0;
@@ -721,19 +719,18 @@ label, label + * {
   padding: 0 0 0 10px;
   font-family: 'Trebuchet MS',sans-serif;
   font-size: 14px;
-  color: #666;
+  height:inherit;
 }
 .header-selectors-wrapper select::-ms-expand {
 	display: none;
 }
 .language-list {
-	max-width: 100%;
-	font-size: 0;
-	min-width: 70px;
+	display: flex;
+	gap: 0;
 }
 .language-list li {
 	display: inline-block;
-	margin: 0 1px;
+	margin: 0 ;
 }
 .language-list a {
 	display: block;
@@ -1045,7 +1042,7 @@ label, label + * {
 	font-weight: normal;
 	display: block;
 	font-size: 16px;
-	font-family: Arvo;
+	
 	background: #f9f9f9;
 	text-transform: uppercase;
 	overflow: hidden;
@@ -1359,7 +1356,7 @@ div.product-viewmode {
 	font-size: 16px;
 	line-height: 15px;
 	margin: 0 3px;
-	font-family: Arvo;
+	
 }
 .item-box .buttons {
 	margin: 0;
@@ -1462,7 +1459,7 @@ div.product-viewmode {
 .home-page-category-grid .title strong {
 	font-weight: normal;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 }
 .product-grid .item-box {
 	margin: auto;
@@ -1614,7 +1611,7 @@ div.product-viewmode {
 	background: #a69c97;
 	border: none !important;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	line-height: 40px;
 	text-transform: uppercase;
@@ -1636,7 +1633,7 @@ div.product-viewmode {
 .product-filters-wrapper .filter-title {
 	color: #000;
 	display: block;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	line-height: 17px;
 	padding: 10px 20px;
@@ -1760,10 +1757,9 @@ div.product-viewmode {
 	font-size: 22px;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-family: Arvo;
 	padding-bottom: 22px;
+	font-weight:600;
 /*	background: url(../img/title-decoration.png) no-repeat center bottom;*/
-	color: #000;
 }
 .overview .short-description {
 	padding-bottom: 20px;
@@ -2082,7 +2078,7 @@ div.product-viewmode {
 /*	background: url('../img/title-decoration.png') no-repeat center bottom;*/
 	padding: 5px 10px 30px;
 	font-size: 18px;
-	font-family: Arvo;
+	
 	color: #000;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -2530,7 +2526,7 @@ td .attributes {
 	font-size: 14px;
 	color: #fff;
 	width: auto;
-	font-family: Arvo;
+	
 	border: none;
 	text-transform: uppercase;
 }
@@ -2669,7 +2665,7 @@ td .attributes {
 	background: #b68d40;
 	border: medium none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 40px;
 	text-transform: uppercase;
@@ -2701,7 +2697,7 @@ td .attributes {
 	max-width: 70%;
 	text-align: right;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 	font-size: 16px;
 }
 .product-review-item .review-title strong {
@@ -2792,7 +2788,7 @@ td .attributes {
 	padding: 10px 15px;
 	border: medium none;
 	color: #fff;
-	font-family: Arvo;
+	
 	font-size: 15px;
 	text-transform: uppercase;
 	background: #a79c97;
@@ -2825,7 +2821,7 @@ td .attributes {
 		background: #b68d40;
 		border: none;
 		color: #ffffff;
-		font-family: Arvo;
+		
 		font-size: 16px;
 		height: 40px;
 		overflow: hidden;
@@ -2877,7 +2873,7 @@ td .attributes {
 .topic-block-title h2 {
 	font-weight: normal;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 	font-size: 24px;
 }
 .topic-block-body {
@@ -2938,7 +2934,7 @@ td .attributes {
 	background: #b68d40;
 	border: none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 40px;
 	line-height: 40px;
@@ -2996,7 +2992,7 @@ td .attributes {
 .registration-page .title strong {
 	font-size: 16px;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 	font-weight: normal;
 }
 .registration-page .inputs .gender {
@@ -3077,7 +3073,7 @@ td .attributes {
 	line-height: 40px;
 	vertical-align: middle;
     font-size:16px;
-    color:#666;
+    
 }
 .inputs.accept-consent a {
 	font-weight: bold;
@@ -3094,7 +3090,7 @@ td .attributes {
 	background: #b68d40;
 	border: none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 42px;
 	margin: 2px 0;
@@ -3152,7 +3148,7 @@ td .attributes {
 	height: 40px;
 	background: #b68d40;
 	color: #fff;
-	font-family: Arvo;
+	
 	text-transform: uppercase;
 	border: none;
 	font-size: 16px;
@@ -3193,7 +3189,7 @@ td .attributes {
 	background: #b68d40;
 	border: none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 14px;
 	max-width: none;
 	padding: 8px 26px;
@@ -3376,7 +3372,7 @@ td .attributes {
     background: #a69c97 none repeat scroll 0 0;
     border: medium none !important;
     color: #ffffff;
-    font-family: Arvo;
+    
     font-size: 16px;
     line-height: 40px;
     padding: 0 10px !important;
@@ -3388,7 +3384,7 @@ td .attributes {
     border: medium none;
     color: #fff;
     display: inline-block;
-    font-family: Arvo;
+    
     font-size: 13px;
     padding: 8px 16px;
     text-transform: uppercase;
@@ -3484,15 +3480,9 @@ td .attributes {
 	margin: 0px auto;
 }
 .shopping-cart-page .button-1 {
-	height: 45px;
-	background: #8e807a;
-	width: 96%;
-	max-width: 350px;
-	color: #fff;
-	font-family: Arvo;
+	width: 100%;
 	text-transform: uppercase;
 	border: none;
-	font-size: 16px;
 }
 .checkout-page .button-1 {
 	width: auto;
@@ -3502,7 +3492,7 @@ td .attributes {
 	line-height: 40px;
 	background: #8e807a;
 	color: #fff;
-	font-family: Arvo;
+	
 	text-transform: uppercase;
 	border: none;
 	font-size: 16px;
@@ -3548,7 +3538,7 @@ td .attributes {
 	padding: 10px 15px;
 	font-size: 14px;
 	color: #fff;
-	font-family: Arvo;
+	
 	border: none;
 	text-transform: uppercase;
 }
@@ -3561,7 +3551,7 @@ td .attributes {
 	.shopping-cart-page .button-2,
 	.shopping-cart-page .button-1,
 	.shopping-cart-page .common-buttons .continue-shopping-button {
-		background: var(--DarkBrownBgColor);
+		background: var(--BtnPrimaryBgColor);
 	}
 .shopping-cart-page .common-buttons .update-cart-button,
 .shopping-cart-page .common-buttons .estimate-shipping-button {
@@ -3575,7 +3565,7 @@ input.estimate-shipping-radio:checked + label {
 .shopping-cart-page .shipping .inputs select {
 	border: 1px solid #ddd;
 	background: #f9f9f9;
-	font-family: Arvo;
+	
 	text-transform: none;
 	font-size: 16px;
 	height: 36px;
@@ -3648,9 +3638,7 @@ input.estimate-shipping-radio:checked + label {
 .cart-total td {
 	width: 50%;
 	border: none;
-	padding: 5px;
-	font-size: 16px;
-	color: #666;
+	padding: 3px 5px;
 }
 .cart-total tr:last-child {
 	border-top: 1px solid #ddd;
@@ -3666,11 +3654,7 @@ input.estimate-shipping-radio:checked + label {
 .cart-total-right {
 	text-align: left;
 }
-.cart-total .order-total strong {
-	font-size: 16px;
-	color: #000;
-	font-weight: normal;
-}
+
 .terms-of-service {
 	margin: 0 0 20px;
 	font-size: 16px;
@@ -3692,14 +3676,11 @@ input.estimate-shipping-radio:checked + label {
 	margin: 0 0 30px;
 }
 .cart-collaterals .title {
-	margin: 0 0 5px;
-	font-size: 16px;
+	margin: 0 0 0;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 }
-.cart-collaterals .title strong {
-	font-weight: normal;
-}
+
 .cart-collaterals .hint {
 	margin: 0 0 15px;
 	font-size: 14px;
@@ -3723,15 +3704,11 @@ input.estimate-shipping-radio:checked + label {
 	margin: 0 0 0 -1px;
 	background: #f9f9f9;
 }
-.cart-collaterals .coupon-code button {
-	float: right;
-	width: 35%;
-	height: 36px;
-	background: #a79c97;
-	color: #fff;
-	font-family: Arvo;
-	text-transform: none;
-}
+	.cart-collaterals .coupon-code button {
+		float: right;
+		width: 35%;
+		text-transform: none;
+	}
 .cart-collaterals .message {
 	margin: 5px 0 0;
 	color: #c00;
@@ -3854,7 +3831,7 @@ input.estimate-shipping-radio:checked + label {
 	line-height: 40px;
 	background: #a79c97;
 	color: #fff;
-	font-family: Arvo;
+	
 	text-transform: uppercase;
 	border: none;
 	font-size: 16px;
@@ -4036,7 +4013,7 @@ input.estimate-shipping-radio:checked + label {
 	padding: 10px;
 }
 .order-details-page .order-overview strong {
-	font-family: Arvo;
+	
 	font-weight: normal;
 	color: #000;
 }
@@ -4130,7 +4107,7 @@ input.estimate-shipping-radio:checked + label {
 	background: #8e807a;
 	border: medium none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 40px;
 	text-transform: uppercase;
@@ -4141,7 +4118,7 @@ input.estimate-shipping-radio:checked + label {
 	background: #a69c97;
 	border: none !important;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	line-height: 40px;
 	text-transform: uppercase;
@@ -4184,7 +4161,7 @@ input.estimate-shipping-radio:checked + label {
 	background: #8e807a;
 	border: none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 40px;
 	padding: 0 30px;
@@ -4309,7 +4286,7 @@ input.estimate-shipping-radio:checked + label {
 	display: inline-block;
 	margin: 0 0 10px;
 	font-size: 20px;
-	font-family: Arvo;
+	
 }
 .news-title {
 	color: #333;
@@ -4416,7 +4393,7 @@ input.estimate-shipping-radio:checked + label {
 	font-size: 18px;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 }
 .new-comment .notifications {
 	margin: 0 0 10px;
@@ -4438,7 +4415,7 @@ input.estimate-shipping-radio:checked + label {
 	background: none repeat scroll 0 0 #8e807a;
 	border: medium none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 40px;
 	line-height: 40px;
@@ -4525,7 +4502,7 @@ input.estimate-shipping-radio:checked + label {
 }
 .comment-content .comment-title {
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	margin: 0 0 10px;
 	color: #000;
@@ -4611,7 +4588,7 @@ input.estimate-shipping-radio:checked + label {
 	background: #8e807a;
 	border: medium none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	height: 40px;
 	line-height: 40px;
@@ -4677,7 +4654,7 @@ input.estimate-shipping-radio:checked + label {
 	display: inline-block;
 	border: none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 14px;
 	padding: 8px 12px;
 	background: #8e807a;
@@ -4696,7 +4673,7 @@ input.estimate-shipping-radio:checked + label {
 }
 .forums-table-section-title > a,
 .forums-table-section-title strong {
-	font-family: Arvo;
+	
 	font-size: 18px !important;
 	font-weight: normal;
 	color: #000;
@@ -4779,7 +4756,7 @@ input.estimate-shipping-radio:checked + label {
 	margin: 0 0 20px;
 }
 .forum-page .forum-name h1 {
-	font-family: Arvo;
+	
 	font-size: 22px;
 	font-weight: normal;
 	margin: 0 0 10px;
@@ -4805,7 +4782,7 @@ input.estimate-shipping-radio:checked + label {
 	color: #666;
 	font-size: 14px;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 }
 .forum-page .new-topic {
 	background: url('../img/icon-new_topic.png') 8px center no-repeat/* CHECK_HERE */;
@@ -4826,7 +4803,7 @@ input.estimate-shipping-radio:checked + label {
 	font-size: 22px;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 /*	background: url('../img/title-decoration.png') center bottom no-repeat;*/
 	padding-bottom: 22px;
 }
@@ -4842,7 +4819,7 @@ input.estimate-shipping-radio:checked + label {
 .topic-footer .actions a {
 	display: inline-block;
 	color: #666;
-	font-family: Arvo;
+	
 	font-size: 14px;
 	margin: 0;
 	padding: 10px 25px 10px 15px;
@@ -4924,7 +4901,7 @@ input.estimate-shipping-radio:checked + label {
 .topic-post .username {
 	display: inline-block;
 	margin: 0 0 5px;
-	font-family: Arvo;
+	
 }
 .topic-post .avatar,
 .profile-info-box .avatar {
@@ -5025,7 +5002,7 @@ input.estimate-shipping-radio:checked + label {
 	margin: 0 0 10px;
 	font-size: 16px;
 	text-transform: uppercase;
-	font-family: Arvo;
+	
 	background: #f9f9f9;
 	padding: 12px 10px 10px;
 	color: #666;
@@ -5042,7 +5019,7 @@ input.estimate-shipping-radio:checked + label {
 	background: #f6f6f6;
 	padding: 10px;
 	font-size: 16px;
-	font-family: Arvo;
+	
 }
 .profile-page .topic-title label {
 	display: none;
@@ -5068,7 +5045,7 @@ input.estimate-shipping-radio:checked + label {
 	float: right;
 	border: medium none;
 	color: #ffffff;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	margin: 0;
 	padding: 10px 15px !important;
@@ -5088,7 +5065,7 @@ input.estimate-shipping-radio:checked + label {
 .forum-edit-page strong,
 .private-message-send-page a {
 	font-size: 18px;
-	font-family: Arvo;
+	
 	font-weight: normal;
 	vertical-align: middle;
 }
@@ -5141,7 +5118,7 @@ input.estimate-shipping-radio:checked + label {
 	height: 40px;
 	color: #ffffff;
 	float: right;
-	font-family: Arvo;
+	
 	font-size: 16px;
 	text-transform: uppercase;
 	background: #a79c97;

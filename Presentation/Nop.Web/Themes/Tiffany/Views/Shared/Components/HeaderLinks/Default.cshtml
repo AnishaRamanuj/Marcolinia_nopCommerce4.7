@@ -51,6 +51,15 @@
 </style>
 <div class="header-links">
     <ul>
+        <li>
+            <div class="custum-select">
+                <select class="form-control">
+                    <option value="0">My Account</option>
+                    <option value="1">Login</option>
+                    <option value="2">Sign Up</option>
+                </select>
+            </div>
+        </li>
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksBefore, additionalData = Model })
         @if (Model.IsAuthenticated)
         {

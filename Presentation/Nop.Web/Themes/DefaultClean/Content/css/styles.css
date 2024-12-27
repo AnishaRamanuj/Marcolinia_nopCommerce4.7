@@ -902,13 +902,13 @@ label, label + * {
   padding: 10px 0;
 }
 
-.header-selectors-wrapper > div {
+/*.header-selectors-wrapper > div {
   display: block;
   width: 50%;
   margin: 10px auto;
   vertical-align: middle;
 }
-
+*/
 .header-selectors-wrapper select {
   width: 100%;
 }
@@ -920,7 +920,7 @@ label, label + * {
 
 .language-list li {
   display: inline-block;
-  margin: 0 1px;
+  margin: 0 ;
   vertical-align: middle;
 }
 
@@ -946,8 +946,6 @@ label, label + * {
   padding: 20px 0;
 }
 
-.header-links {
-}
 
 .header-links ul {
   font-size: 0;
@@ -4242,7 +4240,7 @@ label, label + * {
 
 .cart-total td {
   width: 50%;
-  padding: 5px 0;
+  padding: 3px 0;
   text-align: right;
 }
 
@@ -4260,9 +4258,6 @@ label, label + * {
   color: #4ab2f1;
 }
 
-.cart-total .order-total strong {
-  font-weight: normal;
-}
 
 .cart-total .earn-reward-points {
   font-style: italic;
@@ -4349,14 +4344,10 @@ label, label + * {
 }
 
 .cart-collaterals .title {
-  margin: 0 0 5px;
-  font-size: 18px;
-  color: #444;
+  margin: 0 0 0;
 }
 
-.cart-collaterals .title strong {
-  font-weight: normal;
-}
+
 
 .cart-collaterals .hint {
   margin: 0 0 10px;
@@ -4380,7 +4371,6 @@ label, label + * {
 .cart-collaterals .coupon-code button[type="submit"] {
   float: left;
   width: 40%;
-  height: 36px; /*safari padding fix*/
   padding: 0;
 }
 
@@ -6877,12 +6867,12 @@ label, label + * {
   /*** HEADER ***/
 
 
-  .header-selectors-wrapper > div {
+/*  .header-selectors-wrapper > div {
     display: inline-block;
     width: 30%;
     margin: 10px auto;
   }
-
+*/
   .search-box input.search-box-text {
     width: 280px;
   }
@@ -7073,10 +7063,10 @@ label, label + * {
   /*** HEADER ***/
 
 
-  .header-selectors-wrapper > div {
+/*  .header-selectors-wrapper > div {
     width: 20%;
   }
-
+*/
 
   /*** FOOTER ***/
 
@@ -7828,20 +7818,20 @@ label, label + * {
     display: block;
     clear: both;
   }
-
+/*
   .header-selectors-wrapper {
     float: left;
     border: none;
     padding: 0;
-  }
-
+  }*/
+/*
   .header-selectors-wrapper > div {
     width: auto;
     min-width: 100px;
     margin: 0 12px 0 0;
     line-height: 43px;
   }
-
+*/
   .header-selectors-wrapper select {
     height: 25px;
     padding: 4px;

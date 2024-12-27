@@ -910,25 +910,22 @@ label, label + * {
   padding: 10px 0;
 }
 
-.header-selectors-wrapper > div {
+/*.header-selectors-wrapper > div {
   display: block;
   width: 50%;
   margin: 10px auto;
   vertical-align: middle;
-}
+}*/
 
 .header-selectors-wrapper select {
   width: 100%;
 }
 
-.language-list {
-  max-width: 100%;
-  font-size: 0;
-}
+
 
 .language-list li {
   display: inline-block;
-  margin: 0 1px;
+  margin: 0 ;
   vertical-align: middle;
 }
 
@@ -954,8 +951,6 @@ label, label + * {
   padding: 20px 0;
 }
 
-.header-links {
-}
 
 .header-links ul {
   font-size: 0;
@@ -4296,7 +4291,7 @@ label, label + * {
 }
 
 .cart-total .order-total strong {
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .cart-total .earn-reward-points {
@@ -4385,14 +4380,9 @@ label, label + * {
 }
 
 .cart-collaterals .title {
-  margin: 0 0 5px;
-  font-size: 18px;
-  color: #444;
+  margin: 0 0;
 }
 
-.cart-collaterals .title strong {
-  font-weight: normal;
-}
 
 .cart-collaterals .hint {
   margin: 0 0 10px;
@@ -4416,7 +4406,6 @@ label, label + * {
 .cart-collaterals .coupon-code button[type="submit"] {
   float: right;
   width: 40%;
-  height: 36px; /*safari padding fix*/
   padding: 0;
 }
 
@@ -6919,13 +6908,13 @@ label, label + * {
 
   /*** HEADER ***/
 
-
+/*
   .header-selectors-wrapper > div {
     display: inline-block;
     width: 30%;
     margin: 10px auto;
   }
-
+*/
   .search-box input.search-box-text {
     width: 280px;
   }
@@ -7129,10 +7118,10 @@ label, label + * {
   /*** HEADER ***/
 
 
-  .header-selectors-wrapper > div {
+/*  .header-selectors-wrapper > div {
     width: 20%;
   }
-
+*/
 
   /*** FOOTER ***/
 
@@ -7906,12 +7895,12 @@ label, label + * {
     padding: 0;
   }
 
-  .header-selectors-wrapper > div {
+  /*.header-selectors-wrapper > div {
     width: auto;
     min-width: 100px;
     margin: 0 0 0 12px;
     line-height: 43px;
-  }
+  }*/
 
   .header-selectors-wrapper select {
     height: 25px;

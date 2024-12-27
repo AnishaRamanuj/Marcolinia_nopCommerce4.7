@@ -21,7 +21,7 @@
 .wishlist-shoping {
 	display: none;
 }
-.header-selectors-wrapper > div {
+/*.header-selectors-wrapper > div {
     height: 32px;
     line-height: 30px;
     margin: 0 5px;
@@ -29,7 +29,7 @@
     color: #666;
     text-align: right;   
     overflow: hidden;
-}
+}*/
 .header-selectors-wrapper select {
 	min-width: 100px;
 	background-position: left 5px center;

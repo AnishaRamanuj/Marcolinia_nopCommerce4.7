@@ -153,12 +153,12 @@ input.instant-search-busy {
 .instant-search-item .detail .price {
     font-size:16px;
 	line-height: 20px;
-    color:#666;
+    
 }
 .instant-search-item .detail .sku {
     font-size:16px;
 	line-height: 20px;
-    color:#666;
+    
 }
 
 @media all and (min-width: 481px) {	

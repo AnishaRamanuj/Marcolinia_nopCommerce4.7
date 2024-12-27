@@ -152,7 +152,7 @@ body.home-page-wrapper {
     font-family:Arvo;
 }
 .mini-shopping-cart .count {
-    color:#666;
+    
 	background: #eee;
 	padding: 10px;
     text-align:center;
@@ -227,7 +227,7 @@ body.home-page-wrapper {
 	display: inline-block;
 	padding: 8px 16px;
     font-size:13px;
-	font-family: Arvo;
+	
     background:#a79c97;
     color:#fff;
     border:none;
@@ -235,6 +235,9 @@ body.home-page-wrapper {
 }
     .header-selectors-wrapper {
         order: 2;
+        display:flex;
+        align-items:center;
+        gap:5px;
     }
     .search-n-selectors {
   /*      float: right;*/
@@ -280,17 +283,16 @@ body.home-page-wrapper {
 	/*float: right;
 	margin: 0 0 0 25px;*/
 }
-.header-selectors-wrapper > div {
+/*.header-selectors-wrapper > div {
 	width: 40px;
 	font-size: 14px;
 	float: left;
 	margin: 0 10px;
 	color: #fff;
-}
+}*/
     .header-selectors-wrapper select {
         height: 32px;
         border: none;
-        color: #a7a7a7;
     }
 
 .header-2 .search-n-selectors {
@@ -1046,9 +1048,7 @@ body.home-page-wrapper {
 .order-progress {
 	margin: 0 0 20px;
 }
-.shopping-cart-page .page-body {
-    padding-bottom:45px;
-}
+
 .shopping-cart-page .tax-shipping-info,
 .shopping-cart-page .common-buttons,
 .checkout-attributes {
@@ -1089,7 +1089,7 @@ body.home-page-wrapper {
 }
 .cart-collaterals .title,
 .cart-collaterals .hint {
-	padding-left: 10px;
+	padding-left: 0;
 }
 .cart-collaterals .coupon-code {
 	width: auto;
@@ -1222,7 +1222,7 @@ body.home-page-wrapper {
     background: #a69c97;
     border: medium none !important;
     color: #ffffff;
-    font-family: Arvo;
+    
     font-size: 16px;
     line-height: 40px;
     margin: 0 0 30px;
@@ -1256,7 +1256,7 @@ body.home-page-wrapper {
 }
 .custom-select-text{
     font-size:16px;
-    color:#666;
+    
     line-height:40px;
     padding:0 5px 0 10px;
     position:absolute;

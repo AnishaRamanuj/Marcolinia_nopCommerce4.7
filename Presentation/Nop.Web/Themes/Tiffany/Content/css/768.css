@@ -248,7 +248,7 @@
 .product-list .item-box .details .description{
 	display:block;
 	font-size:16px;
-	color:#666;
+	
 	line-height:20px;
 	height: auto;
 	border-bottom:1px solid #ddd;
@@ -259,7 +259,7 @@
 	margin: 0 0 10px;
 }
 .product-list .item-box .details .price.old-price{
-    color:#666;
+    
 }
 .product-list .details .prices {
     display: block;
@@ -286,7 +286,7 @@
 	height: 45px;
 	text-align: left;
 	width: 45px;
-	font-family: Arvo;
+	
 	font-size: 18px;
 	color: #fff;
 	text-indent: -999px;
@@ -758,7 +758,7 @@
 	height:40px;
 	border-right:1px solid #ddd;
 	background:#fff;
-	color:#666;
+	
     overflow:hidden;
 }
 .account-page .inputs {
@@ -774,7 +774,7 @@
 	margin:0 0 0 5px;
 	border:none;
 	text-align:left;
-	color:#666;
+	
 }
 .account-page .inputs input[type="text"],
 .account-page .inputs input[type="email"],

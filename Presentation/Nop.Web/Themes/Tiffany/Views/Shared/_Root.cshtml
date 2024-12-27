@@ -22,10 +22,21 @@
                 </marquee>
             </div>
             <div class="rightbox">
-                 <div class="header-selectors-wrapper">
-                      
-                        @await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
-                        @await Component.InvokeAsync(typeof(LanguageSelectorViewComponent))
+                <div class="header-selectors-wrapper">
+                    <div class="social_icons">
+                        <ul>
+                            <li><i class="ri-whatsapp-line"></i></li>
+                            <li><i class="ri-facebook-circle-line"></i></li>
+                            <li><i class="ri-instagram-line"></i></li>
+                            <li><i class="ri-twitter-x-fill"></i></li>
+                            <li><i class="ri-youtube-line"></i></li>
+                            <li><i class="ri-skype-line"></i></li>
+                            <li><i class="ri-music-line"></i></li>
+                        </ul>
+                    </div>
+                    @await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
+                    @await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
+                    @await Component.InvokeAsync(typeof(LanguageSelectorViewComponent))
                </div>
             </div>
         </div>
@@ -78,6 +89,16 @@
         }
         <div class="main_content">
            @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageTop }) 
+           <div>
+                <section class="inner_banner_layout">
+                    <div class="inner_banner">
+                        <img src="https://resources.commerceup.io/?key=https%3A%2F%2Fprod-admin-images.s3.amazonaws.com%2FPeZho1KcxJ6lLWV8SlDT%2Fproduct%2Fdior%2520.jpg&amp;width=2000&amp;resourceKey=PeZho1KcxJ6lLWV8SlDT&amp;background=no">
+                        <div class="banner_title">
+                            <h2>Perfume</h2>
+                        </div>
+                    </div>
+                </section>
+           </div>
             <div class="master-column-wrapper">
                 @RenderBody()
             </div>
