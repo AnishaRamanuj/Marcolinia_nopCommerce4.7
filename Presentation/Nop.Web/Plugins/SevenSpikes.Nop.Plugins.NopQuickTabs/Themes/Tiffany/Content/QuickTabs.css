@@ -24,7 +24,7 @@
 	margin-bottom: 20px;
 }
 .full-description {
-	margin-bottom: 40px;
+	margin-bottom: 0px;
 	padding-bottom: 40px;
 	border-bottom: 1px solid #ddd;
 }
@@ -46,16 +46,15 @@
     border:none;
     border-bottom:1px solid #ddd;
     background:transparent;
-    color: #666666;
     font-size: 16px;
     line-height: 40px;
-    text-transform: uppercase;
     width: 100%;
 }
 .ui-tabs .ui-state-active.ui-tabs-active a {
-    background:transparent;
-    border-bottom:1px solid #ddd;
-    color:#000;
+    background: transparent;
+    border-bottom: 1px solid #ddd;
+    color: var(--BtnPrimaryBgColor);
+    font-weight:600;
 }
 .ui-tabs .ui-state-active.ui-tabs-active:after {
     display:block;
@@ -109,16 +108,16 @@
 	color:#eee;
 }
 .quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active a {
-	background: #a79c97;
-	color: #ffffff;
-	height: 50px;
-	line-height: 50px;
+    color: var(--BtnPrimaryBgColor);
+    height: 50px;
+    line-height: 50px;
 }
 .quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active:after {
 	display:none;
 }
 .quick-tabs-2 .ui-tabs .ui-state-active.ui-tabs-active a {
-	background:#8e807a;
+    background: #8e807a;
+    color: var(--BtnPrimaryBgColor);
 }
 
 /*VERSION 3*/
@@ -130,10 +129,9 @@
 	color:#000;
 }
 .quick-tabs-3 .ui-tabs .ui-state-active.ui-tabs-active a {
-	background: #a79c97;
-	color: #ffffff;
-	height: 50px;
-	line-height:50px;
+    color: var(--BtnPrimaryBgColor);
+    height: 50px;
+    line-height: 50px;
 }
 .quick-tabs-3 .ui-tabs .ui-state-active.ui-tabs-active:after {
 	display:none;
@@ -165,6 +163,7 @@
         margin:0;
         border-bottom:1px solid #ddd;
         height:40px;
+        text-align:left;
     }
     .ui-tabs .ui-tabs-nav li {
         display:inline-block;

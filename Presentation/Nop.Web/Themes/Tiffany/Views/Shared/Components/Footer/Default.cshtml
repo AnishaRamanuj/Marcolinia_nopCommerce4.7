@@ -14,35 +14,150 @@
     var removeDesignedBy = await settingService.GetSettingByKeyAsync("tiffanythemesettings.removedesignedby", false, storeId, true);
     var removeCopyright = await settingService.GetSettingByKeyAsync("tiffanythemesettings.removecopyright", false, storeId, true);
 }
+
+
+<div class="footer-upper">
+	<div class="center">
+		@await Component.InvokeAsync(typeof(NewsletterBoxViewComponent))
+	</div>
+</div>
+<div class="footer-middle">
+	<div class="center">
+		<div class="footer-block about-us">
+			<h2 class="title">@T("SevenSpikes.Themes.Tiffany.Footer.AboutUs.Title")</h2>
+			<p>@T("SevenSpikes.Themes.Tiffany.Footer.AboutUs")</p>
+		</div>
+		<div class="footer-block contacts">
+			<h2 class="title">@T("ContactUs")</h2>
+			<ul>
+				<li class="fax"><span class="icon"><i class="ri-printer-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Fax")</span></li>
+				<li class="mobile"><span class="icon"><i class="ri-phone-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Mobile")</span></li>
+				<li class="mail"><span class="icon"><i class="ri-mail-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Email")</span></li>
+				<li class="location"><span class="icon"><i class="ri-map-pin-2-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Location")</span></li>
+				<li class="skype"><span class="icon"><i class="ri-skype-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Skype")</span></li>
+			</ul>
+		</div>
+		<div class="footer-block pinterest-plugin">
+			<h2 class="title">Gallery</h2>
+			<!--include pinterest plugin-->
+			@await Component.InvokeAsync("Widget", new { widgetZone = "tiffany_pinterest_profile_widget_footer" })
+		</div>
+	</div>
+</div>
+<div class="footer_layout">
+	<div class="footer_container">
+		<div class="d-flex flex-column justify-content-between custom_footer">
+			<div class="footer_logo d-flex align-items-center justify-content-center">
+				<div class="d-none d-lg-flex mb-5"> <img src=""> </div>
+			</div>
+			<div class="mb-1 order-lg-1 d-flex justify-content-around footer_data">
+				<div class="col">
+					<div class="footer_heading">
+						<h4 class="ftr__title">Information</h4>
+					</div>
+					<ul class="footer_list">
+						<li>Shipping & Returns</li>
+						<li>Privacy notice</li>
+						<li>Terms & Conditions</li>
+						<li>About us</li>
+						<li>Contact us</li>
+					</ul>
+				</div>
+				<div class="col">
+					<div class="footer_heading">
+						<h4 class="ftr__title">Customer service</h4>
+					</div>
+					<ul class="footer_list social_media">
+						<li><i class="ri-mail-line"></i> customercare@marcolinia.com</li>
+						<li><i class="ri-phone-line"></i> 800-92929</li>
+						<li><i class="ri-phone-line"></i> 800-92929</li>
+					</ul>
+					<div class="social-media">
+						<div class="f_icons mb-2">><i class="fa fa-envelope-o"></i> customercare@marcolinia.com</div>
+						<div class="f_icons mb-2"><i class="fa fa-phone"></i> 800-92929</div>
+						<div class="f_icons"><i class="fa fa-phone"></i> 04--2977792</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="footer_heading">
+						<h4 class="ftr__title">My account</h4>
+					</div>
+					<ul class="footer_list">
+						<li>My account</li>
+						<li>Orders</li>
+						<li>Shopping cart</li>
+						<li>Search</li>
+						<li>New products</li>
+					</ul>
+				</div>
+				<div class="col">
+					<div class="newsletter mb-2">
+						<div class="footer_heading">
+							<h4 class="ftr__title">Newsletter</h4>
+						</div>
+						<div class="newsletter_subscribe">
+							<div class="newsletter_email d-flex justify-content-center justify-content-md-start">
+								<input class="newsletter_subscribe_text" placeholder="Enter your email here..." aria-label="Sign up for our newsletter" type="email" name="NewsletterEmail">
+								<input class="newsletter__subscribe_button btn" type="button" value="Subscribe">
+							</div>
+						</div>
+					</div>
+					<div class="app_download">
+						<ul>
+							<li><a target="_blank" href=""><img src="https://marcolinia.com/images/gpaystore.png"></a></li>
+							<li>
+								<a target="_blank" href="">
+									<img src="https://marcolinia.com/images/applestore.png">
+								</a>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="social-media mb-4 mb-lg-4">
+						<div class="footer_heading">
+							<h4 class="ftr__title">Follow us</h4>
+						</div>
+						<div class="social-media-icons">
+							<span title="Facebook"><i class="ri-facebook-fill"></i></span>
+							<span title="linkedin"><i class="ri-linkedin-fill"></i></span>
+							<span title="Instagram"><i class="ri-instagram-line"></i></span>
+							<span title="Twitter"><i class="ri-twitter-x-line"></i></span>
+							<span title="YouTube"><i class="ri-youtube-fill"></i></span>
+							<span title="RSS"><i class="ri-rss-fill"></i></span>
+							<span title="snapchat"><i class="ri-snapchat-fill"></i></span>
+
+						</div>
+					</div>
+					<div class="payment-cards-custom">
+						<svg width="111" height="24" viewBox="0 0 111 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M30 0.5H4C2.067 0.5 0.5 2.067 0.5 4V20C0.5 21.933 2.067 23.5 4 23.5H30C31.933 23.5 33.5 21.933 33.5 20V4C33.5 2.067 31.933 0.5 30 0.5Z" fill="white" stroke="#D9D9D9"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 15.8582H8.69031L7.14575 9.79235C7.07244 9.51332 6.91678 9.26664 6.68781 9.15038C6.11639 8.85821 5.48671 8.62568 4.7998 8.50841V8.27487H8.11788C8.57582 8.27487 8.91928 8.62568 8.97652 9.0331L9.77792 13.4086L11.8366 8.27487H13.8391L10.75 15.8582ZM14.984 15.8582H13.0388L14.6406 8.27487H16.5858L14.984 15.8582ZM19.1025 10.3757C19.1597 9.96725 19.5032 9.73372 19.9039 9.73372C20.5336 9.67508 21.2195 9.79235 21.7919 10.0835L22.1354 8.45079C21.5629 8.21725 20.9333 8.09998 20.3618 8.09998C18.4738 8.09998 17.1 9.15038 17.1 10.6082C17.1 11.7173 18.0731 12.2996 18.76 12.6504C19.5032 13.0002 19.7894 13.2337 19.7322 13.5835C19.7322 14.1082 19.1597 14.3418 18.5883 14.3418C17.9014 14.3418 17.2145 14.1669 16.5858 13.8747L16.2424 15.5084C16.9293 15.7996 17.6724 15.9169 18.3593 15.9169C20.4763 15.9745 21.7919 14.9251 21.7919 13.35C21.7919 11.3664 19.1025 11.2502 19.1025 10.3757ZM28.5998 15.8582L27.0552 8.27487H25.3962C25.0527 8.27487 24.7093 8.5084 24.5948 8.8582L21.7347 15.8582H23.7372L24.1368 14.7502H26.5973L26.8263 15.8582H28.5998ZM25.6824 10.3171L26.2538 13.1751H24.652L25.6824 10.3171Z" fill="#172B85"></path>
+							<path d="M68 0.5H42C40.067 0.5 38.5 2.067 38.5 4V20C38.5 21.933 40.067 23.5 42 23.5H68C69.933 23.5 71.5 21.933 71.5 20V4C71.5 2.067 69.933 0.5 68 0.5Z" fill="white" stroke="#D9D9D9"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M55.179 16.8295C53.9949 17.8276 52.459 18.4301 50.7807 18.4301C47.0358 18.4301 44 15.4304 44 11.7301C44 8.02972 47.0358 5.03003 50.7807 5.03003C52.459 5.03003 53.9949 5.63253 55.179 6.63057C56.363 5.63253 57.8989 5.03003 59.5773 5.03003C63.3221 5.03003 66.358 8.02972 66.358 11.7301C66.358 15.4304 63.3221 18.4301 59.5773 18.4301C57.8989 18.4301 56.363 17.8276 55.179 16.8295Z" fill="#ED0006"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M55.1792 16.8295C56.6371 15.6006 57.5616 13.772 57.5616 11.7301C57.5616 9.68807 56.6371 7.85947 55.1792 6.63057C56.3632 5.63253 57.8991 5.03003 59.5774 5.03003C63.3223 5.03003 66.3581 8.02972 66.3581 11.7301C66.3581 15.4304 63.3223 18.4301 59.5774 18.4301C57.8991 18.4301 56.3632 17.8276 55.1792 16.8295Z" fill="#F9A000"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M55.1788 16.8293C56.6367 15.6004 57.5612 13.7718 57.5612 11.7299C57.5612 9.68799 56.6367 7.8594 55.1788 6.63049C53.7209 7.8594 52.7964 9.68799 52.7964 11.7299C52.7964 13.7718 53.7209 15.6004 55.1788 16.8293Z" fill="#FF5E00"></path>
+							<path d="M106.5 0.5H80.5C78.567 0.5 77 2.067 77 4V20C77 21.933 78.567 23.5 80.5 23.5H106.5C108.433 23.5 110 21.933 110 20V4C110 2.067 108.433 0.5 106.5 0.5Z" fill="white"></path>
+							<path d="M87.0501 10.0849C87.0291 10.39 86.8931 10.6758 86.6701 10.8849C86.4211 11.0839 86.1091 11.1868 85.7901 11.1749C85.5541 11.1772 85.3231 11.1149 85.1201 10.9949C84.9251 10.8666 84.7691 10.6866 84.6701 10.4749C84.5581 10.2299 84.5011 9.96401 84.5001 9.69487V9.40486C84.4981 9.13004 84.5521 8.85772 84.6601 8.60487C84.7631 8.38721 84.9261 8.20338 85.1301 8.07486C85.3391 7.95172 85.5781 7.88938 85.8201 7.89486C86.1291 7.88384 86.4321 7.98708 86.6701 8.18487C86.8931 8.39818 87.0291 8.68698 87.0501 8.99486H86.4901C86.4821 8.81044 86.4111 8.63426 86.2901 8.49486C86.1581 8.3869 85.9901 8.33327 85.8201 8.34487C85.7101 8.33945 85.6001 8.35999 85.5001 8.40486C85.4051 8.45516 85.3231 8.52708 85.2601 8.61486C85.1111 8.8426 85.0401 9.11321 85.0601 9.38487V9.67487C85.0421 9.95136 85.1081 10.2268 85.2501 10.4649C85.3071 10.5551 85.3871 10.628 85.4821 10.6757C85.5771 10.7233 85.6841 10.7438 85.7901 10.7349C85.9671 10.7507 86.1431 10.6968 86.2801 10.5849C86.4081 10.4528 86.4821 10.2784 86.4901 10.0949L87.0501 10.0849ZM89.34 10.3849H88.1001L87.8401 11.1249H87.2601L88.4701 7.89486H88.9701L90.1801 11.0949H89.5801L89.34 10.3849ZM88.2501 9.89487H89.1801L88.7501 8.56487L88.2501 9.89487ZM92.2501 10.2649C92.2491 10.2025 92.2361 10.1409 92.2101 10.0841C92.1841 10.0273 92.1471 9.97647 92.1001 9.93487C91.9311 9.83377 91.7501 9.75637 91.5601 9.70486C91.3431 9.65385 91.1371 9.56591 90.9501 9.44487C90.8211 9.37595 90.7111 9.27634 90.6301 9.15486C90.5511 9.02893 90.5101 8.88337 90.5101 8.73487C90.5021 8.60971 90.53 8.48483 90.59 8.37486C90.641 8.26296 90.7201 8.1664 90.8201 8.09487C91.0441 7.94479 91.3111 7.87434 91.5801 7.89486C91.7861 7.89513 91.9901 7.93591 92.1801 8.01487C92.3441 8.09464 92.485 8.21512 92.59 8.36486C92.697 8.52091 92.7521 8.70597 92.7501 8.89487H92.2001C92.2151 8.8257 92.2151 8.75405 92.2001 8.68487C92.1721 8.61776 92.1311 8.55665 92.0801 8.50486C91.9521 8.41715 91.8001 8.37023 91.6451 8.37023C91.4901 8.37023 91.3381 8.41715 91.2101 8.50486C91.1591 8.54542 91.118 8.59664 91.09 8.65486C91.075 8.71395 91.075 8.77578 91.09 8.83486C91.076 8.89062 91.076 8.94911 91.09 9.00486C91.119 9.05436 91.1611 9.09565 91.2101 9.12486C91.3741 9.22756 91.5531 9.30509 91.7401 9.35487C91.9501 9.41308 92.151 9.49705 92.34 9.60487C92.481 9.68253 92.5981 9.79648 92.6801 9.93487C92.7481 10.0642 92.7831 10.2087 92.7801 10.3549C92.7831 10.4796 92.7561 10.6033 92.7001 10.7149C92.6491 10.8268 92.5701 10.9233 92.4701 10.9949C92.2291 11.1672 91.9361 11.2518 91.6401 11.2349C91.4201 11.2323 91.2031 11.1882 91.0001 11.1049C90.8201 11.0287 90.6641 10.9041 90.5501 10.7449C90.4381 10.5955 90.3811 10.4116 90.3901 10.2249H90.9501C90.9301 10.3002 90.9301 10.3795 90.9501 10.4549C90.9821 10.5281 91.029 10.5931 91.09 10.6449C91.237 10.7538 91.4181 10.807 91.6001 10.7949C91.7561 10.8051 91.9111 10.7629 92.0401 10.6749C92.0961 10.6412 92.1411 10.5927 92.1701 10.5349C92.2021 10.4801 92.2191 10.4182 92.2201 10.3549L92.2501 10.2649ZM95.8301 11.0849H95.2801V9.70486H93.84V11.1249H93.2901V7.89486H93.84V9.26487H95.2801V7.89486H95.8301V11.0849ZM100.16 9.57486C100.167 9.85657 100.112 10.1364 100 10.3949C99.9041 10.6222 99.7401 10.8142 99.5301 10.9449C99.3201 11.0669 99.083 11.1324 98.84 11.1349C98.597 11.1333 98.3591 11.0678 98.1501 10.9449C97.9431 10.8154 97.7801 10.6275 97.6801 10.4049C97.5601 10.1487 97.5011 9.86776 97.5101 9.58486V9.44487C97.5031 9.16316 97.5581 8.88333 97.6701 8.62486C97.7661 8.39755 97.9311 8.20548 98.1401 8.07486C98.2941 7.97586 98.4681 7.91421 98.6501 7.89486C98.8281 7.85519 99.0121 7.85519 99.1901 7.89486C99.3661 7.9492 99.5291 8.03754 99.6701 8.15486C99.8101 8.27653 99.9221 8.42651 100 8.59487C100.108 8.85473 100.162 9.13357 100.16 9.41486V9.57486ZM99.5801 9.44487C99.5981 9.15629 99.524 8.86945 99.37 8.62486C99.304 8.53664 99.218 8.4648 99.12 8.41486C99.024 8.36584 98.9181 8.34177 98.8101 8.34487C98.6991 8.34295 98.5901 8.36691 98.4901 8.41486C98.3901 8.46207 98.3041 8.53443 98.2401 8.62486C98.0921 8.86454 98.0181 9.14321 98.0301 9.42487V9.61486C98.0071 9.90077 98.0811 10.186 98.2401 10.4249C98.3041 10.5181 98.3901 10.5937 98.4901 10.6449C98.5901 10.6928 98.6991 10.7168 98.8101 10.7149C98.9211 10.7217 99.0321 10.6974 99.1301 10.6449C99.2301 10.598 99.3171 10.5256 99.3801 10.4349C99.5211 10.1851 99.5901 9.90138 99.5801 9.61486V9.44487ZM103.22 11.1249H102.67L101.24 8.89487V11.1249H100.69V7.89486H101.24L102.67 10.1749V7.89486H103.22V11.1249ZM84.6101 16.1249V12.8949H85.6101C85.8721 12.8924 86.1311 12.9579 86.3601 13.0849C86.5761 13.2153 86.7521 13.4019 86.8701 13.6249C86.9901 13.871 87.0511 14.1412 87.0501 14.4149V14.5749C87.0511 14.8517 86.9891 15.1251 86.8701 15.3749C86.7541 15.6024 86.5731 15.7903 86.3501 15.9149C86.1141 16.033 85.8541 16.0947 85.5901 16.0949L84.6101 16.1249ZM85.1601 13.3749V15.6849H85.5801C85.7031 15.6944 85.8271 15.6738 85.9401 15.6249C86.0531 15.5762 86.1551 15.5047 86.2401 15.4149C86.4121 15.1886 86.4971 14.9084 86.4801 14.6249V14.4449C86.4991 14.1641 86.4221 13.8853 86.2601 13.6549C86.1811 13.5569 86.0771 13.4811 85.9601 13.4349C85.8471 13.3851 85.7231 13.3645 85.6001 13.3749H85.1601ZM89.4201 14.6949H88.1001V15.6949H89.6401V16.1349H87.5801V12.8949H89.5801V13.3449H88.0601V14.2349H89.3801L89.4201 14.6949ZM90.6501 15.6949H92.1001V16.1349H90.1001V12.8949H90.6601L90.6501 15.6949ZM93.1101 16.1349H92.5801V12.8949H93.1301L93.1101 16.1349ZM94.9201 15.4449L95.7501 12.8949H96.37L95.2101 16.0949H94.6801L93.5101 12.8949H94.12L94.9201 15.4449ZM98.5801 14.6949H97.2601V15.6949H98.8001V16.1349H96.7501V12.8949H98.7501V13.3449H97.23V14.2349H98.5501L98.5801 14.6949ZM100.43 14.8949H99.8101V16.1249H99.2501V12.8949H100.38C100.684 12.8769 100.984 12.9653 101.23 13.1449C101.329 13.236 101.407 13.3476 101.459 13.4719C101.511 13.5962 101.535 13.7303 101.53 13.8649C101.533 14.0555 101.48 14.2428 101.38 14.4049C101.27 14.5524 101.121 14.6665 100.95 14.7349L101.67 16.0649H101.07L100.43 14.8949ZM99.8101 14.4449H100.38C100.539 14.4536 100.695 14.4038 100.82 14.3049C100.874 14.2558 100.916 14.1939 100.94 14.1249C100.955 14.0557 100.955 13.984 100.94 13.9149C100.95 13.8452 100.95 13.7745 100.94 13.7049C100.912 13.6378 100.871 13.5767 100.82 13.5249C100.759 13.4755 100.692 13.4351 100.62 13.4049C100.544 13.3903 100.466 13.3903 100.39 13.4049H99.8001L99.8101 14.4449ZM103 14.4449L103.75 12.8949H104.36L103.29 14.8949V16.0949H102.75V14.9549L101.68 12.9549H102.29L103 14.4449Z" fill="#4E4E4E"></path>
+							<path d="M107 0.5H81C79.067 0.5 77.5 2.067 77.5 4V20C77.5 21.933 79.067 23.5 81 23.5H107C108.933 23.5 110.5 21.933 110.5 20V4C110.5 2.067 108.933 0.5 107 0.5Z" stroke="#D9D9D9"></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_bottom">
+		<div class="footer_container">
+			<div class="d-flex flex-column align-items-center justify-content-center">
+				<div class="footer_copyright pt-3 pt-lg-0 order-1 order-lg-0"><span class="footer-disclaimer">Copyright © 2024 Your store name. All rights reserved.</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="footer">
-    <div class="footer-upper">
-        <div class="center">
-            @await Component.InvokeAsync(typeof(NewsletterBoxViewComponent))
-        </div>
-    </div>
-    <div class="footer-middle">
-        <div class="center">
-            <div class="footer-block about-us">
-                <h2 class="title">@T("SevenSpikes.Themes.Tiffany.Footer.AboutUs.Title")</h2>
-                <p>@T("SevenSpikes.Themes.Tiffany.Footer.AboutUs")</p>
-            </div>
-            <div class="footer-block contacts">
-                <h2 class="title">@T("ContactUs")</h2>
-                <ul>
-                    <li class="fax"><span class="icon"><i class="ri-printer-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Fax")</span></li>
-                    <li class="mobile"><span class="icon"><i class="ri-phone-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Mobile")</span></li>
-                    <li class="mail"><span class="icon"><i class="ri-mail-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Email")</span></li>
-               <li class="location"><span class="icon"><i class="ri-map-pin-2-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Location")</span></li>
-                    <li class="skype"><span class="icon"><i class="ri-skype-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Skype")</span></li>
-                </ul>
-            </div>
-            <div class="footer-block pinterest-plugin">
-                <h2 class="title">Gallery</h2>
-                <!--include pinterest plugin-->
-                @await Component.InvokeAsync("Widget", new { widgetZone = "tiffany_pinterest_profile_widget_footer" })
-            </div>
-        </div>
-    </div>
+
     <div class="footer-lower">
         <div class="footer_upper">
             <div class="center">

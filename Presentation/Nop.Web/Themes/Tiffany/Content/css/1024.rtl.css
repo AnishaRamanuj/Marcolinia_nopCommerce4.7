@@ -139,9 +139,8 @@
 		line-height: normal !important;
 	}
 	.mini-shopping-cart .items a {
-		font-size: 15px;
+		font-size: 14px;
 		font-weight: normal;
-		text-transform: uppercase;
 		
 	}
 	.mini-shopping-cart .count {
@@ -190,22 +189,20 @@
 	.mini-shopping-cart .name {
 		margin: 0 0 10px;
 		overflow: hidden;
-		max-height: 36px;
-		line-height: 18px !important;
 		color: #222;
 	}
 	.mini-shopping-cart .attributes {
 		padding: 0;
 		border: none;
 	}
-	.mini-shopping-cart .totals {
-		background: #f9f9f9;
-		text-align: right;
-		overflow: hidden;
-		padding: 15px;
-		border-top: 1px solid #ddd;
-		font-size: 14px;
-	}
+		.mini-shopping-cart .totals {
+			background: #f9f9f9;
+			text-align: right;
+			overflow: hidden;
+			padding: 15px;
+			border-top: 1px dashed #b7b4b4;
+			font-size: 14px;
+		}
 	.mini-shopping-cart .totals strong {
 		float: left;
 		font-weight: normal;
@@ -220,8 +217,6 @@
 		display: inline-block;
 		padding: 8px 16px;
 		font-size: 13px;
-		
-		background: #a79c97;
 		color: #fff;
 		border: none;
 		text-transform: uppercase;
@@ -606,10 +601,10 @@
 		display: block;
 	}
 	.block-recently-viewed-products .list li a {
-		line-height: 40px;
-		padding: 0 0 0 8px;
+		/*line-height: 40px;*/
+/*		padding: 0 0 0 8px;*/
 		border-bottom: none;
-		font-size: 14px;
+	/*	font-size: 14px;*/
 		white-space: normal;
 		text-align: left;
 		border-top: none;

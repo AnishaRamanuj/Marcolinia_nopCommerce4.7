@@ -44,9 +44,9 @@
 /*	background: #393230;
 	border-bottom: 1px solid #282322;*/
 }
-	.filter-block a.toggleControl,
-	.filter-block .title_content {
-		/*	color: #dddddd;
+
+.filter-block a.toggleControl {
+	/*	color: #dddddd;
 		display: block;
 		font-size: 16px;
 		line-height: 17px;
@@ -56,15 +56,15 @@
 		z-index: 1;
 		text-align: left;
 		*/
-		font-size: 16px;
-		color: var(--primaryColor);
-		text-transform: uppercase;
-		font-weight: 600;
-		width: 100%;
-		text-align: left;
-		display: block;
-		padding-bottom: 5px;
-	}
+	font-size: 16px;
+	color: var(--primaryColor);
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 100%;
+	text-align: left;
+	display: block;
+	padding-bottom: 5px;
+}
 .filter-block a.toggleControl.closed {
 }
 .filter-block a.clearFilterOptions,

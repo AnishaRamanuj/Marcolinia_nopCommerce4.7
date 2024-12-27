@@ -53,6 +53,7 @@
     padding: 0 !important;
     background: #fff;
     box-shadow: 0 1px 3px #666;
+    border-radius: 15px;
 }
 
 .ajaxCart li {
@@ -72,31 +73,32 @@
 }
 
 .ajaxCart .k-window-titlebar {
-    padding: 0 0 10px;
+    padding: 0 0 0;
     text-transform: uppercase;
 }
 
-.ajaxCart .k-window-titlebar-actions {
-    position: absolute;
-    top: 9px;
-    right: 10px;
-    font-size: 0;
-    z-index: 1;
-}
+    .ajaxCart .k-window-titlebar-actions {
+        position: absolute;
+        top: 11px;
+        right: 10px;
+        font-size: 0;
+        z-index: 1;
+    }
 
-.ajaxCart .k-window-titlebar .k-button {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url(images/exit.png) no-repeat center transparent;
-    border: none;
-    box-shadow: none;
-    transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
-    font-size: 0;
-}
+    .ajaxCart .k-window-titlebar .k-button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(images/exit.png) no-repeat center transparent;
+        border: none;
+        box-shadow: none;
+        transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+        -ms-transition: all 0.5s ease 0s;
+        font-size: 0;
+        filter: brightness(0.1) invert(1);
+    }
 
 .ajaxCart .k-window-titlebar .k-button:hover {
     background: url(images/exit.png) no-repeat center transparent;
@@ -120,14 +122,22 @@
 }
 
 .productAddedToCartWindowTitle {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;*/
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 30px;
-/*    background: url(images/title-decoration.png) no-repeat center bottom transparent;*/
     text-transform: uppercase;
-    
     text-align: center;
     font-weight: normal;
     font-size: 18px;
@@ -266,11 +276,14 @@
     padding: 10px;
     border-top: 1px dotted #ccc;
     text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
 }
 
 .productAddedToCartWindowSummary {
     border-top: 1px solid #ddd;
-    padding: 20px 0;
+    padding: 15px 10px;
     font-size: 0;
 }
 

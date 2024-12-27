@@ -787,8 +787,8 @@ label, label + * {
 }
 .footer-upper {
 	margin: 0;
-	border-top: 1px solid var(--borderColor);
-	border-bottom: 1px solid var(--borderColor);
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 	padding: 30px 0px;
 }
 .home-page-wrapper.footer-upper {
@@ -1484,12 +1484,9 @@ div.product-viewmode {
 }
 .home-page-category-grid .item-box .title a, 
 .sub-category-grid .item-box .title a, 
-.manufacturer-grid .item-box .title a,
 .vendor-grid .item-box .title a {
-    color: #ffffff;
     display: table-cell;
-    font-family: "Arvo";
-    font-size: 19px;
+    font-size: 18px;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
@@ -1514,12 +1511,9 @@ div.product-viewmode {
 }
 .home-page-category-grid .item-box .title a,
 .sub-category-grid .item-box .title a,
-.manufacturer-grid .item-box .title a,
 .vendor-grid .item-box .title a {
 	vertical-align: middle;
 	text-align: center;
-	font-family:'Arvo';
-	font-size: 19px;
 	color: #fff;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -1543,12 +1537,12 @@ div.product-viewmode {
 	background: #b68d40;
 }
 .product-grid .title,
-.home-page-category-grid .title{
-	margin: 0 0 30px;
+.home-page-category-grid .title {
+	margin: 0 0 20px;
 	font-size: 28px;
-    padding-bottom:0px;
-	text-align:left;
-   /* background:url('../img/title-decoration.png') no-repeat center bottom;*/
+	padding-bottom: 0px;
+	text-align: left;
+	/* background:url('../img/title-decoration.png') no-repeat center bottom;*/
 }
 .product-grid .title strong,
 .home-page-category-grid .title strong {
@@ -1668,16 +1662,17 @@ div.product-viewmode {
 	display: inline-block;
 	margin: 0 5px;
 }
-.pager li * {
-	display: block;
-	width: 40px;
-    height:40px;
-	overflow: hidden;
-	padding: 10px;
-	text-align: center;
-	font-size: 15px; /*reset zeroing*/
-	cursor: pointer;
-}
+	.pager li * {
+		display: block;
+		width: 40px;
+		height: 40px;
+		overflow: hidden;
+		padding: 0 2px;
+		text-align: center;
+		font-size: 15px;
+		cursor: pointer;
+		line-height: 40px;
+	}
 .pager li span {
 	border: 1px solid #e1e1e1;
 }
@@ -1688,7 +1683,6 @@ div.product-viewmode {
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	text-indent: -9999px;
-    background:#a79c97;
 }
 .pager li.previous-page * {
 	background-image: url('../img/prev.png');
@@ -2128,7 +2122,6 @@ div.product-viewmode {
 	clear: both;
 	margin: 0 0 30px;
 	line-height: 20px;
-    
     font-size:16px;
 }
 .product-collateral {
@@ -2232,11 +2225,8 @@ div.product-viewmode {
 }
 .ui-tabs .ui-tabs-nav li a {
 	display: inline-block;
-	background: #a79c97;
 	padding: 8px 24px;
 	font-size: 16px;
-	color: #fff;
-	text-transform: uppercase;
 }
 	.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
 	.ui-tabs .ui-state-active.ui-tabs-active a {
@@ -4087,7 +4077,7 @@ td .attributes {
 }
 .opc .step-title * {
 	float: left;
-	font-family: 'Arvo';
+	/*font-family: 'Arvo';*/
 	font-size: 15px; 
 }
 .opc .step-title span {
@@ -4667,7 +4657,7 @@ td .attributes {
 	background: #b68d40;
 	color: #fff;
 	font-size: 16px;
-	font-family: 'Arvo';
+	/*font-family: 'Arvo';*/
 	text-transform: uppercase;
 }
 .news-list-page .news-items .read-more,

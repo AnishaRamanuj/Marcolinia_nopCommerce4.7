@@ -23,12 +23,12 @@
 @media all and (min-width: 768px) {
 
     .ui-tabs .ui-state-default:after {
-        display:block;
-        content:'';
-        height:0px;
-        width:100%;
-        background:#a79c97;
-        transition:all 0.3s ease 0s;
+        display: block;
+        content: '';
+        height: 0px;
+        width: 100%;
+        background-color: var(--BtnPrimaryBgColor);
+        transition: all 0.3s ease 0s;
     }
     .ui-tabs .ui-state-default:hover:after {
         width:100%;

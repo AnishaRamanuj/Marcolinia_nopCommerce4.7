@@ -318,20 +318,20 @@
 .spc .deals .title,
 .spc .estimate-shipping .title,
 .spc .step-title .title {
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 22px;
-  padding: 10px;
-  display: block;
-  line-height: 1;
-  height: auto;
-  min-height: 24px;
-  width: 100%;
-  text-align: left;
-  background: #4ab2f1;
-  text-transform: capitalize;
-  float: left;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+    display: block;
+    line-height: 1;
+    height: auto;
+    min-height: 24px;
+    width: 100%;
+    text-align: left;
+    background: var(--DarkBrownBgColor);
+    text-transform: capitalize;
+    float: left;
 }
 
 .opc .allow .step-title .number, .opc .allow .step-title .title {
@@ -530,8 +530,10 @@
 }
 
 .spc .inputs label {
-  text-align: left;
-  margin: 0 0 5px 1px;
+    text-align: left;
+    margin: 0 0 5px 1px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .spc .inputs {

@@ -18,14 +18,17 @@
 	left: 0;
     margin: auto;
 }
-.gallery .picture-wrapper .picture {
-	text-align: center;
-	font-size: 0;
-}
-.gallery .picture-wrapper .picture a {
-	display: inline-block;
-	max-width: 100%;
-}
+    .gallery .picture-wrapper .picture {
+        text-align: center;
+        font-size: 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+    }
+    .gallery .picture-wrapper .picture a {
+        display: inline-block;
+        max-width: 100%;
+    }
 .gallery .picture-wrapper .picture img {
     position: static !important;
 }

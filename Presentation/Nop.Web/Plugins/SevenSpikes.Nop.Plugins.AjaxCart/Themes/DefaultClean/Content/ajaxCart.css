@@ -134,12 +134,25 @@
 	display: none;
 }
 .productAddedToCartWindowTitle {
-    position: absolute;
+    /*   position: absolute;
     top: 0;
     left: 0;
     padding: 13px 35px 13px 15px;
-    font-size: 18px;
-    color: #444;
+    font-size: 18px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    /* text-transform: uppercase; */
+    text-align: left;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+    background: var(--DarkBrownBgColor);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .productAddedToCartWindow, .miniProductDetailsView {
     padding: 0;

@@ -142,7 +142,7 @@ label, label + * {
 	margin: 0 auto 60px;
 }
 .center-1 {
-	margin: 0 0 40px;
+	margin: 0 0;
 	position: relative;
 }
 .center-2, .side-2 {
@@ -156,15 +156,15 @@ label, label + * {
 	margin: 0 0 30px;
 	text-align: center;
 }
-.page-title h1 {
-	padding-bottom: 20px;
-	font-family: 'Arvo';
-	text-transform: uppercase;
-/*	background: url('../img/title-decoration.png')no-repeat center bottom;*/
-	font-weight: normal;
-	font-size: 22px;
-	color: #000;
-}
+	.page-title h1 {
+		padding-bottom: 20px;
+		/*font-family: 'Arvo';*/
+		text-transform: uppercase;
+		/*	background: url('../img/title-decoration.png')no-repeat center bottom;*/
+		font-weight: normal;
+		font-size: 22px;
+		color: #000;
+	}
 .page-body .description {
 	margin: 0 0 30px;
 }
@@ -764,7 +764,7 @@ label, label + * {
 .footer-upper .title.overlaid {
 	margin: 20px;
 	padding-bottom: 22px;
-	font-family: 'Arvo';
+	/*font-family: 'Arvo';*/
 	font-size: 18px;
 	text-transform: uppercase;
 	/*background: url(../img/title-decoration.png)no-repeat center bottom;*/
@@ -834,6 +834,7 @@ label, label + * {
 	font-weight: bold;
 	padding-bottom: 22px;
 	text-transform: uppercase;
+	text-align:center;
 }
 .newsletter .title strong {
     font-weight: normal;
@@ -1392,13 +1393,10 @@ div.product-viewmode {
 .sub-category-grid .item-box .title a, 
 .manufacturer-grid .item-box .title a,
 .vendor-grid .item-box .title a  {
-	color: #ffffff;
 	display: table-cell;
-	font-family: "Arvo";
-	font-size: 19px;
+	font-size: 18px;
 	font-weight: normal;
 	text-align: center;
-	text-transform: uppercase;
 	vertical-align: middle;
 }
 .home-page-category-grid .slider-wrapper {
@@ -1418,18 +1416,16 @@ div.product-viewmode {
 .vendor-grid .item-box .title  {
 	background: rgba(35,28,25,.4);
 }
-.home-page-category-grid .item-box .title a,
-.sub-category-grid .item-box .title a,
-.manufacturer-grid .item-box .title a,
-.vendor-grid .item-box .title a {
-	vertical-align: middle;
-	text-align: center;
-	font-family: 'Arvo';
-	font-size: 19px;
-	color: #fff;
-	font-weight: normal;
-	text-transform: uppercase;
-}
+	.home-page-category-grid .item-box .title a,
+	.sub-category-grid .item-box .title a,
+	.manufacturer-grid .item-box .title a,
+	.vendor-grid .item-box .title a {
+		vertical-align: middle;
+		text-align: center;
+		/*font-family: 'Arvo';*/
+		font-size: 18px;
+		font-weight: normal;
+	}
   .home-page-category-grid .item-box .title {
     padding: 0;
     border-radius: 5px;
@@ -1450,7 +1446,7 @@ div.product-viewmode {
 }
 .product-grid .title,
 .home-page-category-grid .title {
-	margin: 0 0 30px;
+	margin: 0 0 20px;
 	font-size: 20px;
 	padding-bottom: 22px;
 /*	background: url('../img/title-decoration.png') no-repeat center bottom;*/
@@ -1573,16 +1569,17 @@ div.product-viewmode {
 	display: inline-block;
 	margin: 0 5px;
 }
-.pager li * {
-	display: block;
-	width: 40px;
-	height: 40px;
-	overflow: hidden;
-	padding: 10px;
-	text-align: center;
-	font-size: 15px;
-	cursor: pointer;
-}
+	.pager li * {
+		display: block;
+		width: 40px;
+		height: 40px;
+		overflow: hidden;
+		padding: 0 2px;
+		text-align: center;
+		font-size: 15px;
+		cursor: pointer;
+		line-height: 40px;
+	}
 .pager li span {
 	border: 1px solid #e1e1e1;
 }
@@ -1593,7 +1590,6 @@ div.product-viewmode {
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	text-indent: -9999px;
-	background: #a79c97;
 }
 .pager li.previous-page * {
 	background-image: url('../img/next.png');
@@ -1858,7 +1854,7 @@ div.product-viewmode {
 	padding: 20px 0;
 }
 .product-review-box {
-	margin: 0 0 5px;
+	margin: 0 0;
 }
 .product-review-box .rating {
 	display: inline-block;
@@ -2011,14 +2007,13 @@ div.product-viewmode {
 }
 .product-share-button {
 	display: inline-block;
-	margin-top: 20px;
+	margin-top:10px;
 	overflow: hidden;
 }
 .full-description {
 	clear: both;
-	margin: 0 0 30px;
+	margin: 0 0 0px;
 	line-height: 20px;
-	color: #666;
 	font-size: 16px;
 }
 .product-collateral {
@@ -2121,11 +2116,8 @@ div.product-viewmode {
 }
 .ui-tabs .ui-tabs-nav li a {
 	display: inline-block;
-	background: #a79c97;
 	padding: 8px 24px;
 	font-size: 16px;
-	color: #fff;
-	text-transform: uppercase;
 }
 	.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
 	.ui-tabs .ui-state-active.ui-tabs-active a {
@@ -3945,9 +3937,10 @@ input.estimate-shipping-radio:checked + label {
 }
 .opc .step-title * {
 	float: right;
-	font-family: 'Arvo';
+	/*font-family: 'Arvo';*/
 	font-size: 15px;
 }
+
 .opc .step-title span {
 	width: 24px;
 	margin: 0 0 0 10px;
@@ -4518,7 +4511,7 @@ input.estimate-shipping-radio:checked + label {
 	background: #8e807a;
 	color: #fff;
 	font-size: 16px;
-	font-family: 'Arvo';
+	/*font-family: 'Arvo';*/
 	text-transform: uppercase;
 }
 .news-list-page .news-items .read-more,
