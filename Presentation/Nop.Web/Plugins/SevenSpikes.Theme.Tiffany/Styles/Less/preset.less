@@ -37,9 +37,7 @@
 .variant-overview .add-to-cart-button,
 .write-review .button-1,
 .productAddedToCartWindowCheckout:hover,
-.shopping-cart-page .common-buttons .continue-shopping-button,
 .mfp-container .apply-shipping-button,
-.shopping-cart-page .button-1,
 .cart-collaterals .coupon-code button:hover,
 .shopping-cart-page .estimate-shipping-button:hover,
 .shopping-cart-page .common-buttons .update-cart-button:hover,
@@ -52,7 +50,6 @@
 .shipping-method .method-name:hover,
 .shipping-method li:nth-child(2) .method-name,
 .checkout-page .order-completed-continue-button,
-.shopping-cart-page .button-2,
 .checkout-page .button-2,
 .order-details-page .page-title a,
 .order-details-page .button-2,
@@ -84,21 +81,30 @@
 .ui-dialog .back-in-stock-subscription-page .notify-me-button,
 .spc-header li.active::after,
 .spc-header li:after {
-    background-color: @color;
+/*    background-color: @color;*/
+    background-color: #b68d40;
     -webkit-transition: all 0.2s ease 0s;
     -ms-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
 }
+
+.shopping-cart-page .common-buttons .continue-shopping-button,
+.shopping-cart-page .button-2,
+.shopping-cart-page .button-1,
+.shopping-cart-page .common-buttons .continue-shopping-button {
+    background: var(--DarkBrownBgColor);
+}
 .post-info .manage-post .edit-post-button,
 .post-info .manage-post .delete-post-button,
-.item-box .add-info button.button-2.add-to-wishlist-button,
 .product-list .details .add-info .buttons button.button-2.add-to-wishlist-button,
 .poll .buttons button,
 .button-2.contact-vendor-button,
 .wishlist-content .common-buttons .wishlist-add-to-cart-button,
 .wishlist-content .common-buttons .update-wishlist-button:hover,
-.wishlist-content .common-buttons .email-a-friend-wishlist-button:hover {
-    background-color:@color !important;
+.wishlist-content .common-buttons .email-a-friend-wishlist-button:hover
+/*,item-box .add-info button.button-2.add-to-wishlist-button, */ {
+    /*   background-color: @color !important;*/
+    background-color: #b68d40 !important;
 }
 
 .item-box:nth-child(2n+1) .details,
@@ -143,7 +149,6 @@
 .productAddedToCartWindowSummary .continueShoppingLink,
 .productAddedToCartWindowSummary .viewBasketLink:hover,
 .mini-shopping-cart .cart-button:hover,
-.cart-collaterals .coupon-code button,
 .shopping-cart-page .estimate-shipping-button,
 .shopping-cart-page .common-buttons .update-cart-button,
 .shopping-cart-page .common-buttons .estimate-shipping-button,
@@ -182,45 +187,50 @@
 .private-message-view-page .back-pm-button:hover,
 .private-message-view-page .delete-pm-button,
 .user-agreement-page .button-1:hover {
-    background-color: lighten(@color, 10%);
+    /* background-color: lighten(@color, 10%);*/
     -webkit-transition: all 0.2s ease 0s;
     -ms-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
 }
 .home-page-filters-wrapper .search-button:hover {
-    background-color: lighten(@color, 10%) !important;
+    /*    background-color: lighten(@color, 10%) !important;*/
+    background-color: #d6ad60!important;
 }
 
+.cart-collaterals .coupon-code button {
+    background: var(--BtnPrimaryBgColor);
+}
 .item-box .add-info button.button-2.add-to-wishlist-button:hover,
 .poll .buttons button:hover,
 .button-2.contact-vendor-button:hover,
 .wishlist-content .common-buttons .update-wishlist-button,
 .wishlist-content .common-buttons .email-a-friend-wishlist-button,
 .wishlist-content .common-buttons .wishlist-add-to-cart-button:hover {
-    background-color:lighten(@color, 10%) !important;
+    /*    background-color:lighten(@color, 10%) !important;*/
+    background-color: #d6ad60 !important;
 }
 #headerMenuParent,
-.home-page-category-grid.categories-1 .item-box .title,
 .header-menu > ul > li:hover,
 #topcartlink,
 .wishlist-button,
 .mega-menu .dropdown,
 .blog-search-box .search-box-button {
-    background-color:rgba(red(darken(@color, 30%)),green(darken(@color, 30%)),blue(darken(@color, 30%)),.3);
-
+/*    background-color: rgba(red(darken(@color, 30%)),green(darken(@color, 30%)),blue(darken(@color, 30%)),.3);*/
+    background-color: var(--LightBrownBgColor);
 }
 #AjaxFiltersProForm  {
     background-color:rgba(red(lighten(@color, 10%)),green(lighten(@color, 10%)),blue(lighten(@color, 10%)),.6) !important;
 }
 
-.header-menu .sublist li a {
+/*.header-menu .sublist li a {
     background-color: rgba(red(darken(@color, 30%)),green(darken(@color, 30%)),blue(darken(@color, 30%)),.7);
-}
+}*/
 #headerMenuParent.stick,
 .news-list-homepage .view-all,
 .header-menu .sublist li:hover a,
 .home-page-category-grid.categories-1 .item-box:hover .title {
-    background-color: rgba(red(darken(@color, 30%)),green(darken(@color, 30%)),blue(darken(@color, 30%)),.8);
+    /*    background-color: rgba(red(darken(@color, 30%)),green(darken(@color, 30%)),blue(darken(@color, 30%)),.8);*/
+    background: var(--DarkBrownBgColor);
 }
 .footer-lower{
     background-color:darken(@color, 30%);

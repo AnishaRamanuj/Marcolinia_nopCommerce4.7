@@ -16,21 +16,22 @@
 
 <div class="header @headerLayout">
     <div class="header-inner">
-    	@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
         @await Component.InvokeAsync(typeof(LogoViewComponent))
-        <div class="header-links-wrapper">
-            @await Component.InvokeAsync(typeof(HeaderLinksViewComponent))
-        </div>
+    	@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
+       
         <div class="search-n-selectors">
             <div class="search-box store-search-box">
                 @await Component.InvokeAsync(typeof(SearchBoxViewComponent))
             </div>
             <div class="header-selectors-wrapper">
-            	@await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
-            	@await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
-            	@await Component.InvokeAsync(typeof(LanguageSelectorViewComponent))
-            	@await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderSelectors })
-            </div>
+              @*   @await Component.InvokeAsync(typeof(TaxTypeSelectorViewComponent))
+                @await Component.InvokeAsync(typeof(CurrencySelectorViewComponent))
+                @await Component.InvokeAsync(typeof(LanguageSelectorViewComponent)) *@
+                @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderSelectors })
+            </div> 
+        </div>
+        <div class="header-links-wrapper">
+            @await Component.InvokeAsync(typeof(HeaderLinksViewComponent))
         </div>
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderAfter })
     </div>

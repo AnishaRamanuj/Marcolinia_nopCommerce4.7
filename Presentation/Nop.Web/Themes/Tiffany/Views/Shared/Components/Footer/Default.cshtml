@@ -22,61 +22,68 @@
     </div>
     <div class="footer-middle">
         <div class="center">
-            <div class="footer-block contacts">
-                <h2 class="title">@T("ContactUs")</h2>
-                <ul>
-                    <li class="fax"><span>@T("SevenSpikes.Themes.Tiffany.Common.Fax")</span></li>
-                    <li class="mobile"><span>@T("SevenSpikes.Themes.Tiffany.Common.Mobile")</span></li>
-                    <li class="mail"><span>@T("SevenSpikes.Themes.Tiffany.Common.Email")</span></li>
-                    <li class="location"><span>@T("SevenSpikes.Themes.Tiffany.Common.Location")</span></li>
-                    <li class="skype"><span>@T("SevenSpikes.Themes.Tiffany.Common.Skype")</span></li>
-                </ul>
-            </div>
             <div class="footer-block about-us">
                 <h2 class="title">@T("SevenSpikes.Themes.Tiffany.Footer.AboutUs.Title")</h2>
                 <p>@T("SevenSpikes.Themes.Tiffany.Footer.AboutUs")</p>
             </div>
+            <div class="footer-block contacts">
+                <h2 class="title">@T("ContactUs")</h2>
+                <ul>
+                    <li class="fax"><span class="icon"><i class="ri-printer-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Fax")</span></li>
+                    <li class="mobile"><span class="icon"><i class="ri-phone-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Mobile")</span></li>
+                    <li class="mail"><span class="icon"><i class="ri-mail-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Email")</span></li>
+               <li class="location"><span class="icon"><i class="ri-map-pin-2-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Location")</span></li>
+                    <li class="skype"><span class="icon"><i class="ri-skype-fill"></i></span><span>@T("SevenSpikes.Themes.Tiffany.Common.Skype")</span></li>
+                </ul>
+            </div>
             <div class="footer-block pinterest-plugin">
+                <h2 class="title">Gallery</h2>
                 <!--include pinterest plugin-->
                 @await Component.InvokeAsync("Widget", new { widgetZone = "tiffany_pinterest_profile_widget_footer" })
             </div>
         </div>
     </div>
     <div class="footer-lower">
-        <div class="center">
-            <h2 class="title">@T("Footer.FollowUs")</h2>
-            <div class="social">
-                @await Component.InvokeAsync(typeof(SocialButtonsViewComponent))
+        <div class="footer_upper">
+            <div class="center">
+                <h2 class="title">@T("Footer.FollowUs")</h2>
+                <div class="social">
+                    @await Component.InvokeAsync(typeof(SocialButtonsViewComponent))
+                </div>
+
+                <ul class="information-links">
+                    @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn1).ToList())
+                    {
+                        <li><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))">@topic.Name</a></li>
+                    }
+                    @if (Model.SitemapEnabled && Model.DisplaySitemapFooterItem)
+                    {
+                        <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
+                    }
+                    @if (Model.AllowCustomersToApplyForVendorAccount && Model.DisplayApplyVendorAccountFooterItem)
+                    {
+                        <li><a href="@Url.RouteUrl("ApplyVendorAccount")">@T("Vendors.ApplyAccount")</a></li>
+                    }
+                </ul>
+
+                <ul class="accepted-payment-methods">
+                    <li class="method1"></li>
+                    <li class="method2"></li>
+                    <li class="method3"></li>
+                    <li class="method4"></li>
+                </ul>
+
             </div>
-
-            <ul class="information-links">
-                @foreach (var topic in Model.Topics.Where(x => x.IncludeInFooterColumn1).ToList())
-                {
-                    <li><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))">@topic.Name</a></li>
-                }
-                @if (Model.SitemapEnabled && Model.DisplaySitemapFooterItem)
-                {
-                    <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
-                }
-                @if (Model.AllowCustomersToApplyForVendorAccount && Model.DisplayApplyVendorAccountFooterItem)
-                {
-                    <li><a href="@Url.RouteUrl("ApplyVendorAccount")">@T("Vendors.ApplyAccount")</a></li>
-                }
-            </ul>
-
-            <ul class="accepted-payment-methods">
-                <li class="method1"></li>
-                <li class="method2"></li>
-                <li class="method3"></li>
-                <li class="method4"></li>
-            </ul>
+        </div>
+        <div class="footer_copyright_layout">
+            <div class="center">
             <div class="links-bottom-left">
                 @if (!removeCopyright)
                 {
                     <div class="footer-powered-by">
                         Powered by <a href="@(OfficialSite.Main)" target="_blank" @(Model.IsHomePage ? string.Empty : "rel=nofollow")>nopCommerce</a>
                         @*Would you like to remove the "Powered by nopCommerce" link in the bottom of the footer?
-                            Please find more info at https://www.nopcommerce.com/nopcommerce-copyright-removal-key*@
+                    Please find more info at https://www.nopcommerce.com/nopcommerce-copyright-removal-key*@
                     </div>
                 }
                 @if (!removeDesignedBy)
@@ -102,6 +109,7 @@
             }
 
 
+        </div>
         </div>
     </div>
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.Footer, additionalData = Model })

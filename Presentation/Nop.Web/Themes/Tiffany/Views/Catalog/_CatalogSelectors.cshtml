@@ -12,7 +12,7 @@
 
     @if (Model.AllowProductViewModeChanging)
     {
-        <div class="product-viewmode">
+        <div class="product-viewmode filter_right">
             <span>@T("Catalog.ViewMode")</span>
             @if (Model.AvailableViewModes.Count > 1)
             {
@@ -36,7 +36,7 @@
 
     @if (Model.AllowProductSorting)
     {
-        <div class="product-sorting">
+        <div class="product-sorting filter_right">
             <span>@T("Catalog.OrderBy")</span>
             @Html.DropDownList("products-orderby", Model.AvailableSortOptions, new { aria_label = T("Catalog.OrderBy.Label") })
         </div>
@@ -57,7 +57,7 @@
 
     @if (Model.AllowCustomersToSelectPageSize)
     {
-        <div class="product-page-size">
+        <div class="product-page-size filter_right">
             <span>@T("Catalog.PageSize")</span>
             @Html.DropDownList("products-pagesize", Model.PageSizeOptions, new { aria_label = T("Catalog.PageSize.Label") })
             <span>@T("Catalog.PageSize.PerPage")</span>

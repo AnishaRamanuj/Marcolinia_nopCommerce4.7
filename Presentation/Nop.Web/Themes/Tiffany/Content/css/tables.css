@@ -12,14 +12,17 @@
     font-size:16px;
     font-weight:normal;
 }
-.cart td, .data-table td,
-.compare-products-table td,
-.forums-table-section td {
-	min-width: 50px;
-    border: 1px solid #ddd;
-	background: #f9f9f9;
-    padding: 10px;
-    font-size:16px;
+    .cart td, .data-table td,
+    .compare-products-table td,
+    .forums-table-section td {
+        min-width: 50px;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+        padding: 10px;
+        font-size: 14px;
+    }
+.shopping-cart-page .page-title {
+    margin-bottom: 0;
 }
 .shopping-cart-page .cart th,
 .order-summary-content .cart th,
@@ -51,9 +54,9 @@
 .cart a, .data-table a,
 .compare-products-table a,
 .forums-table-section a {
-    font-size:16px;
-    text-transform:uppercase;
-    font-family:Arvo;
+    font-size:14px;
+/*    text-transform:uppercase;
+    font-family:Arvo;*/
 	color: #000;
 }
 .forums-table-section .latest-post{

@@ -1110,7 +1110,6 @@ label, label + * {
 .footer-upper {
   width: 95%;
   margin: auto;
-  border-bottom: 1px solid #ddd;
   overflow: hidden;
   padding: 40px 0;
   font-size: 0;
@@ -1262,8 +1261,9 @@ label, label + * {
 }
 
 .footer-tax-shipping a {
-  font-weight: bold;
-  color: #4ab2f1;
+    font-weight: bold;
+/*    color: #4ab2f1;*/
+    color: var(--DarkBrownBgColor);
 }
 
 .footer-tax-shipping a:hover,
@@ -1276,10 +1276,11 @@ label, label + * {
   font-size: 16px;
 }
 
-.footer-powered-by a {
-  font-weight: bold;
-  color: #4ab2f1;
-}
+    .footer-powered-by a {
+        font-weight: bold;
+       /* color: #4ab2f1;*/
+        color: var(--DarkBrownBgColor);
+    }
 
 .footer-powered-by a:hover,
 .footer-powered-by a:focus {
@@ -3389,7 +3390,7 @@ label, label + * {
 }
 
 .home-page .topic-block {
-  margin: 0 0 50px;
+    margin: 15px 0 40px;
 }
 
 .popup-window .topic-page {
@@ -8072,27 +8073,30 @@ label, label + * {
     color: #4ab2f1;
   }
 
-  .header-menu .sublist {
-    display: none;
-    position: absolute;
-    width: 200px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.2);
-    background-color: #fff;
-    padding: 10px 0;
-    text-align: left;
-  }
+    .header-menu .sublist {
+        display: none;
+        position: absolute;
+        width: 240px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+        background-color: #fff;
+        padding: 8px 0;
+        text-align: left;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+    }
 
   .header-menu .sublist li {
     position: relative;
   }
 
-  .header-menu .sublist li a {
-    display: block;
-    position: relative;
-    padding: 10px 20px 10px 30px;
-    font-size: 14px;
-    color: #444;
-  }
+    .header-menu .sublist li a {
+        display: block;
+        position: relative;
+        padding: 8px 20px 8px 30px;
+        font-size: 14px;
+        color: #444;
+        background: #ffffff;
+    }
 
   .header-menu .sublist li a:before {
     content: "";
@@ -8215,12 +8219,12 @@ label, label + * {
   .block {
     float: none;
     width: auto;
-    margin: 0 0 20px;
+/*    margin: 0 0 20px;*/
   }
   
   .block .title {
     margin: 0;
-    border-bottom: 1px solid #ddd;
+/*    border-bottom: 1px solid #ddd;*/
     background: none;
     cursor: auto;
   }

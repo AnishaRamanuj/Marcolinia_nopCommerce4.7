@@ -31,9 +31,7 @@
 	padding-right: 3%;
 	padding-left: 3%;
 }
-.footer-upper {
-	margin-bottom: 80px;
-}
+
 .newsletter-email {
 	width: auto;
 	max-width: 600px;
@@ -48,8 +46,8 @@
 .newsletter-email button {
 	float: right;
 	width: auto;
-	min-width: 134px;
-	max-width: 200px;
+	min-width: inherit;
+/*	max-width: 200px;*/
 }
 .footer-middle .footer-block {
 	float: right;
@@ -281,18 +279,18 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.product-list .details .add-info .buttons>*:nth-child(even){
-    background-color:#8e807a !important;
-}
+	.product-list .details .add-info .buttons > *:nth-child(even) {
+		background-color: #b68d40 !important;
+	}
 .product-list .details .add-info .buttons>*:nth-child(even):hover{
     background-color:#a79c97 !important;
 }
 .product-list .details .add-info .buttons>*:nth-child(odd){
     background-color:#a79c97 !important;
 }
-.product-list .details .add-info .buttons>*:nth-child(odd):hover{
-    background-color:#8e807a !important;
-}
+	.product-list .details .add-info .buttons > *:nth-child(odd):hover {
+		background-color: #b68d40 !important;
+	}
 .product-list .add-info .compare-products{
     margin:0 1px 0 0;
 }

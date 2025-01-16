@@ -41,21 +41,30 @@
 }
 .filter-block .title {
     position: relative;
-	background: #393230;
-	border-bottom: 1px solid #282322;
+/*	background: #393230;
+	border-bottom: 1px solid #282322;*/
 }
-.filter-block a.toggleControl {   
-	color: #dddddd;
-	display: block;
-	font-size: 16px;
-	line-height: 17px;
-	padding: 16px 20px !important;
-	position: relative;
-	text-transform: uppercase;
-	z-index: 1;
-	text-align:left;
-	font-family: Arvo;
-}
+	.filter-block a.toggleControl,
+	.filter-block .title_content {
+		/*	color: #dddddd;
+		display: block;
+		font-size: 16px;
+		line-height: 17px;
+		padding: 16px 20px !important;
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+		text-align: left;
+		font-family: Arvo;*/
+		font-size: 16px;
+		color: var(--primaryColor);
+		text-transform: uppercase;
+		font-weight: 600;
+		width: 100%;
+		text-align: left;
+		display: block;
+		padding-bottom: 5px;
+	}
 .filter-block a.toggleControl.closed {
 }
 .filter-block a.clearFilterOptions,
@@ -83,8 +92,11 @@
 .filter-block a.clearPriceRangeFilter:hover {
 }
 .filtersGroupPanel {
-	color: #000;
+/*	color: #000;
+	background: #fff;*/
 	background: #fff;
+	border-radius: 7px;
+	border: 1px solid var(--borderColor) !important;
 }
 /*one line design*/
 .center-1 .filtersPanel .block.filter-block{
@@ -277,11 +289,15 @@ a.filterItemDisabled:hover,
 a.filterItemSelectedDisabled:hover {
 	color: #999;
 }
+.checkbox-list {
+	padding: 0px 5px;
+}
 .checkbox-list li {
-    position: relative;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    background-color: #f9f9f9;
+	position: relative;
+	text-align: left;
+	border-bottom: 1px solid var(--borderColor);
+	/*	border-bottom: 1px solid #ddd;
+	background-color: #f9f9f9;*/
 }
 .checkbox-list li:last-child {
     border-bottom: none;
@@ -302,14 +318,13 @@ a.filterItemSelectedDisabled:hover {
     z-index: 2;
     cursor: pointer;
 }
-.checkbox-list li input + label {
-    position: relative;
-    display: block;
-    padding: 12px 12px 12px 40px; 
-    font-size: 16px;
-    color: #666;
-    cursor: pointer;
-}
+	.checkbox-list li input + label {
+		position: relative;
+		display: block;
+		padding: 12px 12px 12px 40px;
+		font-size: 14px;
+		cursor: pointer;
+	}
 .imageOptions .checkbox-list li input + label {
     padding-left: 48px;
 }
@@ -546,7 +561,7 @@ a.filterItemSelectedDisabled:hover {
 }
 .ajaxFilters .k-window-titlebar {
 	margin: 5px 0 0 !important;
-	background: url(images/title-decoration.png) no-repeat center bottom;
+/*	background: url(images/title-decoration.png) no-repeat center bottom;*/
 	text-align: center;
 }
 .ajaxFilters .k-window-titlebar span {
@@ -672,11 +687,11 @@ a.filterItemSelectedDisabled:hover {
 	display: none;
 }
 
-.filter-block {
+/*.filter-block {
 	margin: 0 auto 30px;
 	background:#f9f9f9;
    border-bottom:1px solid #ddd;
-}
+}*/
 .filter-block.priceRangeFilterPanel7Spikes {
 	border:none;
 	background: none;
@@ -687,16 +702,16 @@ a.filterItemSelectedDisabled:hover {
 	background:transparent !important;
 }
 .filter-block.priceRangeFilterPanel7Spikes .title .toggleControl {
-	text-align:center;
+	text-align:left;
 	border-bottom:none;
 }
 .filter-block.priceRangeFilterPanel7Spikes .filtersGroupPanel {
 	border:none;
 }
-.filter-block .title {
+/*.filter-block .title {
 	background: #f9f9f9;
 	border-bottom: none;
-}
+}*/
 .filtersGroupPanel li > a {
 	padding: 10px 10px 10px 42px;
 	border:none;
@@ -705,13 +720,11 @@ a.filterItemSelectedDisabled:hover {
 .filtersGroupPanel li:last-child > a {
 	border-bottom:none;
 }
-.filter-block a.toggleControl {
-	padding: 12px 10px 10px 20px !important;
+/*.filter-block a.toggleControl {
+	padding: 12px 10px 10px 0;
 	font-size: 16px;
-	font-weight: 300;
-	color: #000;
 	border-bottom:1px solid #ddd;
-}
+}*/
 .filter-block a.toggleControl.closed {
 	background: url(images/expand-button.png) no-repeat 95% center;
 	border-bottom:none;
